@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="utf-8" />
+    <link rel="preload" href="/fonts/source-serif-variable.woff2" as="font" type="font/woff2" crossorigin />
+    <meta name="viewport" content="width=device-width,minimum-scale=1.0" />
+    <meta name="description" content="{{ .Summary }}" />
+    <title>{{ .Page.Title }}</title>
+
+    {{ with .OutputFormats.Get "rss" -}}
+        <link rel="{{ .Rel }}" type="{{ .MediaType.Type | html }}" href="{{ .Permalink }}" title="{{ $title }}" />
+    {{ end -}}
+
+    {{ with resources.Get "css/default.scss" | toCSS | postCSS | minify -}}
+        <style>{{ .Content | safeCSS }}</style>
+    {{ end -}}
+
+    {{ with .Resources.GetMatch "thumb.*" -}}
+        {{ $image := .Fill "1200x1200 q50" -}}
+        {{ $shortTitle := $.Title | truncate 70 -}}
+        {{ $desc := $.Summary | plainify | safeHTML | truncate 200 -}}
+        <meta property="og:title" content="{{ $shortTitle }}" />
+        <meta property="og:description" content="{{ $desc }}" />
+        <meta property="og:image" content="{{ $image.Permalink }}" />
+        <meta property="og:site_name" content="{{ $.Site.BaseURL }}" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="{{ $.Permalink }}" />
+        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:site" content="{{ $.Site.BaseURL }}" />
+        <meta name="twitter:creator" content="@adamhavel" />
+        <meta name="twitter:title" content="{{ $shortTitle }}" />
+        <meta name="twitter:description" content="{{ $desc }}" />
+        <meta name="twitter:image" content="{{ $image.Permalink }}" />
+    {{ end }}
+
+</head>
+<body>
+
+    <header>
+    </header>
+
+    <div>
+        {{ block "main" . }}{{ end }}
+    </div>
+
+    <footer></footer>
+
+</body>
+</html>

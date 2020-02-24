@@ -1,0 +1,13 @@
+{
+  "name": "decentrum",
+  "version": "0.1.0",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/adamhavel/decentrum.git"
+  },
+  "devDependencies": {
+    "autoprefixer": "9.7.4",
+    "postcss-cli": "7.1.0"
+  },
+  "browserslist": "> 2%, ie 11"
+}

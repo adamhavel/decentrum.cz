@@ -1,0 +1,2 @@
+defaultContentLanguage: cs
+disableKinds: ["taxonomy", "taxonomyTerm"]
