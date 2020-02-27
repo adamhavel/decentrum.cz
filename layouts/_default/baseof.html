@@ -2,48 +2,64 @@
 <html lang="cs">
 <head>
     <meta charset="utf-8" />
-    <link rel="preload" href="/fonts/source-serif-variable.woff2" as="font" type="font/woff2" crossorigin />
     <meta name="viewport" content="width=device-width,minimum-scale=1.0" />
-    <meta name="description" content="{{ .Summary }}" />
-    <title>{{ .Page.Title }}</title>
-
+    <link rel="preload" href="/fonts/source-serif-variable.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="/fonts/source-serif-italic-variable.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="/fonts/space-grotesk-variable.ttf" as="font" type="font/ttf" crossorigin />
     {{ with .OutputFormats.Get "rss" -}}
-        <link rel="{{ .Rel }}" type="{{ .MediaType.Type | html }}" href="{{ .Permalink }}" title="{{ $title }}" />
+        <link rel="{{ .Rel }}" type="{{ .MediaType.Type | html }}" href="{{ .Permalink }}" title="{{ $.Site.Title }}" />
     {{ end -}}
-
-    {{ with resources.Get "css/default.scss" | toCSS | postCSS | minify -}}
-        <style>{{ .Content | safeCSS }}</style>
+    {{ with resources.Get "css/default.scss" | toCSS | postCSS | minify | resources.Fingerprint "md5" -}}
+        <link rel="stylesheet" href="{{ .Permalink }}" integrity="{{ .Data.Integrity }}" />
     {{ end -}}
-
-    {{ with .Resources.GetMatch "thumb.*" -}}
-        {{ $image := .Fill "1200x1200 q50" -}}
-        {{ $shortTitle := $.Title | truncate 70 -}}
-        {{ $desc := $.Summary | plainify | safeHTML | truncate 200 -}}
-        <meta property="og:title" content="{{ $shortTitle }}" />
-        <meta property="og:description" content="{{ $desc }}" />
-        <meta property="og:image" content="{{ $image.Permalink }}" />
-        <meta property="og:site_name" content="{{ $.Site.BaseURL }}" />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="{{ $.Permalink }}" />
-        <meta name="twitter:card" content="summary" />
-        <meta name="twitter:site" content="{{ $.Site.BaseURL }}" />
-        <meta name="twitter:creator" content="@adamhavel" />
-        <meta name="twitter:title" content="{{ $shortTitle }}" />
-        <meta name="twitter:description" content="{{ $desc }}" />
-        <meta name="twitter:image" content="{{ $image.Permalink }}" />
-    {{ end }}
-
+    <title>{{ .Site.Title }}</title>
+    <meta name="description" content="{{ .Summary }}" />
 </head>
 <body>
 
-    <header>
+    <header class="site-header">
+
+        <div class="tiles">
+            <div class="tile">
+                <h1 class="site-title">decentrum</h1>
+                <p class="site-desc">praktická<br>soběstačnost<br>v labyrintu<br>moderní civilizace</p>
+            </div>
+            <div class="tile">
+                <img src="/img/tile4bw.jpg">
+            </div>
+            <div class="tile">
+                <img src="/img/tile3bw.jpg">
+            </div>
+            <div class="tile">
+                <img src="/img/tile1bw.jpg">
+            </div>
+            <div class="tile">
+                <img src="/img/tile4bbw.jpg">
+            </div>
+            <div class="tile">
+                <img src="/img/tile2bw.jpg">
+            </div>
+        </div>
+
+        <nav class="site-nav">
+            <ul>
+                <li><a href="">Archiv</a></li>
+                <li><a href="">RSS</a></li>
+                <li><a href="">Newsletter</a></li>
+                <li><a href="">E-mail</a></li>
+                <li><a href="">Twitter</a></li>
+            </ul>
+        </nav>
+
+        <p class="site-disclaimer">Repudiandae, eveniet libero sed. Ipsa nisi sint quas modi, neque alias deserunt iste. Accusantium voluptatem quos placeat voluptates perferendis sed facere ea, non dolore dolorem nisi excepturi, blanditiis tenetur maiores?</p>
+
     </header>
 
-    <div>
+    <main class="site-content">
         {{ block "main" . }}{{ end }}
-    </div>
+    </main>
 
-    <footer></footer>
+    <footer class="site-footer"></footer>
 
 </body>
 </html>

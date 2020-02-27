@@ -1,1 +1,194 @@
-background: green;
+@font-face {
+    font-family: 'Source Serif Variable';
+    src: url('/fonts/source-serif-variable.woff2') format('woff2-variations');
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Source Serif Variable';
+    src: url('/fonts/source-serif-italic-variable.woff2') format('woff2-variations');
+    font-display: swap;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Source Code Variable';
+    src: url('/fonts/source-code-variable.woff2') format('woff2-variations');
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Space Grotesk';
+    src: url('/fonts/space-grotesk-variable.ttf') format('truetype');
+    font-display: swap;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+html {
+    background: rgb(245, 246, 250);
+    color: rgba(black, .9);
+    font-family: 'Source Serif Variable';
+    line-height: 1.4;
+    font-size: 1.25em;
+    font-weight: 375;
+}
+
+body {
+    padding: 3vw;
+    display: flex;
+}
+
+.site-header {
+    width: 15em;
+    margin-right: 5vw;
+    display: flex;
+    flex-direction: column;
+}
+
+    .tiles {
+        display: grid;
+        grid-gap: .6em;
+        grid-template-columns: repeat(2, 1fr);
+        margin-bottom: .75em;
+    }
+
+        .tile {
+
+            &:first-child {
+                font-family: 'Space Grotesk';
+                line-height: 1.25;
+                margin-top: -.25em;
+                display: flex;
+                flex-direction: column;
+            }
+
+            &:not(:first-child) {
+                background: #03327b;
+                transition: background .5s;
+                opacity: .75;
+            }
+
+            img {
+                display: block;
+                box-sizing: border-box;
+                max-width: 100%;
+                mix-blend-mode: difference;
+                xborder: 1px solid rgba(black, .5);
+            }
+        }
+
+            .site-title {
+                font-size: .875rem;
+                font-weight: 600;
+                margin-bottom: auto;
+                letter-spacing: .05em;
+            }
+
+            .site-desc {
+                font-weight: 375;
+                color: rgba(black, .6);
+                text-align: right;
+                font-size: .675em;
+            }
+
+.site-nav {
+    font-family: 'Space Grotesk';
+    font-size: .675em;
+
+    ul {
+        display: flex;
+        justify-content: space-between;
+        list-style: none;
+    }
+
+    li:not(:first-child) {
+        margin-left: .75em;
+    }
+
+    a {
+        color: rgba(black, .75);
+        text-decoration: none;
+        letter-spacing: .05em;
+        text-decoration: underline;
+        text-decoration-color: rgba(black, .4);
+
+        &:hover,
+        &:focus {
+            text-decoration: none;
+        }
+    }
+}
+
+.site-disclaimer {
+    color: rgba(black, .6);
+    font-size: .75em;
+    margin-top: auto;
+}
+
+.site-content {
+    width: 38em;
+
+    header {
+        margin-bottom: 2.8rem;
+        margin-top: -.25rem;
+    }
+
+    time {
+        display: block;
+        font-family: 'Space Grotesk';
+        color: rgba(black, .5);
+        letter-spacing: .025em;
+        font-size: .75rem;
+        margin-bottom: .5em;
+    }
+
+    h1 {
+        font-family: 'Space Grotesk';
+        line-height: 1.2;
+        font-size: 2rem;
+        font-weight: 600;
+        font-feature-settings: 'zero', 'liga', 'case';
+    }
+
+    h2 {
+        font-family: 'Space Grotesk';
+        line-height: 1.16667;
+        font-size: 1.2rem;
+        font-weight: 600;
+        margin-bottom: .5em;
+        margin-top: 2.1rem;
+        font-feature-settings: 'zero', 'liga', 'case';
+    }
+
+    h3 {
+        font-family: 'Source Serif Variable';
+        line-height: 1.4;
+        font-size: 1rem;
+        font-weight: 650;
+        margin-bottom: .5em;
+        margin-top: 2.1rem;
+        font-feature-settings: 'smcp';
+    }
+
+    p {
+
+        &:not(:last-child) {
+            margin-bottom: 1.4rem;
+        }
+
+        a {
+            color: inherit;
+            text-decoration-color: rgba(black, .5);
+            text-decoration-thickness: 1px;
+        }
+
+        strong {
+            font-weight: 600;
+        }
+    }
+}

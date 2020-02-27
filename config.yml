@@ -1,2 +1,6 @@
+title: decentrum
+baseURL: https://decentrum.cz
+
 defaultContentLanguage: cs
 disableKinds: ["taxonomy", "taxonomyTerm"]
+disableHugoGeneratorInject: true

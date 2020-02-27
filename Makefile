@@ -1,9 +1,9 @@
 .PHONY: develop build clean clean-build
 
-build: clean-build
+build: node_modules clean-build
 	hugo
 
-develop: clean-build
+develop: node_modules clean-build
 	hugo server
 
 node_modules:
