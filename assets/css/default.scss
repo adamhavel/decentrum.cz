@@ -19,6 +19,7 @@ html {
 
 body {
     padding: 3vw;
+    padding-bottom: 6vw;
     display: flex;
 }
 
@@ -60,7 +61,6 @@ body {
 
                 img {
                     display: block;
-                    box-sizing: border-box;
                     max-width: 100%;
                     mix-blend-mode: difference;
                     transition: transform .3s;
@@ -120,12 +120,12 @@ body {
                 font-weight: 375;
                 color: rgba(black, .5);
                 text-align: right;
-                font-size: .675em;
+                font-size: .7rem;
             }
 
 .site-nav {
     font-family: 'Space Grotesk';
-    font-size: .675em;
+    font-size: .7rem;
     margin-top: auto;
     margin-bottom: -.25em;
 
@@ -154,7 +154,8 @@ body {
             content: '';
             flex-grow: 1;
             margin-right: .5em;
-            border-bottom: 1px dotted rgba(black, .2);
+            border-bottom: 1px dotted currentColor;
+            opacity: .25;
         }
 
         &:hover,
@@ -174,7 +175,7 @@ body {
 }
 
 .site-disclaimer {
-    font-size: .75em;
+    font-size: .8em;
     margin-top: auto;
     color: rgba(black, .7);
 
@@ -199,7 +200,7 @@ body {
             letter-spacing: .075em;
             font-weight: 400;
             font-size: .8rem;
-            margin-bottom: 2.4em;
+            margin-bottom: 1.8em;
             align-items: center;
             line-height: 1;
 
