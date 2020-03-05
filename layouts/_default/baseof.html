@@ -21,8 +21,8 @@
 
         <div class="tiles">
             <div class="tile">
-                <h1 class="site-title">decentrum</h1>
-                <p class="site-desc">praktická<br>soběstačnost<br>v labyrintu<br>moderní civilizace</p>
+                <h1 class="site-title"><a href="/">de<span aria-hidden="true">·</span>centrum</a></h1>
+                <p class="site-desc">praktická<br>soběstačnost<br>v komplexním světě</p>
             </div>
             <div class="tile">
                 <img src="/img/tile4bw.jpg">
@@ -34,28 +34,30 @@
                 <img src="/img/tile1bw.jpg">
             </div>
             <div class="tile">
-                <img src="/img/tile4bbw.jpg">
+                <img src="/img/tile2bw.jpg">
             </div>
             <div class="tile">
-                <img src="/img/tile2bw.jpg">
+                <nav class="site-nav">
+                    <ul>
+                        <li><a href="">Archiv</a></li>
+                        <li><a href="">RSS</a></li>
+                        <li><a href="https://decentrum.substack.com">Newsletter</a></li>
+                        <li><a href="mailto:info@decentrum.cz">E-mail</a></li>
+                        <li><a href="https://twitter.com/de_centrum">Twitter</a></li>
+                    </ul>
+                </nav>
             </div>
         </div>
 
-        <nav class="site-nav">
-            <ul>
-                <li><a href="">Archiv</a></li>
-                <li><a href="">RSS</a></li>
-                <li><a href="">Newsletter</a></li>
-                <li><a href="">E-mail</a></li>
-                <li><a href="">Twitter</a></li>
-            </ul>
-        </nav>
-
-        <p class="site-disclaimer">Repudiandae, eveniet libero sed. Ipsa nisi sint quas modi, neque alias deserunt iste. Accusantium voluptatem quos placeat voluptates perferendis sed facere ea, non dolore dolorem nisi excepturi, blanditiis tenetur maiores?</p>
+        <section class="site-disclaimer content">
+            <h3>Upozornění</h3>
+            <p>Nejsme lékaři, ani finanční poradci. Veškeré zde uvedené informace a tipy představují náš osobní názor a neslouží jako konkrétní investiční nebo lékařské doporučení. Rozhodnutí se jimi řídit ponecháváme vaší zodpovědnosti a zdravému rozumu.</p>
+            <p>V případě některých odkazů používáme <em><a href="https://cs.wikipedia.org/wiki/Affiliate_marketing">affiliate marketing</a></em>. Pokud při návštěvě odkazovaného webu koupíte produkt či službu, obdržíme pár procent z prodejní ceny. Jde o jeden z mála rozumných způsobů, jak finančně podpořit provoz webu, narozdíl od reklam či prodeje uživatelských dat. Všechny produkty či služby, na které tímto způsobem odkazujeme, buď sami používáme nebo bychom je s čistým svědomím doporučili nejbližším.</p>
+        </section>
 
     </header>
 
-    <main class="site-content">
+    <main class="site-content content">
         {{ block "main" . }}{{ end }}
     </main>
 

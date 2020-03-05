@@ -1,7 +1,12 @@
 {{ define "main" }}
-<header>
-    <time>27. února 2020</time>
-    <h1>Abveritatis ffequibusdam {0-1}</h1>
+<header class="article__header">
+    <time>27<span>·</span>2<span>·</span>2020</time>
+    <h1>Decentralizovaná společnost</h1>
+    <ul>
+        <li>Nová cesta do otroctví</li>
+        <li>Mýtus soběstačnosti</li>
+        <li>Užitečnost jako měna vztahů</li>
+    </ul>
 </header>
 
 <p>Barcelona plní nejen titulky novin, ale hostí i řadu skvělých konferencí — o jedné takové už jsem ostatně <a href="/blog/full-stack-fest-2018">psal</a> — a kombinace <em>JSCamp</em> a <em>CSSCamp 2019</em> nebyla výjimkou. Jak napovídají názvy, každoročním těžištěm konferencí jsou JavaScript a CSS ve všech svých podobách. Pro ty nejlepší přednášející však posloužily jen jako odrazový můstek k prozkoumání témat širšího záběru.</p>
@@ -21,4 +26,14 @@
 <h2 id="méně-kódu-více-radosti">Méně kódu, více radosti</h2>
 <p>Rich Harris, mimo jiné tvůrce nástroje <a href="https://rollupjs.org">Rollup</a>, přišel s jasným sdělením: <strong>pište méně kódu</strong>. Proč? Každý kód nevyhnutelně obsahuje chyby a jejich počet přirozeně roste spolu s délkou kódu. Problém tkví v tom, že tento vztah není lineární, ale spíše <strong>kvadratický</strong>. Z naší zkušenosti to dává smysl — čím obsáhlejší je nějaký <em>pull request</em>, tím neúměrně větší problém nám dělá kód pochopit a objevit záludné chyby. Rich v tomto ohledu nabízí jednoduchou radu: kód jakéhokoliv modulu by se měl vejít na jednu obrazovku. Stejnou pozornost, jakou dáváme pokrytí kódu testy nebo výsledné velikostí skriptů bychom měli věnovat snaze vyhnout se zbytečnému kódu.</p>
 <p>Mnohdy je to kód, který sám o sobě nepřináší žádný užitek, ale který vyžaduje daný jazyk nebo <em>framework</em>. Dobrým příkladem jsou funkce pro čtení a zápis proměnných v instancích tříd, které najdeme třeba v Javě. Ve své základní podobě jsou paradoxně nutné i zbytečné zároveň, a nic nebrání tomu, aby byly generovány automaticky. Podobným neduhem však trpí i řada <em>frameworků</em> a Rich se rozhodl tento problém vyřešit — alespoň ve světě JavaScriptu. Výsledkem je <a href="https://svelte.dev">Svelte</a>.</p>
+
+<footer class="article__footer">
+
+    <ul class="article__nav">
+        <li><a href="" rel="prev"><span>Dolores dolorum uto</span></a></li>
+        <li><a href="#" rel="top"><span>Nahoru</span></a></li>
+        <li><a href="" rel="next"><span>Excepturi sequi saepe</span></a></li>
+    </ul>
+
+</footer>
 {{ end }}
