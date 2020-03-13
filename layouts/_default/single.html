@@ -1,3 +1,35 @@
 {{ define "main" }}
-ipsum
+<article class="article">
+
+    <header class="article__header">
+        <h1>{{ .Title }}</h1>
+        <time>{{ .Date.Format "2<span>·</span>1<span>·</span>2006" | safeHTML }}</time>
+        <ul>
+            {{ range (findRE "<h\\d.*?>(.|\n)*?</h\\d>" .Content) }}
+                {{ $id := trim (index (findRE "\"[a-ž0-9-]*?\"" . ) 0) "\"" }}
+                <li><a href="#{{ $id }}">{{ . | plainify }}</a></li>
+            {{ end }}
+        </ul>
+
+    </header>
+
+    <div class="article__content content">
+        {{ .Content }}
+    </div>
+
+    <footer class="article__footer">
+
+        <ul class="article__nav">
+            {{ with .PrevInSection }}
+                <li><a href="{{ .Permalink }}" rel="prev"><span>{{ .Title }}</span></a></li>
+            {{ end }}
+            <li><a href="#" rel="top"><span>Nahoru</span></a></li>
+            {{ with .NextInSection }}
+                <li><a href="{{ .Permalink }}" rel="next"><span>{{ .Title }}</span></a></li>
+            {{ end }}
+        </ul>
+
+    </footer>
+
+</article>
 {{ end }}

@@ -1,8 +1,21 @@
-$fontDisplay: 'Space Grotesk', 'Helvetica Neue', 'Helvetica', 'Roboto', sans-serif;
-$fontBody: 'Source Serif Variable', 'Georgia', serif;
+$fontGrotesk: 'Space Grotesk', 'Helvetica Neue', 'Helvetica', 'Roboto', sans-serif;
+$fontSerif: 'Source Serif Variable', 'Georgia', serif;
 
 $colorText: rgba(black, .9);
 $colorTextMedium: rgba(black, .7);
 $colorTextLight: rgba(black, .5);
-
 $colorBackground: rgb(245, 246, 250);
+
+$baseFontSize: 1.25em;
+$baseLineHeight: 1.4;
+
+@function lines($count) {
+    @return $count * $baseLineHeight * 1rem;
+}
+
+$sizeNano: .7rem;
+$sizeMicro: .8rem;
+$sizeMilli: .9rem;
+$sizeKilo: 1.25rem;
+$sizeMega: 1.5rem;
+$sizeGiga: 2rem;

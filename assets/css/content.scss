@@ -1,0 +1,51 @@
+.content {
+
+    h2 {
+        font-family: $fontGrotesk;
+        font-size: 1rem;
+        font-weight: 600;
+        letter-spacing: .05em;
+        margin-bottom: .75em;
+        margin-top: lines(2);
+        text-transform: uppercase;
+        font-feature-settings: 'zero', 'liga', 'case';
+    }
+
+    h3 {
+        font-family: $fontSerif;
+        font-size: 1rem;
+        font-weight: 600;
+        margin-bottom: .5em;
+        margin-top: lines(1.5);
+        font-feature-settings: 'smcp';
+    }
+
+    p {
+
+        &:not(:last-child) {
+            margin-bottom: lines(1);
+        }
+
+        a {
+            color: inherit;
+            text-decoration-color: $colorTextLight;
+            text-decoration-thickness: 1px;
+
+            &:hover,
+            &:focus {
+                text-decoration: none;
+                xbackground: rgba(red, .075);
+                color: red;
+            }
+        }
+
+        strong {
+            font-weight: 600;
+        }
+
+        .lede {
+            font-feature-settings: 'smcp';
+            font-weight: 450;
+        }
+    }
+}

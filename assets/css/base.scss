@@ -1,0 +1,21 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    list-style: none;
+}
+
+html {
+    background: $colorBackground;
+    color: $colorText;
+    font-family: $fontSerif;
+    line-height: $baseLineHeight;
+    font-size: $baseFontSize;
+    font-weight: 375;
+}
+
+body {
+    padding: 3vw;
+    padding-bottom: 6vw;
+    display: flex;
+}
