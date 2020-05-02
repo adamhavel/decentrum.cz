@@ -3,6 +3,7 @@
     .article__header {
         margin-bottom: lines(2.5);
         margin-top: -.2rem;
+        overflow: hidden;
 
         time {
             display: flex;
@@ -40,21 +41,55 @@
             margin-right: 5rem;
         }
 
+        blockquote {
+            margin-top: lines(.75);
+            width: 80%;
+
+            p {
+                font-style: italic;
+                font-size: $sizeMilli;
+                margin-bottom: .25em;
+                color: $colorTextMedium;
+            }
+
+            cite {
+                font-style: normal;
+                font-family: $fontGrotesk;
+                font-size: $sizeNano;
+                letter-spacing: .025em;
+                color: $colorTextLight;
+
+                a {
+                    color: inherit;
+                    text-decoration: none;
+
+                    &:hover,
+                    &:focus {
+                        color: red;
+                    }
+                }
+            }
+        }
+
         ul {
             display: flex;
+            display: none;
             flex-wrap: wrap;
-            font-style: italic;
+            xfont-style: italic;
             color: $colorTextLight;
-            font-size: $sizeMilli;
-            margin-right: 5rem;
+            font-size: $sizeNano;
+            line-height: 1.5;
+            margin-right: 6rem;
+            margin-left: -1em;
         }
 
         li {
             display: flex;
 
-            &:not(:first-child):before {
+            &:before {
                 content: '·';
-                margin: 0 .3em;
+                width: 1em;
+                text-align: center;
             }
 
             a {
@@ -68,6 +103,68 @@
             }
         }
     }
+
+    .article__content {
+
+        > p:first-child:first-letter {
+            float: left;
+            font-size: 7.12rem;
+            font-weight: 350;
+            margin-right: .05em;
+            margin-top: .0675em;
+        }
+    }
+
+        .article__figure {
+            margin: lines(1.5) 0;
+
+            &--left,
+            &--right,
+            &--small-right,
+            &--small-left {
+                margin-top: .25em;
+                margin-bottom: 1.5em;
+            }
+
+            &--right {
+                width: 50%;
+                float: right;
+                margin-right: -25%;
+                margin-left: 3em;
+            }
+
+            &--left {
+                float: left;
+                width: 50%;
+                margin-right: 2em;
+                margin-left: -25%;
+            }
+
+            &--small-right {
+                width: 30%;
+                float: right;
+                margin-left: 2em;
+            }
+
+            &--small-left {
+                float: left;
+                width: 30%;
+                margin-right: 2em;
+            }
+
+            &--hero {
+                margin: lines(1.5) -20%;
+            }
+
+            &--small {
+                margin: lines(1.5) 20%;
+            }
+
+            img {
+                width: 100%;
+                display: block;
+            }
+        }
 
     .article__footer {
         margin-top: lines(3);

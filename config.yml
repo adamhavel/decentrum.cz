@@ -1,11 +1,19 @@
-title: de centrum
+title: decentrum
 baseURL: https://decentrum.cz
+
+params:
+  description: "Decentrum je web o praktické soběstačnosti v komplexním světě, stavící na pilířích technologií, financí, praktických dovedností a zdraví."
 
 defaultContentLanguage: cs
 disableKinds: ["taxonomy", "taxonomyTerm"]
 disableHugoGeneratorInject: true
 
+footnoteReturnLinkContents: "a"
+footnoteAnchorPrefix: "aaa"
+
 markup:
   goldmark:
     renderer:
       unsafe: true
+    parser:
+      autoHeadingIDType: github-ascii

@@ -2,22 +2,43 @@
 
     h2 {
         font-family: $fontGrotesk;
-        font-size: 1rem;
+        font-size: $sizeKilo;
         font-weight: 600;
-        letter-spacing: .05em;
-        margin-bottom: .75em;
-        margin-top: lines(2);
+        margin-bottom: lines(1);
+        margin-top: lines(4);
+        line-height: lines(1);
         text-transform: uppercase;
+        letter-spacing: .075em;
         font-feature-settings: 'zero', 'liga', 'case';
+        clear: both;
     }
 
     h3 {
         font-family: $fontSerif;
-        font-size: 1rem;
+        font-size: $sizeKilo;
         font-weight: 600;
-        margin-bottom: .5em;
-        margin-top: lines(1.5);
+        line-height: lines(1);
+        margin-bottom: lines(.5);
+        margin-top: lines(2);
         font-feature-settings: 'smcp';
+    }
+
+    h2, h3 {
+        position: relative;
+        cursor: pointer;
+
+        &:hover:before,
+        &:focus:before,
+        &:target:before {
+            content: '→';
+            position: absolute;
+            right: calc(100% + .5rem);
+            top: 50%;
+            transform: translateY(-45%);
+            font-weight: 100;
+            font-family: $fontGrotesk;
+            font-size: 1rem;
+        }
     }
 
     p {
@@ -34,7 +55,6 @@
             &:hover,
             &:focus {
                 text-decoration: none;
-                xbackground: rgba(red, .075);
                 color: red;
             }
         }
@@ -43,9 +63,109 @@
             font-weight: 600;
         }
 
+        sup[id^="fnref"] {
+            vertical-align: baseline;
+            font-size: 1rem;
+            font-feature-settings: 'sups';
+            padding: 0 .05em 0 .1em;
+            display: inline-block;
+
+            a {
+                text-decoration: none;
+            }
+
+            &:target a {
+                color: red;
+            }
+        }
+
         .lede {
             font-feature-settings: 'smcp';
-            font-weight: 450;
+            font-weight: 500;
+        }
+    }
+
+    .pullout {
+        font-weight: 500;
+        font-size: $sizeKilo;
+        margin: lines(2) 0 !important;
+
+        &:before {
+            $squareSize: .3em;
+            $squareDistance: $squareSize + .1em;
+
+            content: '';
+            color: $colorTextMedium;
+            width: $squareSize;
+            height: $squareSize;
+            transform: translateX(-$squareSize) rotate(45deg);
+            display: block;
+            margin: 0 auto lines(1) auto;
+            background: currentColor;
+            box-shadow: 0 $squareDistance 0 0 currentColor,
+                        $squareDistance 0 0 0 currentColor,
+                        -$squareDistance $squareDistance 0 0 currentColor;
+        }
+    }
+
+    .footnotes {
+        margin-top: lines(3);
+
+        &:before {
+            content: 'Poznámky';
+            display: block;
+            font-family: $fontGrotesk;
+            font-size: $sizeMicro;
+            text-transform: uppercase;
+            letter-spacing: .2em;
+            font-weight: 500;
+            margin-bottom: lines(.75);
+            font-feature-settings: 'smcp';
+        }
+
+        hr {
+            display: none;
+        }
+
+        ol {
+            counter-reset: footnotes;
+            font-size: $sizeMicro;
+        }
+
+        li {
+            display: block;
+            counter-increment: footnotes;
+            position: relative;
+
+            &:not(:last-child) {
+                margin-bottom: lines(.5);
+            }
+
+            &:before {
+                position: absolute;
+                top: 0;
+                right: 100%;
+                content: counter(footnotes) ' · ';
+                color: $colorTextLight;
+                white-space: nowrap;
+                padding-right: .4em;
+            }
+
+            &:target:before {
+                color: red;
+            }
+
+            .footnote-backref {
+                display: inline-block;
+                text-decoration: none;
+                opacity: 0;
+                transform: scaleX(-1) rotate(90deg);
+            }
+
+            &:hover .footnote-backref,
+            &:target .footnote-backref {
+                opacity: 1;
+            }
         }
     }
 }

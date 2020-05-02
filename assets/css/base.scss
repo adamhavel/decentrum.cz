@@ -19,3 +19,8 @@ body {
     padding-bottom: 6vw;
     display: flex;
 }
+
+::selection {
+    color: red;
+    background: yellow;
+}
