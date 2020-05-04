@@ -14,7 +14,8 @@
 
     </header>
 
-    <div class="article__content content">
+    {{ $dropcap := substr (.Content | plainify) 0 1 -}}
+    <div class="article__content content" data-dropcap="{{ $dropcap }}">
         {{ .Content }}
     </div>
 
