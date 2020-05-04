@@ -64,7 +64,7 @@
 
                     &:hover,
                     &:focus {
-                        color: red;
+                        color: $colorHighlight;
                     }
                 }
 
@@ -131,7 +131,7 @@
 
                 &:hover,
                 &:focus {
-                    color: red;
+                    color: $colorHighlight;
 
                     &:before {
                         border-bottom-style: solid;

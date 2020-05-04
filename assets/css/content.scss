@@ -55,7 +55,7 @@
             &:hover,
             &:focus {
                 text-decoration: none;
-                color: red;
+                color: $colorHighlight;
             }
         }
 
@@ -75,7 +75,7 @@
             }
 
             &:target a {
-                color: red;
+                color: $colorHighlight;
             }
         }
 
@@ -152,7 +152,7 @@
             }
 
             &:target:before {
-                color: red;
+                color: $colorHighlight;
             }
 
             .footnote-backref {

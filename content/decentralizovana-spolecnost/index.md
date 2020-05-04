@@ -1,11 +1,17 @@
 ---
 title: "Decentralizovaná společnost"
-summary: "Abychom v tomto světě nejen přežívali, ale i prospívali, je nicméně nutné ovládnout ne jednu, ale několik domén soběstačnosti. Byť nás běžná ekonomická realita nabádá ke specializaci a považuje ji za nejlepší (nejvýhodnější) způsob využití našich schopností, v životě — jak opakovaně zjišťujeme — platí jiná pravidla. Praktická soběstačnost v moderním světě tudíž stojí na čtyřech pilířích. Jsou jimi technologie, finance, praktické dovednosti a zdraví."
 date: 2020-04-01
+summary: "Pokud chceme v tomto světě nejen přežívat, ale i prospívat, musíme ovládnout ne jednu, ale několik oblastí soběstačnosti. Praktická soběstačnost v moderním světě tudíž stojí na čtyřech pilířích. Jsou jimi technologie, finance, praktické dovednosti a zdraví."
 quote:
   source: "Otevřená společnost a její nepřátelé, Karl R. Popper"
   link: "https://www.kosmas.cz/autor/720/karl-r.-popper/"
   content: "Místo toho, abychom se vydávali za proroky, musíme se stát tvůrci svého osudu. Musíme se naučit dělat věci tak dobře, jak to dokážeme, a rozhlížet se po vlastních chybách. A když jsme se vzdali představy, že mocenské dějiny budou naším soudcem, když jsme si přestali dělat starost s tím, zda nám dějiny dají za pravdu nebo ne, pak se nám snad může jednoho dne podařit dostat moc pod kontrolu."
+image: "uzitecnost.jpg"
+tags:
+  - technologie
+  - finance
+  - dovednosti
+  - zdraví
 ---
 
 {{<lede>}}Je dílem náhody a zvláštní ironií{{</lede>}}, že tento text vzniká v době, kdy většinu světa pohlcuje opar pandemie. Zatímco v ostrém světle přímého přenosu obnažuje křehkost naší globální civilizace, nám svojí rychlostí nabízí — nebo spíš vnucuje — příležitost pocítit na vlastní kůži jindy těžko uchopitelnou sílu exponenciálního růstu.
@@ -38,7 +44,7 @@ Zdravé společenství tudíž obsahuje hustou síť závislostí — čím víc
 
 ### Míra decentralizace
 
-Společnost je pak decentralizovaná natolik, nakolik jsou soběstačné menší prvky — rodiny, sousedství, města a podobně — z kterých se skládá. Decentralizace však není absolutní stav, ve smyslu buď—anebo, ale míra. Plně decentralizovaná společnost je proto ideál, který může být vzorem, ne však realitou. Protipólem takové společnosti je totalitní stát. Jeho měřítkem úspěchu je naprostý opak: likvidace všech vazeb, které nezávisí na státu.
+Společnost je pak decentralizovaná natolik, nakolik jsou soběstačné menší prvky — rodiny, sousedství, města a podobně — z kterých se skládá. Decentralizace však není absolutním stavem, ve smyslu buď — anebo, ale mírou. Plně decentralizovaná společnost je proto ideál, který může být vzorem, ne však realitou. Protipólem takové společnosti je totalitní stát. Jeho měřítkem úspěchu je naprostý opak: likvidace všech vazeb, které nezávisí na státu.
 
 {{< figure src="graf4.svg" type="small" >}}
 
@@ -58,7 +64,7 @@ Přiblížíme se tak ideálu společnosti, ve které stát činí jen to, co mu
 
 Zde se rýsuje zdánlivý paradox. Tvrdím, že soběstačnost dává smysl jen na úrovni společenství, zároveň se však odkazuji na zodpovědnost jednotlivců. Aby totiž soběstačné, decentralizované společenství vůbec mohlo vzniknout, nestačí pouhá skupina nezávislých lidí. Nutnou ingrediencí je ona pavučina vztahů, která jedince propojí. Ta se však nezjeví sama od sebe či přáním zeshora. Vztahy vzniknou pouze tehdy, jsou-li si lidé vzájemně užiteční, v nejširším významu toho slova. Pokud si tedy přejeme, aby společnost byla soběstačná, musíme být prvně sami užiteční[^3].
 
-Nehledejme v této užitečnosti nic tajemného. Pokud ostatním nabídneme naše schopnosti, znalosti či prostředky — třeba i za peníze — nebo jim, skrze naší pozornost a péči, věnujeme to nejcennější, tedy náš čas, budeme společnosti prospěšní a tudíž i užiteční. V opačném případě jsme přítěž. Někdo může namítnout, že užiteční jsme přece už jen tím, že existujeme. Že jsme nenahraditelní naší jedinečností. To je sice pravda — nikdo jiný nemá zcela identické geny, natož stejné zkušenosti, dokonce ani jednovaječná dvojčata — nevyplývá z toho však naše užitečnost, nýbrž jen *jedinečný potenciál*. Naším úkolem je ho naplnit a uvést ve skutečnost.
+Nehledejme v užitečnosti žádnou složitost. Společnosti jsme prospěšní a tudíž užiteční, pokud ostatním nabídneme naše schopnosti, znalosti či prostředky nebo pokud jim, skrze naší pozornost a péči, věnujeme to nejcennější, tedy náš čas. V opačném případě jsme přítěž. Někdo může namítnout, že užiteční jsme přece už jen tím, že existujeme. Že jsme nenahraditelní naší jedinečností. To je sice pravda — nikdo jiný nemá zcela identické geny, natož stejné zkušenosti, dokonce ani jednovaječná dvojčata — nevyplývá z toho však naše užitečnost, nýbrž jen *jedinečný potenciál*. Naším úkolem je ho naplnit a uvést ve skutečnost.
 
 {{< figure src="uzitecnost.jpg" type="hero" ratio="0.45" crop="top" >}}
 
@@ -158,7 +164,7 @@ Důležitý je příběh, který kolem krize vzniká. Už teď se vypráví o ud
 
 Společnost, jež z této krize vzejde, proto bude v mnoha ohledech jiná, než jakou ji předpovídal vývoj před vznikem pandemie. Jistě dojde k urychlení některých trendů, které existovaly už předtím. Příkladem je práce z domova. Ta — přestože byla v některých oborech běžná už dříve — se najednou rozrostla na velkou část společnosti a spousta lidí tak poprvé poznalo výhody, kterých se nebudou chtít vzdát. Zjevně dojde i k dlouhodobému poklesu mezinárodní letecké dopravy a turistiky, jež na ní závisí, na úroveň, kterou jsme nezažili dekády.
 
-Tyto předpovědi asi nikoho nepřekvapí. Potýkat se však budeme i s takzvanými dopady druhého (a dalších) řádu. Co způsobí rozmach práce z domova? Nepochybně se dotkne městské dopravy a výstavby. Developeři, kteří byli dosud zvyklí chrlit kancelářské budovy, se dostanou do potíží. S poklesem turismu se zase pojí vzácná příležitost napravit škody, které na městech napáchaly přívaly turistů, a vrátit do jejich historických center skutečný život. Mnohé z těchto změn — pokud se správně využijí — proto mohou decentralizaci společnosti posílit.
+Tyto předpovědi asi nikoho nepřekvapí. Potýkat se však budeme i s takzvanými dopady druhého (a dalších) řádu. Co způsobí rozmach práce z domova? Nepochybně se dotkne městské dopravy a výstavby. Developeři, kteří byli dosud zvyklí chrlit kancelářské budovy, se dostanou do potíží. S poklesem turismu se zase pojí vzácná příležitost napravit škody, které na městech napáchaly přívaly turistů, a vrátit do jejich historických center skutečný život. Pokud se správně využijí, můžou proto mnohé z těchto změn decentralizovanou společnost posílit.
 
 ### Řeka a jezero
 
@@ -174,13 +180,13 @@ Lákavou možností je na globální svět zanevřít. Nepochybně si tak zajist
 
 {{< figure src="reka.jpg" ratio="1.45" type="left" crop="bottom" >}}
 
-Jedině když do řeky vstoupíme však můžeme využít nezměrných výhod, jež divoká voda přináší. Účastnit se a čerpat z globálního víru názorů a hodnot, v jehož středu se křešou myšlenky, které by jinak nemohly vzniknout. Těžit z globální finanční sítě a tvořit produkty, fyzické i digitální, jejichž cílová skupina je rozprostřena po celém světě. Spojit jednotlivce, které jinak dělí fyzická vzdálenost, režimy či jiné bariéry. Najít porozumění, když se nám ho jinde nedostává.
+Jedině když do řeky vstoupíme však můžeme využít nezměrných výhod, jež divoká voda přináší. Účastnit se a čerpat z globálního víru názorů a hodnot, v jehož středu se křešou myšlenky, které by jinak nemohly vzniknout. Těžit z celosvětové finanční sítě a tvořit produkty, fyzické i digitální, jenž cílí do vzdálených koutů planety. Spojit jednotlivce, které jinak dělí fyzická vzdálenost, režimy či jiné bariéry. Najít porozumění, když se nám ho jinde nedostává.
 
 Samozřejmě hrozí, že nás voda strhne a my se octneme bez pevné půdy pod nohama, bez možnosti si oddechnout. Abychom se vyhnuli vyhoření, musíme tudíž neustále považovat přínosy a oběti, a hledat mezi těmito dvěma světy rovnováhu. Ta se v závislosti na okolním světě i nás samotných průběžně mění. Ale přesto, když prcháme z města do přírody, nemáme přece v úmyslu před civilizací utéct navždy. Chceme jen nabrat sil, abychom mohli s čistou hlavou dál využívat výhod, jež města a společnost přináší.
 
 ## Malé skutky
 
-Mým cílem je témata, zde jen nahrubo načrtnutá, postupně vykreslit v jasnějších obrysech a větším detailu. Na otázky, jež si kladu výše, a další, které se nepochybně teprve vyjeví, mám ale sám mnohdy pouze mlhavé odpovědi. Navíc si uvědomuji, že psát veřejně o čemkoliv, natož o takto komplikovaných tématech, vyžaduje značný díl troufalosti i naivity. Přesto chci o soběstačnosti pojednávat. V prvé řadě věřím tomu, že nápady a myšlenky potřebují světlo a čerstvý vzduch, jinak začnou zahnívat, a že není lepšího léku na domýšlivost než pravidelná dávka veřejné kritiky. Samotný proces psaní je tak pro mne jedinečným způsobem, jak se nepřestat učit. Zároveň doufám, že soběstačnost alespoň malým dílem podpořím. A konečně: nevěřím v revoluce, ani v historický úděl. Naopak si myslím, že dějiny tvoří každý z nás svým každodenním jednáním, svými rozhodnutími a tím, že se krok za krokem, skrze úspěchy i selhání, snažíme, abychom byli užitečnější a činili svět lepším místem. K tomu dodám, slovy sice fiktivní, ale moudré ženy, „žádný osud, jen ten který uděláme.”
+Mým cílem je myšlenky, zde jen nahrubo načrtnuté, postupně vykreslit v jasnějších obrysech a větším detailu. Na otázky, jež si kladu výše, a další, které se nepochybně teprve vyjeví, mám ale sám mnohdy pouze mlhavé odpovědi. Navíc si uvědomuji, že psát veřejně o čemkoliv, natož o takto komplikovaných tématech, vyžaduje značný díl troufalosti i naivity. Přesto chci o soběstačnosti pojednávat. V prvé řadě věřím tomu, že nápady a myšlenky potřebují světlo a čerstvý vzduch, jinak začnou zahnívat, a že není lepšího léku na domýšlivost než pravidelná dávka veřejné kritiky. Samotný proces psaní je tak pro mne jedinečným způsobem, jak se nepřestat učit. Stále však platí, že bych se styděl radit cokoliv, co sám nepraktuji. Zároveň doufám, že soběstačnost alespoň malým dílem podpořím. A konečně: nevěřím v revoluce, ani v historický úděl. Naopak si myslím, že dějiny tvoří každý z nás svým každodenním jednáním, svými rozhodnutími a tím, že se krok za krokem, skrze úspěchy i selhání, snažíme, abychom byli užitečnější a činili svět lepším místem. K tomu dodám, slovy sice fiktivní, ale moudré ženy, „žádný osud, jen ten který uděláme.”
 
 {{< figure src="osud.jpg" ratio="0.5" >}}
 
@@ -210,9 +216,9 @@ Mým cílem je témata, zde jen nahrubo načrtnutá, postupně vykreslit v jasn�
 
 [^13]: V kontextu informačních technologií je komprese proces, který zmenší množství dat nutných pro uchování nějaké informace, například hudební nahrávky. Komprese je buď ztrátová, nebo bezztrátová. První případ představuje třeba známý zvukový formát *MP3*, ten druhý pak formát *FLAC*. V obou případech je výsledný soubor menší než původní surová data, ale u ztrátové komprese navíc dojde k *nezvratné* ztrátě některých informací.
 
-[^14]: Epigenetika studuje ty změny v projevech genů, které nevznikají změnami v samotném DNA. Za rozdílných podmínek se tudíž geny mohou projevovat různě.
+[^14]: Ve světě Ghost in the Shell, který proslavila [filmová adaptace](https://www.csfd.cz/film/34300-ghost-in-the-shell/prehled/) (ta animovaná, ne ta hraná), někteří lidé své vědomí, kterému říkají duch, nahrávají do robotických těl.
 
-[^15]: Ve světě Ghost in the Shell, který proslavila [filmová adaptace](https://www.csfd.cz/film/34300-ghost-in-the-shell/prehled/) (ta animovaná, ne ta hraná), někteří lidé své vědomí, kterému říkají duch, nahrávají do robotických těl.
+[^15]: Epigenetika studuje ty změny v projevech genů, které nevznikají změnami v samotném DNA. Za rozdílných podmínek se tudíž geny mohou projevovat různě.
 
 [^16]: Eficience je snahou o zdokonalování procesů z pohledu úspornosti. Efektivita je zdánlivě podobná, ale liší se v tom, že bere v potaz především dosažení vytyčeného cíle a hledí i na jeho dlouhodobou udržitelnost. Oproti eficienci, která je často krátkozraká, se tak dívá dále do budoucnosti.
 

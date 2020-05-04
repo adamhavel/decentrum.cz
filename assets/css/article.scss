@@ -65,7 +65,7 @@
 
                     &:hover,
                     &:focus {
-                        color: red;
+                        color: $colorHighlight;
                     }
                 }
             }
@@ -98,7 +98,7 @@
 
                 &:hover,
                 &:focus {
-                    color: red;
+                    color: $colorHighlight;
                 }
             }
         }
@@ -218,7 +218,7 @@
 
                 &:hover,
                 &:focus {
-                    color: red;
+                    color: $colorHighlight;
 
                     span {
                         text-decoration: none;

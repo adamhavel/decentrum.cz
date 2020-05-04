@@ -21,6 +21,6 @@ body {
 }
 
 ::selection {
-    color: red;
+    color: $colorHighlight;
     background: yellow;
 }

@@ -1,17 +1,37 @@
 <!DOCTYPE html>
 <html lang="cs">
 <head>
+    {{- $title := cond .IsHome .Site.Title (printf "%s · %s" .Title .Site.Title) -}}
+    {{- $description := cond .IsPage .Summary .Site.Params.description -}}
+    {{- $image := cond .IsPage (.Resources.GetMatch (string .Page.Params.image)) (resources.Get "img/image.jpg") }}
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,minimum-scale=1.0" />
     <link rel="preload" href="/fonts/source-serif-variable.woff2" as="font" type="font/woff2" crossorigin />
     <link rel="preload" href="/fonts/source-serif-italic-variable.woff2" as="font" type="font/woff2" crossorigin />
     <link rel="preload" href="/fonts/space-grotesk-variable.ttf" as="font" type="font/ttf" crossorigin />
-    <link rel="alternate" type="application/rss+xml" href="/index.xml" title="decentrum" />
+    <link rel="alternate" type="application/rss+xml" href="{{ .Site.BaseURL }}index.xml" title="decentrum" />
     {{ with resources.Get "css/default.scss" | toCSS | postCSS | minify | resources.Fingerprint "md5" -}}
         <link rel="stylesheet" href="{{ .Permalink }}" integrity="{{ .Data.Integrity }}" />
     {{ end -}}
-    <title>{{ with .Page.Params.title -}}{{ printf "%s — %s" . $.Site.Title }}{{ else }}{{ .Site.Title }}{{ end }}</title>
-    <meta name="description" content="{{ cond .IsNode .Site.Params.description .Summary }}" />
+    <title>{{ $title }}</title>
+    <meta name="description" content="{{ $description }}" />
+    {{ with $image -}}
+        {{ $img := .Fill "1200x1200 q50" -}}
+        {{ $shortTitle := $title | truncate 70 -}}
+        {{ $shortDesc := $description | truncate 200 -}}
+        <meta property="og:title" content="{{ $shortTitle }}" />
+        <meta property="og:description" content="{{ $shortDesc }}" />
+        <meta property="og:image" content="{{ $img.Permalink }}" />
+        <meta property="og:site_name" content="{{ $.Site.BaseURL }}" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="{{ $.Permalink }}" />
+        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:site" content="{{ $.Site.BaseURL }}" />
+        <meta name="twitter:creator" content="@de_centrum" />
+        <meta name="twitter:title" content="{{ $shortTitle }}" />
+        <meta name="twitter:description" content="{{ $shortDesc }}" />
+        <meta name="twitter:image" content="{{ $img.Permalink }}" />
+    {{- end }}
 </head>
 <body>
 

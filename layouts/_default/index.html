@@ -1,3 +1,38 @@
 {{ define "main" }}
+{{ with .GetPage "/decentralizovana-spolecnost" }}
+<article class="article">
 
+    <header class="article__header">
+        <h1>{{ .Title }}</h1>
+        <time>{{ .Date.Format "2<span>·</span>1<span>·</span>2006" | safeHTML }}</time>
+
+        {{ with .Params.quote }}
+            <blockquote>
+                <p>{{ .content }}</p>
+                <cite><a href="{{ .link }}">{{ .source }}</a></cite>
+            </blockquote>
+        {{ end }}
+
+    </header>
+
+    <div class="article__content content">
+        {{ .Content }}
+    </div>
+
+    <footer class="article__footer">
+
+        <ul class="article__nav">
+            {{ with .PrevInSection }}
+                <li><a href="{{ .Permalink }}" rel="prev"><span>{{ .Title }}</span></a></li>
+            {{ end }}
+            <li><a href="#" rel="top"><span>Nahoru</span></a></li>
+            {{ with .NextInSection }}
+                <li><a href="{{ .Permalink }}" rel="next"><span>{{ .Title }}</span></a></li>
+            {{ end }}
+        </ul>
+
+    </footer>
+
+</article>
+{{ end }}
 {{ end }}
