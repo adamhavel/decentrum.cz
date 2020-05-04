@@ -23,5 +23,5 @@ body {
 
 ::selection {
     color: $colorHighlight;
-    background: yellow;
+    background: rgba($colorHighlight, .05);
 }
