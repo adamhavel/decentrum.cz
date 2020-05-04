@@ -144,6 +144,15 @@
             img {
                 width: 100%;
                 display: block;
+
+                .js & {
+                    opacity: 0;
+                    transition: opacity .5s;
+
+                    &.is-loaded {
+                        opacity: 1;
+                    }
+                }
             }
         }
 

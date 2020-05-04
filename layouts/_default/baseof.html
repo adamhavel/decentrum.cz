@@ -79,5 +79,14 @@
 
     </footer>
 
+    <script type="module">
+        document.documentElement.classList.add('js');
+
+        document.querySelectorAll('.site-content img').forEach(imgEl => {
+            function setClass() { imgEl.classList.add('is-loaded') };
+
+            imgEl.complete ? setClass() : imgEl.addEventListener('load', setClass);
+        });
+    </script>
 </body>
 </html>
