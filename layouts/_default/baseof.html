@@ -11,7 +11,7 @@
     <link rel="preload" href="/fonts/space-grotesk-variable.ttf" as="font" type="font/ttf" crossorigin />
     <link rel="alternate" type="application/rss+xml" href="{{ .Site.BaseURL }}index.xml" title="decentrum" />
     {{ with resources.Get "css/default.scss" | toCSS | postCSS | minify | resources.Fingerprint "md5" -}}
-        <link rel="stylesheet" href="{{ .Permalink }}" integrity="{{ .Data.Integrity }}" />
+        <link rel="stylesheet" href="{{ .Permalink }}" />
     {{ end -}}
     <title>{{ $title }}</title>
     <meta name="description" content="{{ $description }}" />
