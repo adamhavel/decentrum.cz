@@ -10,7 +10,6 @@
             font-family: $fontGrotesk;
             color: $colorTextMedium;
             letter-spacing: .075em;
-            font-weight: 400;
             font-size: $sizeNano;
             margin: .25em 0 .375em;
             align-items: center;
@@ -36,7 +35,7 @@
             font-family: $fontGrotesk;
             line-height: 1.2;
             font-size: $sizeGiga;
-            font-weight: 600;
+            font-variation-settings: 'wght' 600;
             font-feature-settings: 'zero', 'liga', 'case';
             margin-right: 5rem;
         }
@@ -70,53 +69,28 @@
                 }
             }
         }
-
-        ul {
-            display: flex;
-            display: none;
-            flex-wrap: wrap;
-            xfont-style: italic;
-            color: $colorTextLight;
-            font-size: $sizeNano;
-            line-height: 1.5;
-            margin-right: 6rem;
-            margin-left: -1em;
-        }
-
-        li {
-            display: flex;
-
-            &:before {
-                content: '·';
-                width: 1em;
-                text-align: center;
-            }
-
-            a {
-                color: inherit;
-                text-decoration: none;
-
-                &:hover,
-                &:focus {
-                    color: $colorHighlight;
-                }
-            }
-        }
     }
 
     .article__content {
 
         > p:first-child:first-letter {
             float: left;
+            display: inline-block;
             font-size: 7.12rem;
-            font-weight: 350;
+            font-variation-settings: 'wght' 350;
             margin-right: .05em;
             margin-top: .0675em;
+            line-height: 0.875;
+            background: red;
         }
     }
 
         .article__figure {
             margin: lines(1.5) 0;
+
+            &--bitmap {
+                background: rgba(black, .05);
+            }
 
             &--left,
             &--right,

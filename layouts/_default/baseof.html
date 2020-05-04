@@ -56,19 +56,12 @@
             </div>
             <div class="site-header__tile">
                 <ul class="site-header__links">
-                    <li><a href="/index.xml">RSS</a></li>
-                    <li><a href="https://decentrum.substack.com">Newsletter</a></li>
+                    <li><a href="{{ .Site.BaseURL }}index.xml">RSS</a></li>
                     <li><a href="mailto:info@decentrum.cz">E-mail</a></li>
                     <li><a href="https://twitter.com/de_centrum">Twitter</a></li>
                 </ul>
             </div>
         </nav>
-
-        <section class="site-disclaimer content">
-            <h3>Upozornění</h3>
-            <p>Nejsme lékaři, ani finanční poradci. Veškeré zde uvedené informace a tipy představují náš osobní názor a neslouží jako konkrétní investiční nebo lékařské doporučení. Rozhodnutí se jimi řídit ponecháváme vaší zodpovědnosti a zdravému rozumu.</p>
-            <p>V případě některých odkazů používáme <em><a href="https://cs.wikipedia.org/wiki/Affiliate_marketing">affiliate marketing</a></em>. Pokud při návštěvě odkazovaného webu koupíte produkt či službu, obdržíme pár procent z prodejní ceny. Jde o jeden z mála rozumných způsobů, jak finančně podpořit provoz webu, narozdíl od reklam či prodeje uživatelských dat. Všechny produkty či služby, na které tímto způsobem odkazujeme, buď sami používáme nebo bychom je s čistým svědomím doporučili nejbližším.</p>
-        </section>
 
     </header>
 
@@ -76,7 +69,15 @@
         {{ block "main" . }}{{ end }}
     </main>
 
-    <footer class="site-footer"></footer>
+    <footer class="site-footer">
+
+        <section class="site-disclaimer content">
+            <h3>Upozornění</h3>
+            <p>Nejsme lékaři, ani finanční poradci. Veškeré zde uvedené informace a tipy představují náš osobní názor a neslouží jako konkrétní investiční nebo lékařské doporučení. Rozhodnutí se jimi řídit ponecháváme vaší zodpovědnosti a zdravému rozumu.</p>
+            <p>V případě některých odkazů používáme <em><a href="https://cs.wikipedia.org/wiki/Affiliate_marketing">affiliate marketing</a></em>. Pokud při návštěvě odkazovaného webu koupíte produkt či službu, obdržíme pár procent z prodejní ceny. Jde o jeden z mála rozumných způsobů, jak finančně podpořit provoz webu, narozdíl od reklam či prodeje uživatelských dat. Všechny produkty či služby, na které tímto způsobem odkazujeme, buď sami používáme nebo bychom je s čistým svědomím doporučili nejbližším.</p>
+        </section>
+
+    </footer>
 
 </body>
 </html>

@@ -2,23 +2,25 @@
 {{ $crop := (default "smart" (.Get "crop")) }}
 {{ $ratio := float (default 0.5625 (.Get "ratio")) }}
 
-{{ $width := 1520 }}
+{{ $width := 760 }}
 {{ if (eq $type "hero") }}
-	{{ $width = 2128 }}
+	{{ $width = 1064 }}
 {{ else if (or (eq $type "left") (eq $type "right")) }}
-	{{ $width = 760 }}
+	{{ $width = 380 }}
 {{ end }}
 {{ $height := int (mul $ratio $width) }}
 
 {{ $image := .Page.Resources.GetMatch (.Get "src") }}
-{{ if (ne $image.MediaType.SubType "svg") }}
-    {{ $image = $image.Fill (printf "%vx%v q70 %v" $width $height $crop) }}
+{{ $isBitmap := (ne $image.MediaType.SubType "svg")}}
+{{ if $isBitmap }}
+    {{ $image = $image.Fill (printf "%vx%v q70 %v" (mul $width 2) (mul $height 2) $crop) }}
     {{ with $.Get "sepia" }}
-    	{{ $image = $image.Filter (images.Sepia .) }}
+        {{ $image = $image.Filter (images.Sepia .) }}
     {{ end }}
 {{ else }}
 	{{ $image = $image | resources.Minify }}
 {{ end }}
-<figure class="article__figure article__figure--{{ with $type }}{{.}}{{ end }}">
-    <img loading="lazy" src="{{ $image.Permalink }}" {{ with $.Get "alt" }}alt="{{.}}"{{ else }}role="presentation"{{ end }} />
+
+<figure class="article__figure {{ if $isBitmap }}article__figure--bitmap{{ end }} article__figure--{{ with $type }}{{.}}{{ end }}">
+    <img width="{{ $width }}" {{ if $isBitmap }}height="{{ $height }}"{{ end }} loading="lazy" src="{{ $image.Permalink }}" {{ with $.Get "alt" }}alt="{{.}}"{{ else }}role="presentation"{{ end }} />
 </figure>
