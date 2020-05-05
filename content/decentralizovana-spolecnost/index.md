@@ -14,7 +14,7 @@ tags:
   - zdraví
 ---
 
-{{<lede>}}He dílem náhody a zvláštní ironií{{</lede>}}, že tento text vzniká v době, kdy většinu světa pohlcuje opar pandemie. Zatímco v ostrém světle přímého přenosu obnažuje křehkost naší globální civilizace, nám svojí rychlostí nabízí — nebo spíš vnucuje — příležitost pocítit na vlastní kůži jindy těžko uchopitelnou sílu exponenciálního růstu.
+{{<lede>}}Je dílem náhody a zvláštní ironií{{</lede>}}, že tento text vzniká v době, kdy většinu světa pohlcuje opar pandemie. Zatímco v ostrém světle přímého přenosu obnažuje křehkost naší globální civilizace, nám svojí rychlostí nabízí — nebo spíš vnucuje — příležitost pocítit na vlastní kůži jindy těžko uchopitelnou sílu exponenciálního růstu.
 
 O koronaviru se mluví jako o *černé labuti*, nepředvídatelné události obrovského dopadu, termínu zpopularizovaném [knihou stejného jména](https://www.kosmas.cz/knihy/162293/cerna-labut/) od Nassima Taleba. To je však nebezpečná mýlka, která svádí k myšlence, že na podobné situace se nelze předem připravit. Peří téhle labutě ovšem nemůže být bělejší. Přestože není v našich silách předpovědět *kdy* k podobné situaci dojde, dokážeme posoudit *jestli* může nastat. Pokud se dobereme závěru, že ano, musí se společnost změnit tak, abychom událost vyloučili nebo ji alespoň učinili méně pravděpodobnou. K tomu nedošlo. Proto se teď potýkáme s následky viru, který se vlivem nadmíru globalizovaného světa proměnil z lokálního problému v pandemii.
 
