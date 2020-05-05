@@ -5,6 +5,10 @@
         margin-top: -.2rem;
         overflow: hidden;
 
+        @media (max-width: $screenSmall) {
+            margin-bottom: lines(1.5);
+        }
+
         time {
             display: flex;
             font-family: $fontGrotesk;
@@ -34,15 +38,24 @@
         h1 {
             font-family: $fontGrotesk;
             line-height: 1.2;
-            font-size: $sizeGiga;
+            font-size: $sizePeta;
             font-variation-settings: 'wght' 600;
             font-feature-settings: 'zero', 'liga', 'case';
             margin-right: 5rem;
+
+            @media (max-width: $screenSmall) {
+                font-size: $sizeGiga;
+            }
         }
 
         blockquote {
             margin-top: lines(.75);
             width: 80%;
+
+            @media (max-width: $screenSmall) {
+                width: auto;
+                margin-top: lines(.5);
+            }
 
             p {
                 font-style: italic;
@@ -85,6 +98,10 @@
             margin-right: .05em;
             margin-top: .0675em;
             line-height: 0.65;
+
+            @media (max-width: $screenTiny) {
+                font-size: 6.75rem;
+            }
         }
 
         &[data-dropcap="J"]:before {
@@ -99,19 +116,22 @@
                 background: rgba(black, .05);
             }
 
-            &--left,
-            &--right,
-            &--small-right,
-            &--small-left {
-                margin-top: .25em;
-                margin-bottom: 1.5em;
-            }
-
             &--right {
                 width: 50%;
                 float: right;
                 margin-right: -25%;
                 margin-left: 3em;
+
+                @media (max-width: $screenLarge) {
+                    margin-right: 0;
+                    width: 40%;
+                    margin-left: 2em;
+                }
+
+                @media (max-width: $screenMedium) {
+                    margin-right: -6vw;
+                    margin-left: 1em;
+                }
             }
 
             &--left {
@@ -119,6 +139,12 @@
                 width: 50%;
                 margin-right: 2em;
                 margin-left: -25%;
+
+                @media (max-width: $screenMedium) {
+                    width: 40%;
+                    margin-left: -6vw;
+                    margin-right: 1em;
+                }
             }
 
             &--small-right {
@@ -135,15 +161,55 @@
 
             &--hero {
                 margin: lines(1.5) -20%;
+
+                @media (max-width: $screenLarge) {
+                    margin-right: 0;
+                    margin-left: -40%;
+                }
+
+                @media (max-width: $screenMedium) {
+                    margin: lines(1) -6vw;
+                }
             }
 
             &--small {
                 margin: lines(1.5) 20%;
             }
 
+            &--left,
+            &--right,
+            &--small-right,
+            &--small-left {
+                margin-top: .25em;
+                margin-bottom: 1.5em;
+
+                @media (max-width: $screenMedium) {
+                    margin-bottom: 1em;
+                }
+
+                @media (max-width: $screenSmall) {
+                    float: none;
+                    width: auto;
+                }
+            }
+
+            &--small-left,
+            &--small-right,
+            &--small {
+
+                @media (max-width: $screenSmall) {
+                    width: 80%;
+                }
+            }
+
+            @media (max-width: $screenSmall) {
+                margin: lines(1) auto !important;
+            }
+
             img {
                 width: 100%;
                 display: block;
+                object-fit: cover;
 
                 .js & {
                     opacity: 0;
@@ -161,6 +227,14 @@
         border: solid rgba(black, .1);
         border-width: 1px 0;
         padding: lines(1) 0;
+
+        @media (max-width: $screenSmall) {
+            margin-top: lines(2);
+        }
+
+        @media (max-width: $screenTiny) {
+            margin-top: lines(1);
+        }
     }
 
         .article__nav {

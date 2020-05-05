@@ -13,12 +13,26 @@ html {
     line-height: $baseLineHeight;
     font-size: $baseFontSize;
     font-variation-settings: 'wght' 375;
+
+    @media (max-width: $screenTiny) {
+        line-height: $smallLineHeight;
+        font-size: $smallFontSize;
+    }
 }
 
 body {
     padding: 3vw;
     padding-bottom: 6vw;
     display: flex;
+
+    @media (max-width: $screenMedium) {
+        display: block;
+        padding-top: 6vw;
+    }
+
+    @media (max-width: $screenSmall) {
+        padding: 5vw;
+    }
 }
 
 ::selection {

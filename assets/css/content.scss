@@ -11,6 +11,11 @@
         letter-spacing: .075em;
         font-feature-settings: 'zero', 'liga', 'case';
         clear: both;
+
+        @media (max-width: $screenSmall) {
+            margin-top: lines(2);
+            margin-bottom: lines(.5);
+        }
     }
 
     h3 {
@@ -22,6 +27,11 @@
         margin-top: lines(2);
         font-feature-settings: 'smcp';
         clear: both;
+
+        @media (max-width: $screenSmall) {
+            margin-top: lines(1);
+            margin-bottom: lines(.25);
+        }
     }
 
     h2, h3 {
@@ -107,10 +117,18 @@
                         $squareDistance 0 0 0 currentColor,
                         -$squareDistance $squareDistance 0 0 currentColor;
         }
+
+        @media (max-width: $screenSmall) {
+            margin: lines(1.5) 0 !important;
+        }
     }
 
     .footnotes {
         margin-top: lines(3);
+
+        @media (max-width: $screenSmall) {
+            margin-top: lines(2);
+        }
 
         &:before {
             content: 'Poznámky';
@@ -131,6 +149,10 @@
         ol {
             counter-reset: footnotes;
             font-size: $sizeMicro;
+
+            @media (max-width: $screenSmall) {
+                margin-left: 3em;
+            }
         }
 
         li {

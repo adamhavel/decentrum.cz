@@ -9,6 +9,8 @@ $colorHighlight: red;
 
 $baseFontSize: 1.25em;
 $baseLineHeight: 1.4;
+$smallFontSize: 1.125em;
+$smallLineHeight: 1.333;
 
 @function lines($count) {
     @return $count * $baseLineHeight * 1rem;
@@ -19,6 +21,12 @@ $sizeMicro: .8rem;
 $sizeMilli: .9rem;
 $sizeKilo: 1.125rem;
 $sizeMega: 1.25rem;
-$sizeGiga: 2rem;
+$sizeGiga: 1.5rem;
+$sizePeta: 2rem;
 
 $siteContentLength: 38em;
+
+$screenLarge: $siteContentLength * 2.25;
+$screenMedium: $siteContentLength * 1.75;
+$screenSmall: $siteContentLength * 1.25;
+$screenTiny: $siteContentLength * .725;

@@ -40,7 +40,9 @@
         <nav class="site-header__nav">
             <div class="site-header__tile">
                 <h1 class="site-header__title"><a href="/">de<span aria-hidden="true">·</span>centrum</a></h1>
-                <p class="site-header__desc">praktická<br>soběstačnost<br>v komplexním světě</p>
+                <p class="site-header__desc">praktická
+soběstačnost
+v komplexním světě</p>
             </div>
             <div class="site-header__tile">
                 <a href="" title=""><img role="presentation" src="/img/tile-skills.jpg"></a>
@@ -79,30 +81,10 @@
 
     </footer>
 
-    <script type="module">
-        document.documentElement.classList.add('js');
-
-        document.querySelectorAll('.site-content img').forEach(imgEl => {
-            function setClass() {
-                imgEl.classList.add('is-loaded');
-                imgEl.removeEventListener('load', setClass);
-            };
-
-            imgEl.complete ? setClass() : imgEl.addEventListener('load', setClass);
-        });
-
-        window.addEventListener('hashchange', function scrollToHash(ev) {
-            let el = document.querySelector(`[id='${window.location.hash.substr(1)}']`);
-
-            if (el) {
-                ev.preventDefault();
-                el.scrollIntoView({
-                    behavior: 'smooth',
-                    block: 'center',
-                    inline: 'nearest'
-                });
-            }
-        });
-    </script>
+    {{ with resources.Get "js/script.js" | minify -}}
+        <script type="module">
+            {{ .Content | safeJS }}
+        </script>
+    {{ end -}}
 </body>
 </html>

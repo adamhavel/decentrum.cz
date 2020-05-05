@@ -1,14 +1,42 @@
 .site-header {
     width: 15em;
     margin-right: 6vw;
-    display: flex;
-    flex-direction: column;
+    flex-shrink: 0;
+
+    @media (max-width: $screenMedium) {
+        width: auto;
+        margin: 0 6vw 6vw 6vw;
+    }
+
+    @media (max-width: $screenSmall) {
+        margin: 0 0 lines(2) 0;
+    }
+
+    @media (max-width: $screenTiny) {
+        margin-bottom: lines(1.5);
+    }
 }
 
     .site-header__nav {
         display: grid;
         grid-gap: .6em;
         grid-template-columns: repeat(2, 1fr);
+
+        @media (max-width: $screenMedium) {
+            grid-template-columns: repeat(4, 1fr);
+            grid-gap: 1vw;
+        }
+
+        @media (max-width: $screenSmall) {
+            grid-gap: 1.5vw;
+            grid-template-columns: repeat(3, 1fr);
+            max-width: 24em;
+        }
+
+        @media (max-width: $screenTiny) {
+            grid-template-columns: repeat(2, 1fr);
+            grid-gap: 3vw;
+        }
     }
 
         .site-header__tile {
@@ -17,13 +45,26 @@
                 font-family: $fontGrotesk;
                 line-height: 1.25;
                 margin-top: -.125em;
-                display: flex;
-                flex-direction: column;
             }
 
+            &:last-child {}
+
+            &:first-child,
             &:last-child {
                 display: flex;
                 flex-direction: column;
+
+                @media (max-width: $screenTiny), (max-width: $screenMedium) and (min-width: $screenSmall) {
+                    grid-column: 1 / span 4;
+                    flex-direction: row;
+                    margin-top: 0;
+                    justify-content: space-between;
+                    align-items: flex-end;
+                }
+
+                @media (max-width: $screenTiny) {
+                    grid-column: 1 / span 2;
+                }
             }
 
             &:not(:first-child):not(:last-child) {
@@ -103,6 +144,15 @@
                 color: $colorTextLight;
                 text-align: right;
                 font-size: $sizeNano;
+                white-space: pre;
+
+                @media (max-width: $screenMedium) and (min-width: $screenSmall) {
+                    white-space: normal;
+                }
+
+                @media (max-width: $screenTiny) {
+                    display: none;
+                }
             }
 
         .site-header__links {
@@ -110,14 +160,34 @@
             font-size: $sizeNano;
             margin-top: auto;
             margin-bottom: -.25em;
-            justify-content: space-between;
             text-align: right;
+
+            @media (max-width: $screenTiny), (max-width: $screenMedium) and (min-width: $screenSmall) {
+                display: flex;
+                margin: .25em 0 0 0;
+            }
+
+            @media (max-width: $screenTiny) {
+                font-size: $sizeMicro;
+                margin-left: auto;
+            }
 
             li {
                 display: block;
 
                 &:not(:last-child) {
                     margin-bottom: .5em;
+                }
+
+                @media (max-width: $screenTiny), (max-width: $screenMedium) and (min-width: $screenSmall) {
+                    margin-bottom: 0 !important;
+                    display: flex;
+                    align-items: center;
+
+                    &:not(:first-child):before {
+                        content: '·';
+                        padding: 0 .5em;
+                    }
                 }
             }
 
@@ -143,6 +213,14 @@
 
                     &:before {
                         border-bottom-style: solid;
+                    }
+                }
+
+                @media (max-width: $screenTiny), (max-width: $screenMedium) and (min-width: $screenSmall) {
+                    display: block;
+
+                    &:before {
+                        display: none;
                     }
                 }
             }

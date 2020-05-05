@@ -24,14 +24,9 @@
         {{ $image = $image.Filter (images.Sepia .) }}
     {{ end }}
 {{ else }}
-    {{ $viewbox := split (index (findRE $viewboxRegex $image.Content 1) 0) " " }}
-    {{ $vectorWidth := float (index $viewbox 2) }}
-    {{ $vectorHeight := float (index $viewbox 3) }}
-    {{ $vectorRatio := div $vectorHeight $vectorWidth }}
-    {{ $height = int (mul $vectorRatio $width) }}
 	{{ $image = $image | resources.Minify }}
 {{ end }}
 
 <figure class="article__figure {{ if $isBitmap }}article__figure--bitmap{{ end }} article__figure--{{ with $type }}{{.}}{{ end }}">
-    <img width="{{ $width }}" height="{{ $height }}" loading="lazy" src="{{ $image.Permalink }}" {{ with $.Get "alt" }}alt="{{.}}"{{ else }}role="presentation"{{ end }} />
+    <img loading="lazy" src="{{ $image.Permalink }}" {{ with $.Get "alt" }}alt="{{.}}"{{ else }}role="presentation"{{ end }} />
 </figure>
