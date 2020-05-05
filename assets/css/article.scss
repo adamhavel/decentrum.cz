@@ -3,7 +3,6 @@
     .article__header {
         margin-bottom: lines(2.5);
         margin-top: -.2rem;
-        overflow: hidden;
 
         @media (max-width: $screenSmall) {
             margin-bottom: lines(1.5);
@@ -60,8 +59,18 @@
             p {
                 font-style: italic;
                 font-size: $sizeMilli;
-                margin-bottom: .25em;
+                margin-bottom: lines(.5);
                 color: $colorTextMedium;
+
+                &:before {
+                    content: '„';
+                    color: $colorTextLight;
+                }
+
+                &:after {
+                    content: '”';
+                    color: $colorTextLight;
+                }
             }
 
             cite {
@@ -70,6 +79,7 @@
                 font-size: $sizeNano;
                 letter-spacing: .025em;
                 color: $colorTextLight;
+                display: block;
 
                 a {
                     color: inherit;
