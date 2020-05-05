@@ -83,7 +83,10 @@
         document.documentElement.classList.add('js');
 
         document.querySelectorAll('.site-content img').forEach(imgEl => {
-            function setClass() { imgEl.classList.add('is-loaded') };
+            function setClass() {
+                imgEl.classList.add('is-loaded');
+                imgEl.removeEventListener('load', setClass);
+            };
 
             imgEl.complete ? setClass() : imgEl.addEventListener('load', setClass);
         });
