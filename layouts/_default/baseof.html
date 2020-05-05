@@ -16,7 +16,7 @@
     <title>{{ $title }}</title>
     <meta name="description" content="{{ $description }}" />
     {{ with $image -}}
-        {{ $img := .Fill "1200x1200 q50" -}}
+        {{ $img := .Fill "1200x628 q70" -}}
         {{ $shortTitle := $title | truncate 70 -}}
         {{ $shortDesc := $description | truncate 200 -}}
         <meta property="og:title" content="{{ $shortTitle }}" />
@@ -25,8 +25,8 @@
         <meta property="og:site_name" content="{{ $.Site.BaseURL }}" />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="{{ $.Permalink }}" />
-        <meta name="twitter:card" content="summary" />
-        <meta name="twitter:site" content="{{ $.Site.BaseURL }}" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:site" content="@de_centrum" />
         <meta name="twitter:creator" content="@de_centrum" />
         <meta name="twitter:title" content="{{ $shortTitle }}" />
         <meta name="twitter:description" content="{{ $shortDesc }}" />
