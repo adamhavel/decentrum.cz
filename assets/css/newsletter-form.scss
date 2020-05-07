@@ -1,6 +1,10 @@
 .newsletter-form {
     display: flex;
 
+    @media (max-width: $screenSmall) {
+        flex-direction: column;
+    }
+
     input {
         flex-grow: 1;
         font-family: $fontGrotesk;
@@ -34,6 +38,7 @@
         font-family: $fontGrotesk;
         font-size: $sizeMicro;
         letter-spacing: .1em;
+        padding: 1em;
         text-transform: uppercase;
         font-variation-settings: 'wght' 600;
         margin-left: 2em;
@@ -43,6 +48,11 @@
         &:hover,
         &:focus {
             color: red;
+        }
+
+        @media (max-width: $screenSmall) {
+            margin-left: auto;
+            padding-right: 0;
         }
     }
 }
