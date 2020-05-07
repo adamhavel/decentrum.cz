@@ -143,7 +143,7 @@
                 font-variation-settings: 'wght' 375;
                 color: $colorTextLight;
                 text-align: right;
-                font-size: $sizeNano;
+                font-size: $sizePico;
                 white-space: pre;
 
                 @media (max-width: $screenMedium) and (min-width: $screenSmall) {

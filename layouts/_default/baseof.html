@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="cs">
 <head>
-    {{- $title := cond .IsHome .Site.Title (printf "%s · %s" .Title .Site.Title) -}}
+    {{- $title := cond .IsHome .Site.Title (printf "%s — %s" .Title .Site.Title) -}}
     {{- $description := cond .IsPage .Summary .Site.Params.description -}}
     {{- $image := cond .IsPage (.Resources.GetMatch (string .Page.Params.image)) (resources.Get "img/image.jpg") }}
     <meta charset="utf-8" />
