@@ -1,0 +1,48 @@
+.newsletter-form {
+    display: flex;
+
+    input {
+        flex-grow: 1;
+        font-family: $fontGrotesk;
+        letter-spacing: .175em;
+        font-size: $sizeMilli;
+        padding: 1.25em;
+        border: 1px solid rgba(black, .1);
+        font-variation-settings: 'wght' 300;
+        line-height: 1;
+        color: $colorTextMedium;
+        background: white;
+
+        &[name="beehive"] {
+            display: none;
+        }
+
+        &:invalid,
+        &:focus {
+            xoutline: none !important;
+            xborder: 0 !important;
+        }
+
+        &:invalid + button {
+            opacity: .25;
+            color: inherit;
+            cursor: default;
+        }
+    }
+
+    button {
+        font-family: $fontGrotesk;
+        font-size: $sizeMicro;
+        letter-spacing: .1em;
+        text-transform: uppercase;
+        font-variation-settings: 'wght' 600;
+        margin-left: 2em;
+        cursor: pointer;
+        background: none;
+
+        &:hover,
+        &:focus {
+            color: red;
+        }
+    }
+}

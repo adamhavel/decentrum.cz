@@ -26,8 +26,8 @@
         <meta property="og:type" content="website" />
         <meta property="og:url" content="{{ $.Permalink }}" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:site" content="@decentrumcz" />
-        <meta name="twitter:creator" content="@decentrumcz" />
+        <meta name="twitter:site" content="{{ $.Site.Params.twitterHandle }}" />
+        <meta name="twitter:creator" content="{{ $.Site.Params.twitterHandle }}" />
         <meta name="twitter:title" content="{{ $shortTitle }}" />
         <meta name="twitter:description" content="{{ $shortDesc }}" />
         <meta name="twitter:image" content="{{ $img.Permalink }}" />
@@ -59,8 +59,9 @@ v komplexním světě</p>
             <div class="site-header__tile">
                 <ul class="site-header__links">
                     <li><a href="{{ .Site.BaseURL }}index.xml">RSS</a></li>
-                    <li><a href="mailto:info@decentrum.cz">E-mail</a></li>
-                    <li><a href="https://twitter.com/decentrumcz">Twitter</a></li>
+                    <li><a href="mailto:{{ .Site.Params.email }}">E-mail</a></li>
+                    <li><a href="{{ .Site.Params.twitterUrl }}">Twitter</a></li>
+                    <li><a href="{{ ref . "newsletter" }}">Newsletter</a></li>
                 </ul>
             </div>
         </nav>
