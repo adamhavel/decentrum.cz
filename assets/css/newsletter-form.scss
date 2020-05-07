@@ -21,12 +21,6 @@
             display: none;
         }
 
-        &:invalid,
-        &:focus {
-            xoutline: none !important;
-            xborder: 0 !important;
-        }
-
         &:invalid + button {
             opacity: .25;
             color: inherit;

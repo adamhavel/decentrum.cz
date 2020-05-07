@@ -22,7 +22,7 @@ Stavu nijak nepomáhá neschopné a zkorumpované vedení Světové zdravotnick�
 
 ## Mýtus soběstačnosti
 
-{{< figure src="img/sobestacnost.jpg" type="hero" ratio="0.5" crop="top" sepia="10" >}}
+{{< figure src="img/sobestacnost.jpg" type="hero" ratio="0.5" crop="top" >}}
 
 Kolem pojmu soběstačnosti nicméně panuje řada mýtů a nedorozumění. Většina si nejspíš představí osamělé stavení uprostřed lesů, uzavřenou komunitu, ne-li rovnou jednotlivce živořícího na hraně přežití. Někoho možná napadne Henry David Thoreau a jeho [Walden](https://www.kosmas.cz/knihy/252636/walden-aneb-zivot-v-lesich/). Navzdory romantickým představám ale platí, že nám přirozenost velí tvořit společenství, a jen skuteční sociopaté mohou žít bez jiných a nestrádat. Ostatně, Thoreau ve svém příbytku na okraji lesa hostil časté návštěvy a špinavé prádlo mu chodila prát vlastní matka.
  
@@ -50,7 +50,7 @@ Společnost je pak decentralizovaná natolik, nakolik jsou soběstačné tyto me
 
 Nikdo to nepopsal lépe než George Orwell v románu [1984](https://www.kosmas.cz/knihy/202933/devatenact-set-osmdesat-ctyri/). V jeho drtivé vizi jsou to děti, které s tupou hrdostí donášejí na své rodiče, s plným vědomím, že tak otevírají dveře smrti, ne-li něčemu horšímu. Nakonec se zdá, že jak Orwell, tak Aldous Huxley, autor dalšího dystopického románu, [Konec civilizace](https://www.kosmas.cz/knihy/155529/konec-civilizace/), měli oba svůj díl pravdy. Na cestě do otroctví se totiž jejich vize potkávají. Orwellův vševědoucí stát nabývá skutečných kontur v Číně, permanentní válku zde však nahrazuje *soma*[^2] rostoucího bohatství.
 
-{{< figure src="img/totalita.jpg" >}}
+{{< figure src="img/totalita.jpg" crop="right" >}}
 
 My v takovém světě ještě nežijeme, ale přesto: roli státu je třeba neustále hodnotit a zvažovat. Právě v dobách krize se stávající struktury (onen graf) zhurta mění a ne nutně k lepšímu. Může se stát, že v případě této krize (ze které Čína možná vyjde posílena, i kdyby jen relativně ke zbytku světa) bude čínský model totalitního kapitalismu brán za vzor hodný následování. Právě v takový moment nesmíme zapomínat, že v každé společnosti dřímají tendence k fašismu.
 
@@ -64,7 +64,7 @@ Přiblížíme se tak ideálu společnosti, ve které stát činí jen to, co mu
 
 Zde se rýsuje zdánlivý paradox. Tvrdím, že soběstačnost dává smysl jen na úrovni společenství, zároveň se však odkazuji na zodpovědnost jednotlivců. Aby totiž soběstačné, decentralizované společenství vůbec mohlo vzniknout, nestačí pouhá skupina nezávislých lidí. Nutnou ingrediencí je ona pavučina vztahů, která jedince propojí. Ta se však nezjeví sama od sebe či přáním zeshora. Vztahy vzniknou pouze tehdy, jsou-li si lidé vzájemně užiteční, v nejširším významu toho slova. Pokud si tedy přejeme, aby společnost byla soběstačná, musíme být prvně sami užiteční[^3].
 
-Nehledejme však v užitečnosti zbytečnou složitost. Společnosti jsme prospěšní (a tudíž užiteční) tehdy, když jí nabídneme naše schopnosti, znalosti či prostředky; pokud lidem, skrze naší pozornost a péči, věnujeme to nejcennější, tedy náš čas. V opačném případě jsme přítěž. Někdo může namítnout, že užiteční jsme přece už jen tím, že existujeme. Že jsme nenahraditelní naší jedinečností. To je sice pravda — nikdo jiný nemá zcela identické geny, natož stejné zkušenosti, dokonce ani jednovaječná dvojčata. Nevyplývá z toho však naše užitečnost, nýbrž jen *jedinečný potenciál*. Naším úkolem je ho naplnit a uvést ve skutečnost.
+Nehledejme však v užitečnosti zbytečnou složitost. Společnosti jsme prospěšní (a tudíž užiteční) tehdy, když jí nabídneme naše schopnosti, znalosti či prostředky; a pokud lidem, skrze naší pozornost a péči, věnujeme to nejcennější, tedy náš čas. V opačném případě jsme přítěž. Někdo může namítnout, že užiteční jsme přece už jen tím, že existujeme. Že jsme nenahraditelní naší jedinečností. To je sice pravda — nikdo jiný nemá zcela identické geny, natož stejné zkušenosti, dokonce ani jednovaječná dvojčata. Nevyplývá z toho však naše užitečnost, nýbrž jen *jedinečný potenciál*. Naším úkolem je ho naplnit a uvést ve skutečnost.
 
 {{< figure src="img/uzitecnost.jpg" type="hero" ratio="0.45" crop="top" >}}
 
@@ -80,7 +80,7 @@ Abychom v tomto světě nejen přežívali, ale i prospívali, je nicméně nutn
 
 Technologie je široký pojem, pod který se vejde kolo i kvantový počítač. Já zde míním ty technologie, jejichž role není zcela jasná či ustálená, ale které zásadně ovlivňují (nebo mají potenciál ovlivnit) společnost. Na zvážení společenského dopadu vynálezu kola je zjevně pozdě, ale v případě internetu, přestože existuje skoro čtyři dekády, lze změnit ještě mnohé. Je tedy v našem zájmu postarat se o to, aby sloužil nám všem, ne jen hrstce korporací a nadmíru zvědavému státu. Moderní technologie, a internet zejména, jsou totiž *pákou*, kterou když správně použijeme, dokážeme pohnout světem.
 
-{{< figure src="img/technologie.jpg" ratio="1.825" type="left" crop="center" sepia="30" >}}
+{{< figure src="img/technologie.jpg" ratio="1.825" type="left" crop="center" sepia="30" ratioSmall="1" >}}
 
 A protože technologie mají moc formovat společnost, je důležité, aby je co nejširší okruh lidí dokázal vědomě používat a nepovažoval je za něco magického. V opačném případě vzniká uzavřená technologická elita, skupina, jejímiž ideovými vůdci jsou lidé jako Mark Zuckerberg; vrstva společnosti, která dílem nadání a vloh, ale také štěstí a náhody, disponuje neúměrně velkou mocí nad životy ostatních.
 
@@ -100,7 +100,7 @@ Finanční nezávislost je téma, které oslovuje většinu lidí, nutně proto 
 
 Jednu z obětí zosobňuje fakt, že pro zachování bohatství už nestačí jen šetřit. Místo toho jsme — jako jedinci, ale i jako společnost — nuceni investovat do finančních produktů, kterým nerozumíme, vystavovat se rizikům, které nechápeme (my, ani jejich tvůrci), a skrze poplatky nepřímo živit odvětví, která samo nic nevytváří a jen parazituje na společnosti[^7]. Poznávacím znamením tohoto systému je inflace, jejíž existence se považuje za nutnou podmínku pro správný chod ekonomiky. To je však jen příběh, jeden z mnoha, který má budit zdání objektivních faktů.
 
-{{< figure src="img/penize.jpg" ratio="1.225" type="right" crop="left" >}}
+{{< figure src="img/penize.jpg" ratio="1.225" type="right" crop="left" ratioSmall="1" >}}
 
 Tvář ekonomiky se totiž neustále mění. Její současná podoba začala vznikat s koncem druhé světové války a v sérii milníků[^8] vykrystalizovala až do aktuálního stavu, který nejlépe popisuje takzvaná *moderní měnová teorie*[^9]. Strojvedoucím moderní světové ekonomiky samozřejmě byly (a stále jsou) Spojené státy. Vzhledem k jejich velikosti a síle, nejen té ekonomické, je to nevyhnutelné. Z toho důvodu je americký dolar rezervní měnou[^10] a proto, přímo i nepřímo, zásadně ovlivňují zbytek světa.
 
@@ -138,7 +138,7 @@ Naše dotazy proto směřují do celé plejády témat. Jak pěstovat jídlo, ab
 
 Poslední oblast je nejdůležitější, protože na ní všechny předchozí staví. Zároveň je nám fyzicky nejbližší, neboť se týká našich těl a našeho zdraví. To je přirozeně hlavním faktorem soběstačnosti. V prvním významu, ve smyslu absence nemoci, zdraví značí, v jaké míře jsme závislí na péči ostatních. V tom druhém, který lze nazvat silou, určuje, nakolik jsme fyzicky *schopní*. Mohli bychom tedy stanovit pravidlo, jež říká, že čím jsme zdravější a schopnější, tím jsme i užitečnější. Tato obecná úměra samozřejmě neplatí vždy. Spousta lidí, z tohoto pohledu neschopných — ať už vlivem postižení, nemoci či úrazu — svému okolí mnohdy dává daleko víc, než lidé jinak zdraví, a to jednoduše proto, že je převyšuje v jiných oblastech.
 
-{{< figure src="img/zdravi.jpg" type="left" ratio="1.5" sepia="20" crop="left" >}}
+{{< figure src="img/zdravi.jpg" type="left" ratio="1.5" sepia="20" crop="left" ratioSmall="1" >}}
 
 Každopádně, dokud se nenaplní vize budoucnosti z mangy [Ghost in the Shell](https://www.kosmas.cz/knihy/231159/ghost-in-the-shell-1/)[^14], jsme od narození až po smrt svázáni s jedním tělem; jiného se nám nedostane. A jelikož jsou těla různá, má každý človek jiný fyzický potenciál. Bylo by chybou nepokusit se jej uskutečnit. Ne jako projev narcismu či sobectví, ale naopak ve snaze stát se užitečnějšími.
 
@@ -154,7 +154,7 @@ Není snad oblasti, která by byla natolik pokřivena nepravdami, nepochopením 
 
 ## Soumrak globalizace
 
-{{< figure src="img/pandemie.jpg" ratio="0.3" type="hero" crop="center" >}}
+{{< figure src="img/pandemie.jpg" ratio="0.3" type="hero" crop="left" >}}
 
 O budoucnosti této pandemie lze s jistotou říct jen málo. Epidemie neštovic, která vypukla za vlády Marka Aurelia Antonia (jehož téměř důvěrně známe skrze jeho [zápisky](https://www.kosmas.cz/knihy/173235/hovory-k-sobe/)), populaci decimovala déle než dekádu, vzala si kolem 5 milionů životů včetně císařova a zásadně ovlivnila vývoj římské říše. Následky koronaviru *možná* nebudou tak dramatické (alespoň co se lidských obětí týče), ale řada změn přesto bude nezvratná. Není totiž podstatné, zdali mají pravdu ti, kdo tvrdí, že nemoc v důsledku nebude o nic horší než sezonní chřipka, ani to, že se nám dříve nebo později podaří nalézt vakcínu.
 
@@ -168,7 +168,7 @@ Tyto předpovědi asi nikoho nepřekvapí. Potýkat se však budeme i s takzvan�
 
 ### Řeka a jezero
 
-{{< figure src="img/jezero.jpg" ratio="1.6" type="right" >}}
+{{< figure src="img/jezero.jpg" ratio="1.6" type="right" crop="left" cropSmall="bottom" >}}
 
 Nejpodstatnější změna se nicméně skrývá za poznáním, že jsme nejspíš dosáhli vrcholu globalizace. Z něho lze sejít do údolí vyhroceného nacionalismu, ale i do místa, kde se setkává decentralizace, lokalismus a vláda rozumu.
 
@@ -178,7 +178,7 @@ Jelikož je hlavním motorem globalizace touha po vyšší eficienci[^16] a výn
 Lákavou možností je na globální svět zanevřít. Nepochybně si tak zajistíme klidnější mysl a možná i štěstí. Globální společenství je totiž jako rozbouřená řeka, jež nám svojí neuchopitelnou rychlostí a ohlušující silou dává poznat limity naší biologické podstaty. Ve srovnání s ní je lokální svět místem odpočinku. Jako klidné jezero, jehož břehy důvěrně známe.
 {{</pullout>}}
 
-{{< figure src="img/reka.jpg" ratio="1.45" type="left" crop="bottom" >}}
+{{< figure src="img/reka.jpg" ratio="1.45" type="left" >}}
 
 Jedině když do řeky vstoupíme však můžeme využít nezměrných výhod, jež divoká voda přináší. Účastnit se a čerpat z globálního víru názorů a hodnot, v jehož středu se křešou myšlenky, které by jinak nemohly vzniknout. Těžit z celosvětové finanční sítě a tvořit produkty, fyzické i digitální, jenž cílí do vzdálených koutů planety. Spojit jednotlivce, které jinak dělí fyzická vzdálenost, režimy či jiné bariéry. Najít porozumění, když se nám ho jinde nedostává.
 
@@ -188,7 +188,7 @@ Samozřejmě hrozí, že nás voda strhne a my se octneme bez pevné půdy pod n
 
 Mým cílem je myšlenky, zde jen nahrubo načrtnuté, postupně vykreslit v jasnějších obrysech a větším detailu. Na otázky, jež si kladu výše, a další, které se nepochybně teprve vyjeví, mám ale sám mnohdy pouze mlhavé odpovědi. Navíc si uvědomuji, že psát veřejně o čemkoliv, natož o takto komplikovaných tématech, vyžaduje značný díl troufalosti i naivity. Přesto chci o soběstačnosti pojednávat. V prvé řadě věřím tomu, že nápady a myšlenky potřebují světlo a čerstvý vzduch, jinak začnou zahnívat, a že není lepšího léku na domýšlivost než pravidelná dávka veřejné kritiky. Samotný proces psaní je tak pro mne jedinečným způsobem, jak se nepřestat učit. Zároveň doufám, že soběstačnost alespoň malým dílem podpořím. A konečně: nevěřím v revoluce, ani v historický úděl. Naopak si myslím, že dějiny tvoří každý z nás svým každodenním jednáním, svými rozhodnutími a tím, že se krok za krokem, skrze úspěchy i selhání, snažíme, abychom byli užitečnější a činili svět lepším místem. K tomu dodám, slovy sice fiktivní, ale moudré ženy, „žádný osud, jen ten který uděláme.”
 
-{{< figure src="img/osud.jpg" ratio="0.5" >}}
+{{< figure src="img/osud.jpg" ratio="0.5" ratioSmall="0.5" >}}
 
 [^1]: Jde o termín z teorie fraktálů, matematických objektů, které vznikají z jednoduchých pravidel, ale vytvářejí nekonečně komplexní obrazce. Princip soběpodobnosti popisuje skutečnost, že si je fraktál v různých úrovních „přiblížení” podobný.
 
