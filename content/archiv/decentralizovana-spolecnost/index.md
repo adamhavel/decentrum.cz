@@ -30,7 +30,7 @@ Kolem pojmu soběstačnosti nicméně panuje řada mýtů a nedorozumění. Vět
 
 {{< figure src="img/graf1.svg" type="small-right" >}}
 
-O skutečné, dlouhodobé a udržitelné soběstačnosti lze tedy mluvit pouze v případě skupiny lidí. Samozřejmě, ne každé společenství je automaticky soběstačné. Zásadní jsou vzájemné vztahy a jejich kvalita. Když si vypůjčíme optiku takzvané teorie grafu, můžeme tuto komplexní síť společenských vazeb zobrazit v sice zjednodušujícím, ale pro tuto úvahu užitečném modelu. V nářečí této teorie se jednotliví lidé a instituce nazývají vrcholy, zatímco jejich vazby a závislosti — jednostranné i vzájemné — ztvárňují hrany.
+O skutečné, dlouhodobé a udržitelné soběstačnosti lze tedy mluvit pouze v případě skupiny lidí. Samozřejmě, ne každé společenství je automaticky soběstačné. Zásadní jsou vzájemné vztahy a jejich kvalita. Když si vypůjčíme optiku takzvané teorie grafu, můžeme tuto komplexní síť společenských vazeb zobrazit v sice zjednodušujícím, ale pro tuto úvahu užitečném modelu. V nářečí této teorie se jednotliví lidé a instituce nazývají vrcholy, zatímco jejich vazby a závislosti — jednostranné i vzájemné — ztvárňují takzvané hrany.
 
 Tento model je nicméně příliš jednoduchý. Všichni jsme více či méně závislí na státu, ale je zřejmé, že tato hrana, tato závislost, není stejného typu jako ty, které nás spojují s rodinou či blízkými lidmi. Teorie grafů proto hranám přisuzuje ještě jeden rozměr, kterým je váha nebo, chceme-li, kvalita. Zatímco k nejbližším nás (většinou) poutá nezištný a emocionální vztah, stát posuzujeme spíše rozumem a zvažujeme jeho přínosy a nedostatky. S ostatními lidmi nás pojí vazby ještě jiného charakteru, založené na vzájemné lidské užitečnosti. Tuto skutečnost nakonec nejlépe vystihuje úsloví z kontextu Spojených států:
 
@@ -38,7 +38,7 @@ Tento model je nicméně příliš jednoduchý. Všichni jsme více či méně z
 Co se federální vlády týče, jsem libertarián. Na úrovni státu se řadím mezi republikány. Na té místní patřím k demokratům. A když jde o rodinu a přátelé, jsem socialistou.
 {{</pullout>}}
 
-{{< figure src="img/graf3.svg" type="left" >}}
+{{< figure src="img/graf3.svg" type="small-left" >}}
 
 Zdravé společenství tudíž obsahuje hustou síť závislostí (čím víc je jich vzájemných, tím lépe), ale i jejich opak, nezávislost, čili absenci hrany. Některé vazby jsou neměnné, jiné jsou dynamické, volně zanikají a vznikají. V takové společnosti jsou si navíc jednotlivé úrovně — rodiny, sousedství, města — *soběpodobné*[^1]. To znamená, že graf soběstačné rodiny připomíná ten znázorňující soběstačné sousedství, ale i město nebo celý stát. Ostatně, když se zblízka podíváme na zdánlivě jednolitý vrchol představující stát, zjistíme, že i v jeho případě sestává ze sítě menších vrcholů a hran. Institucí, jako je vláda, a idejí jako například principu demokratické volby, vzájemně propojených vztahy a závislostmi, které v důsledku určují pravidla společnosti.
 

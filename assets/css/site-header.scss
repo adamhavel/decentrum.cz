@@ -47,7 +47,13 @@
                 margin-top: -.125em;
             }
 
-            &:last-child {}
+            &:last-child {
+
+                @media (max-width: $screenSmall) and (min-width: $screenTiny),
+                       (max-width: $screenLarge) and (min-width: $screenMedium) {
+                    position: relative;
+                }
+            }
 
             &:first-child,
             &:last-child {
@@ -68,7 +74,7 @@
             }
 
             &:not(:first-child):not(:last-child) {
-                background: #03327b;
+                background: var(--color-tiles);
                 transition: background .5s, opacity .5s;
                 opacity: .75;
                 cursor: pointer;
@@ -81,6 +87,7 @@
                     display: block;
                     width: 100%;
                     position: absolute;
+                    z-index: 1;
                     top: 0;
                     left: 0;
                     width: 100%;
@@ -89,15 +96,54 @@
                     transition: transform .3s;
                 }
 
+                &:before {
+                    content: '';
+                    position: absolute;
+                    top: -50%;
+                    left: -50%;
+                    width: 200%;
+                    height: 200%;
+                    background-repeat: no-repeat;
+                    background-position: center;
+                    background-color: rgba(white, .65);
+                    background-size: 30%;
+                    z-index: 2;
+                    filter: invert(1);
+                    opacity: 0;
+                    transition: transform .5s, opacity .4s;
+                    transform: scale(.75);
+                }
+
                 &:hover,
                 &:focus {
                     background: black;
-                    opacity: 1;
+                    opacity: .9;
 
                     img {
                         transform: scale(1.5);
                     }
+
+                    &:before {
+                        opacity: 1;
+                        transform: none;
+                    }
                 }
+            }
+
+            &:nth-child(2):before {
+                background-image: url('/img/icon-skills.svg');
+            }
+
+            &:nth-child(3):before {
+                background-image: url('/img/icon-health.svg');
+            }
+
+            &:nth-child(4):before {
+                background-image: url('/img/icon-money.svg');
+            }
+
+            &:nth-child(5):before {
+                background-image: url('/img/icon-technology.svg');
             }
         }
 
@@ -106,36 +152,65 @@
                 font-variation-settings: 'wght' 500;
                 margin-bottom: auto;
                 letter-spacing: .05em;
+                position: relative;
 
                 a {
                     text-decoration: none;
                     color: inherit;
+                    position: relative;
+
+                    &:before {
+                        content: '';
+                        position: absolute;
+                        width: 4.825em;
+                        height: 4.825em;
+                        border-radius: 50%;
+                        border: 1px solid currentColor;
+                        left: 1.5em;
+                        top: 50%;
+                        transform: translateY(-50%);
+                        transition: opacity 2s, color .5s;
+                        pointer-events: none;
+                        opacity: 0;
+                    }
+
+                    &:after {
+                        content: '';
+                        position: absolute;
+                        width: .25em;
+                        height: .25em;
+                        border-radius: 50%;
+                        background: currentColor;
+                        opacity: .2;
+                        left: 1.5em;
+                        top: 50%;
+                        transform: translate(-50%, -50%);
+                        transform-origin: 2.4125em 0;
+                        pointer-events: none;
+                        transition: transform 1s, opacity .5s, color .5s;
+                    }
 
                     &:hover,
                     &:focus {
                         color: $colorHighlight;
+
+                        &:before {
+                            opacity: .125;
+
+                            :root.dark & {
+                                opacity: .75;
+                            }
+                        }
+
+                        &:after {
+                            transform: translate(70%, 50%) rotate(-180deg);
+                            opacity: 1;
+                        }
                     }
                 }
 
                 span {
-                    display: inline-block;
-                    margin: 0 .125em;
-                    opacity: .15;
-                    user-select: none;
-                    transition: transform .5s, opacity .5s;
-                    transform-style: ease-in;
-                    transform-origin: center;
-                    transform: translateY(.175em) scale(1.5);
-
-                }
-
-                &:hover,
-                &:focus {
-
-                    span {
-                        opacity: .1;
-                        transform: translateY(1em) scale(3);
-                    }
+                    padding-right: .525em;
                 }
             }
 
@@ -155,6 +230,84 @@
                 }
             }
 
+            .site-header__lightswitch {
+                position: absolute;
+                top: 3vw;
+                right: 3vw;
+                cursor: pointer;
+                width: 2.5em;
+                height: 2.5em;
+                background: url('/img/icon-sun.svg') center no-repeat;
+                background-size: 100%;
+                opacity: .5;
+
+                @media (max-width: $screenLarge) {
+                    width: 1.75em;
+                    height: 1.75em;
+                }
+
+                @media (max-width: $screenMedium) {
+                    position: relative;
+                    top: 0;
+                    right: 0;
+                }
+
+                @media (max-width: $screenSmall),
+                       (max-width: $screenLarge) and (min-width: $screenMedium) {
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                }
+
+                @media (max-width: $screenTiny) {
+                    top: 5vw;
+                    right: 5vw;
+                }
+
+                &:before {
+                    content: 'Den';
+                    position: absolute;
+                    right: 100%;
+                    padding-right: .4em;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    text-transform: uppercase;
+                    color: $colorText;
+                    letter-spacing: .25em;
+                    font-size: .5rem;
+                }
+
+                &:hover,
+                &:focus {
+                    background-image: url('/img/icon-moon.svg');
+                    opacity: 1;
+
+                    &:before {
+                        content: 'Noc';
+                        xcolor: $colorHighlight;
+                    }
+                }
+
+                :root.dark & {
+                    filter: invert(1);
+                    background-image: url('/img/icon-moon.svg');
+
+                    &:before {
+                        content: 'Noc';
+                        filter: invert(1);
+                    }
+
+                    &:hover,
+                    &:focus {
+                        background-image: url('/img/icon-sun.svg');
+
+                        &:before {
+                            content: 'Den';
+                        }
+                    }
+                }
+            }
+
         .site-header__links {
             font-family: $fontGrotesk;
             font-size: $sizeNano;
@@ -168,7 +321,6 @@
             }
 
             @media (max-width: $screenTiny) {
-                font-size: $sizeMicro;
                 margin-left: auto;
             }
 

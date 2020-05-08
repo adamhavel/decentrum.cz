@@ -1,7 +1,3 @@
-:root {
-    --text-color: red;
-}
-
 * {
     margin: 0;
     padding: 0;
@@ -12,12 +8,36 @@
 }
 
 html {
+    --color-text-r: 0;
+    --color-text-g: 0;
+    --color-text-b: 0;
+    --color-tiles: #03327b;
+    --color-background: rgb(245, 246, 250);
+    --text-weight: 375;
+    --heading-weight: 600;
+    --strong-weight: 500;
+    --dropcap-weight: 350;
+    --image-opacity: 1;
+
+    &.dark {
+        --color-text-r: 255;
+        --color-text-g: 255;
+        --color-text-b: 255;
+        --color-tiles: #990808;
+        --color-background: #191e20;
+        --text-weight: 325;
+        --heading-weight: 550;
+        --strong-weight: 400;
+        --dropcap-weight: 300;
+        --image-opacity: .85;
+    }
+
     background: $colorBackground;
     color: $colorText;
     font-family: $fontSerif;
     line-height: $baseLineHeight;
     font-size: $baseFontSize;
-    font-variation-settings: 'wght' 375;
+    font-variation-settings: 'wght' var(--text-weight);
 
     @media (max-width: $screenTiny) {
         line-height: $smallLineHeight;

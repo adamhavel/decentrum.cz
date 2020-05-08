@@ -1,11 +1,12 @@
 $fontGrotesk: 'Space Grotesk', 'Helvetica Neue', 'Helvetica', 'Roboto', sans-serif;
 $fontSerif: 'Source Serif Variable', 'Georgia', serif;
 
-$colorText: rgba(black, .9);
-$colorTextMedium: rgba(black, .7);
-$colorTextLight: rgba(black, .5);
-$colorBackground: rgb(245, 246, 250);
+$colorText: rgba(var(--color-text-r), var(--color-text-g), var(--color-text-b), .85);
+$colorTextMedium: rgba(var(--color-text-r), var(--color-text-g), var(--color-text-b), .7);
+$colorTextLight: rgba(var(--color-text-r), var(--color-text-g), var(--color-text-b), .5);
+$colorBackground: var(--color-background);
 $colorHighlight: red;
+$colorShade: rgba(var(--color-text-r), var(--color-text-g), var(--color-text-b), .1);
 
 $baseFontSize: 1.25em;
 $baseLineHeight: 1.4;

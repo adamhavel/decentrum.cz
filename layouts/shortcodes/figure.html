@@ -24,7 +24,8 @@
 
 {{ with .Page.Resources.GetMatch (.Get "src") }}
     {{ $isBitmap := (ne .MediaType.SubType "svg")}}
-    <figure class="article__figure {{ if $isBitmap }}article__figure--bitmap{{ end }} article__figure--{{ with $type }}{{.}}{{ end }}">
+    {{ $class := cond $isBitmap "bitmap" "vector" }}
+    <figure class="article__figure article__figure--{{ $class }} article__figure--{{ with $type }}{{.}}{{ end }}">
         {{ if $isBitmap }}
             {{ $image := .Fill (printf $params $width $height $crop) }}
             {{ $imageRetina := .Fill (printf $params (mul $width 2) (mul $height 2) $crop) }}

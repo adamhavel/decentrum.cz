@@ -9,13 +9,18 @@
         flex-grow: 1;
         font-family: $fontGrotesk;
         letter-spacing: .175em;
-        font-size: $sizeMilli;
-        padding: 1.25em;
-        border: 1px solid rgba(black, .1);
+        font-size: $sizeMicro;
+        text-transform: uppercase;
+        padding: 1.5em;
+        border: 1px solid $colorShade;
         font-variation-settings: 'wght' 300;
         line-height: 1;
-        color: $colorTextMedium;
+        color: $colorText;
         background: white;
+
+        :root.dark & {
+            background: black;
+        }
 
         &[name="beehive"] {
             display: none;
@@ -23,8 +28,15 @@
 
         &:invalid + button {
             opacity: .25;
-            color: inherit;
             cursor: default;
+        }
+
+        &:valid + button {
+
+            &:hover,
+            &:focus {
+                color: red;
+            }
         }
     }
 
@@ -38,11 +50,7 @@
         margin-left: 1em;
         cursor: pointer;
         background: none;
-
-        &:hover,
-        &:focus {
-            color: red;
-        }
+        color: $colorText;
 
         @media (max-width: $screenSmall) {
             margin-left: auto;

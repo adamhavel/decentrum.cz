@@ -39,7 +39,7 @@
 
         <nav class="site-header__nav">
             <div class="site-header__tile">
-                <h1 class="site-header__title"><a href="/">de<span aria-hidden="true">·</span>centrum</a></h1>
+                <h1 class="site-header__title"><a href="/"><span>de</span>centrum</a></h1>
                 <p class="site-header__desc">praktická
 soběstačnost
 v komplexním světě</p>
@@ -63,8 +63,10 @@ v komplexním světě</p>
                     <li><a href="{{ .Site.Params.twitterUrl }}">Twitter</a></li>
                     <li><a href="{{ ref . "newsletter" }}">Newsletter</a></li>
                 </ul>
+                <button class="site-header__lightswitch" type="button" aria-hidden="true"></button>
             </div>
         </nav>
+
 
     </header>
 

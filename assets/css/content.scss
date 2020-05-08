@@ -3,7 +3,7 @@
     h2 {
         font-family: $fontGrotesk;
         font-size: $sizeKilo;
-        font-variation-settings: 'wght' 600;
+        font-variation-settings: 'wght' var(--heading-weight);
         margin-bottom: lines(1);
         margin-top: lines(4);
         line-height: lines(1);
@@ -21,7 +21,7 @@
     h3 {
         font-family: $fontSerif;
         font-size: $sizeKilo;
-        font-variation-settings: 'wght' 600;
+        font-variation-settings: 'wght' var(--heading-weight);
         line-height: lines(1);
         margin-bottom: lines(.5);
         margin-top: lines(2);
@@ -69,7 +69,7 @@
         }
 
         strong {
-            font-variation-settings: 'wght' 600;
+            font-variation-settings: 'wght' var(--strong-weight);
         }
 
         sup[id^="fnref"] {
@@ -92,12 +92,12 @@
 
         .lede {
             font-feature-settings: 'smcp';
-            font-variation-settings: 'wght' 500;
+            font-variation-settings: 'wght' var(--strong-weight);
         }
     }
 
     .pullout {
-        font-variation-settings: 'wght' 500;
+        font-variation-settings: 'wght' var(--strong-weight);
         font-size: $sizeKilo;
         margin: lines(2) 0 !important;
 
