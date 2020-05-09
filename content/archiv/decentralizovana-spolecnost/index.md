@@ -64,7 +64,7 @@ Přiblížíme se tak ideálu společnosti, ve které stát činí jen to, co mu
 
 Zde se rýsuje zdánlivý paradox. Tvrdím, že soběstačnost dává smysl jen na úrovni společenství, zároveň se však odkazuji na zodpovědnost jednotlivců. Aby totiž soběstačné, decentralizované společenství vůbec mohlo vzniknout, nestačí pouhá skupina nezávislých lidí. Nutnou ingrediencí je ona pavučina vztahů, která jedince propojí. Ta se však nezjeví sama od sebe či přáním zeshora. Vztahy vzniknou pouze tehdy, jsou-li si lidé vzájemně užiteční, v nejširším významu toho slova. Pokud si tedy přejeme, aby společnost byla soběstačná, musíme být prvně sami užiteční[^3].
 
-Nehledejme však v užitečnosti zbytečnou složitost. Společnosti jsme prospěšní (a tudíž užiteční) tehdy, když jí nabídneme naše schopnosti, znalosti či prostředky; a pokud lidem, skrze naší pozornost a péči, věnujeme to nejcennější, tedy náš čas. V opačném případě jsme přítěž. Někdo může namítnout, že užiteční jsme přece už jen tím, že existujeme. Že jsme nenahraditelní naší jedinečností. To je sice pravda — nikdo jiný nemá zcela identické geny, natož stejné zkušenosti, dokonce ani jednovaječná dvojčata. Nevyplývá z toho však naše užitečnost, nýbrž jen *jedinečný potenciál*. Naším úkolem je ho naplnit a uvést ve skutečnost.
+Nehledejme však v užitečnosti zbytečnou složitost. Společnosti jsme prospěšní (a tudíž užiteční), pokud jí nabídneme naše schopnosti, znalosti či prostředky. Když lidem, skrze naši pozornost a péči, věnujeme to nejcennější, tedy náš čas. V opačném případě jsme přítěž. Někdo může namítnout, že užiteční jsme přece už jen tím, že existujeme. Že jsme nenahraditelní naší jedinečností. To je sice pravda — nikdo jiný nemá zcela identické geny, natož stejné zkušenosti, dokonce ani jednovaječná dvojčata. Nevyplývá z toho však naše užitečnost, nýbrž jen *jedinečný potenciál*. Naším úkolem je ho naplnit a uvést ve skutečnost.
 
 {{< figure src="img/uzitecnost.jpg" type="hero" ratio="0.45" crop="top" >}}
 
@@ -132,7 +132,7 @@ Na druhou stranu je chyba předpokládat, že schopnost pěstovat jídlo, byť t
 Praktická soběstačnost nicméně nekončí pěstováním jídla, ale zahrnuje i další, zdánlivě nesouvisející témata jako například návrh domů a bydlení obecně. S tím se zase pojí energetická nezávislost a otázka výběru co nejjednodušších technologií.
 {{</pullout>}}
 
-Naše dotazy proto směřují do celé plejády témat. Jak pěstovat jídlo, abychom se neudřeli? Které plodiny pěstovat a jak je uchovávat? Co je to permakultura? Je potravinová soběstačnost vůbec dosažitelná? Jak navrhnout soběstačný dům? Jaké použít technologie a do jaké míry se na ně spoléhat? Proč jsou jednoduché technologie lepší? Co nám dala a vzala moderní architektura?
+Dotazy tudíž směřují do celé plejády témat. Jak pěstovat jídlo, abychom se neudřeli? Které plodiny pěstovat a jak je uchovávat? Co je to permakultura? Je potravinová soběstačnost vůbec dosažitelná? Jaký je rozdíl mezi šlechtěním a přímou genetickou modifikací? Jak naložit (a bojovat) s úpadkem životního protředí? Jak navrhnout soběstačný dům? Jaké použít technologie a do jaké míry se na ně spoléhat? Proč jsou jednoduché technologie lepší? Co nám dala a vzala moderní architektura?
 
 ### Věk pohodlí
 
@@ -182,7 +182,7 @@ Lákavou možností je na globální svět zanevřít. Nepochybně si tak zajist
 
 Jedině když do řeky vstoupíme však můžeme využít nezměrných výhod, jež divoká voda přináší. Účastnit se a čerpat z globálního víru názorů a hodnot, v jehož středu se křešou myšlenky, které by jinak nemohly vzniknout. Těžit z celosvětové finanční sítě a tvořit produkty, fyzické i digitální, jenž cílí do vzdálených koutů planety. Spojit jednotlivce, které jinak dělí fyzická vzdálenost, režimy či jiné bariéry. Najít porozumění, když se nám ho jinde nedostává.
 
-Samozřejmě hrozí, že nás voda strhne a my se octneme bez pevné půdy pod nohama, bez možnosti si oddechnout. Abychom se vyhnuli vyhoření, musíme tudíž neustále zvažovat přínosy a oběti; hledat mezi těmito dvěma světy rovnováhu, která se navíc v závislosti na okolním světě i nás samotných průběžně mění. Ale přesto, když prcháme z města do přírody, nemáme přece v úmyslu před civilizací utéct navždy. Chceme jen nabrat sil, abychom mohli s čistou hlavou dál využívat výhod, jež města a společnost přináší.
+Samozřejmě hrozí, že nás voda strhne a my se octneme bez pevné půdy pod nohama, bez možnosti si oddechnout. Abychom se vyhnuli vyhoření, musíme tudíž neustále zvažovat přínosy a oběti, a hledat mezi těmito dvěma světy rovnováhu. Rovnováhu, která se navíc v závislosti na okolním světě i nás samotných průběžně mění. Ale přesto, když prcháme z města do přírody, nemáme přece v úmyslu před civilizací utéct navždy. Chceme jen nabrat sil, abychom mohli s čistou hlavou dál využívat výhod, jež města a společnost přináší.
 
 ## Malé skutky
 
