@@ -277,14 +277,12 @@
                     font-size: .5rem;
                 }
 
-                &:hover,
-                &:focus {
+                &:hover {
                     background-image: url('/img/icon-moon.svg');
                     opacity: 1;
 
                     &:before {
                         content: 'Noc';
-                        xcolor: $colorHighlight;
                     }
                 }
 
@@ -297,8 +295,7 @@
                         filter: invert(1);
                     }
 
-                    &:hover,
-                    &:focus {
+                    &:hover {
                         background-image: url('/img/icon-sun.svg');
 
                         &:before {
