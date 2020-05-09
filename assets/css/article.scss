@@ -95,6 +95,15 @@
     }
 
     .article__content {
+        margin-bottom: lines(3);
+
+        @media (max-width: $screenSmall) {
+            margin-bottom: lines(2);
+        }
+
+        @media (max-width: $screenTiny) {
+            margin-bottom: lines(1);
+        }
 
         &[data-dropcap] {
 
@@ -245,19 +254,22 @@
             }
         }
 
-    .article__footer {
-        margin-top: lines(3);
-        border: solid $colorShade;
-        border-width: 1px 0;
-        padding: lines(1) 0;
+    .article__discussion {
+        margin-bottom: lines(3);
 
         @media (max-width: $screenSmall) {
-            margin-top: lines(2);
+            margin-bottom: lines(2);
         }
 
         @media (max-width: $screenTiny) {
-            margin-top: lines(1);
+            margin-bottom: lines(1);
         }
+    }
+
+    .article__footer {
+        border: solid $colorShade;
+        border-width: 1px 0;
+        padding: lines(1) 0;
     }
 
         .article__nav {

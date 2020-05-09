@@ -58,16 +58,6 @@
             margin-bottom: lines(1);
         }
 
-        a {
-            color: inherit;
-
-            &:hover,
-            &:focus {
-                text-decoration: none;
-                color: $colorHighlight;
-            }
-        }
-
         strong {
             font-variation-settings: 'wght' var(--strong-weight);
         }
@@ -93,6 +83,16 @@
         .lede {
             font-feature-settings: 'smcp';
             font-variation-settings: 'wght' var(--strong-weight);
+        }
+    }
+
+    a {
+        color: inherit;
+
+        &:hover,
+        &:focus {
+            text-decoration: none;
+            color: $colorHighlight;
         }
     }
 
@@ -124,22 +124,30 @@
     }
 
     .footnotes {
-        margin-top: lines(3);
+        margin-top: lines(5);
+
+        @media (max-width: $screenMedium) {
+            margin-top: lines(3);
+        }
 
         @media (max-width: $screenSmall) {
             margin-top: lines(2);
+        }
+
+        @media (max-width: $screenTiny) {
+            margin-top: lines(1);
         }
 
         &:before {
             content: 'Poznámky';
             display: block;
             font-family: $fontGrotesk;
-            font-size: $sizeMicro;
+            font-size: $sizeMilli;
             text-transform: uppercase;
-            letter-spacing: .2em;
-            font-variation-settings: 'wght' 500;
+            letter-spacing: .15em;
+            font-variation-settings: 'wght' var(--heading-weight);
             margin-bottom: lines(.75);
-            font-feature-settings: 'smcp';
+            font-feature-settings: 'zero', 'liga', 'case';
         }
 
         hr {

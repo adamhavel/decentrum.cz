@@ -1,0 +1,17 @@
+.discussion {
+
+}
+
+    .discussion__heading {
+        font-family: $fontGrotesk;
+        font-size: $sizeMilli;
+        text-transform: uppercase;
+        letter-spacing: .15em;
+        font-variation-settings: 'wght' var(--heading-weight);
+        margin-bottom: lines(.75);
+        font-feature-settings: 'zero', 'liga', 'case';
+    }
+
+    .discussion__info {
+        font-size: $sizeMicro;
+    }

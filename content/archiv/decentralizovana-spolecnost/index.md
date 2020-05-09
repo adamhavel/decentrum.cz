@@ -216,7 +216,7 @@ Mým cílem je myšlenky, zde jen nahrubo načrtnuté, postupně vykreslit v jas
 
 [^13]: V kontextu informačních technologií je komprese proces, který zmenší množství dat nutných pro uchování nějaké informace, například hudební nahrávky. Komprese je buď ztrátová, nebo bezztrátová. První případ představuje třeba známý zvukový formát *MP3*, ten druhý pak formát *FLAC*. V obou případech je výsledný soubor menší než původní surová data, ale u ztrátové komprese navíc dojde k *nezvratné* ztrátě některých informací.
 
-[^14]: Ve světě Ghost in the Shell, který proslavila [filmová adaptace](https://www.csfd.cz/film/34300-ghost-in-the-shell/prehled/) (ta animovaná, ne ta hraná), někteří lidé své vědomí, kterému říkají duch, nahrávají do robotických těl.
+[^14]: Ve světě Ghost in the Shell, který proslavila [filmová adaptace](https://www.csfd.cz/film/34300-ghost-in-the-shell/prehled/) (japonská animovaná, ne ta americká hraná), někteří lidé své vědomí, kterému říkají duch, nahrávají do robotických těl.
 
 [^15]: Epigenetika studuje ty změny v projevech genů, které nevznikají změnami v samotném DNA. Za rozdílných podmínek se tudíž geny mohou projevovat různě.
 
