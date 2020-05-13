@@ -148,6 +148,15 @@
         }
 
             .site-header__title {
+                $circleDiameter: 2.575em * 2;
+                $dotDiameter: .25em;
+                $innerDiameter: $circleDiameter - $dotDiameter;
+                @mixin dots($color) {
+                    box-shadow: $innerDiameter 0 0 0 $color,
+                                ($innerDiameter / 2) ($innerDiameter / 2) 0 .0 $color,
+                                ($innerDiameter / 2) (-$innerDiameter / 2) 0 .0 $color;
+                }
+
                 font-size: $sizeMilli;
                 font-variation-settings: 'wght' 500;
                 margin-bottom: auto;
@@ -165,29 +174,31 @@
                         width: 4.825em;
                         height: 4.825em;
                         border-radius: 50%;
-                        border: 1px solid currentColor;
+                        border: 1px dashed currentColor;
                         left: 1.5em;
                         top: 50%;
                         transform: translateY(-50%);
-                        transition: opacity 2s, color .5s;
+                        transition: opacity 1s, color .5s, transform 2s;
                         pointer-events: none;
                         opacity: 0;
                     }
 
                     &:after {
+                        @include dots(transparent);
+
                         content: '';
                         position: absolute;
-                        width: .25em;
-                        height: .25em;
+                        width: $dotDiameter;
+                        height: $dotDiameter;
                         border-radius: 50%;
                         background: currentColor;
                         opacity: .2;
-                        left: 1.5em;
+                        left: 1.375em;
                         top: 50%;
-                        transform: translate(-50%, -50%);
-                        transform-origin: 2.4125em 0;
+                        transform: translateY(-50%);
+                        transform-origin: 2.575em 0;
                         pointer-events: none;
-                        transition: transform 1s, opacity .5s, color .5s;
+                        transition: transform 1s, opacity .5s, color .5s, box-shadow .5s;
                     }
 
                     &:hover,
@@ -195,7 +206,8 @@
                         color: $colorHighlight;
 
                         &:before {
-                            opacity: .125;
+                            opacity: .4;
+                            transform: translateY(-50%) rotate(-179.9deg);
 
                             :root.dark & {
                                 opacity: .75;
@@ -203,7 +215,9 @@
                         }
 
                         &:after {
-                            transform: translate(70%, 50%) rotate(-180deg);
+                            @include dots(currentColor);
+
+                            transform: rotate(-179.9deg) translateY(-50%);
                             opacity: 1;
                         }
                     }

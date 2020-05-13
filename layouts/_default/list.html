@@ -15,12 +15,6 @@
 
         <ul class="archive">
             {{ $year := "" }}
-            {{ $icons := `{
-                "technologie": "technology",
-                "finance": "money",
-                "dovednosti": "skills",
-                "zdraví": "health"
-            }` | transform.Unmarshal }}
             {{ range .Data.Pages }}
                 {{ $postYear := .Date.Format "2006" }}
                 {{ $isFirst := ne $postYear $year }}

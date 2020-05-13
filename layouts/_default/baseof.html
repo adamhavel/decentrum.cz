@@ -15,6 +15,7 @@
     {{ with resources.Get "css/default.scss" | toCSS | postCSS | minify | resources.Fingerprint "md5" -}}
         <link rel="stylesheet" href="{{ .Permalink }}" />
     {{ end -}}
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
     <title>{{ $title }}</title>
     <meta name="description" content="{{ $description }}" />
     {{ with $image -}}
