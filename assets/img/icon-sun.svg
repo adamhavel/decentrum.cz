@@ -2,6 +2,11 @@
 <!-- Generator: Adobe Illustrator 19.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
+     <style>
+         * {
+            fill: currentColor;
+         }
+     </style>
 <g>
 	<g>
 		<path d="M420.518,273.86h33.011V238.14h-33.011c-1.858-17.233-6.373-33.679-13.124-48.925l66.686-38.499l-17.86-30.934
@@ -45,35 +50,5 @@
 	<g>
 		<rect x="118.766" y="443.858" transform="matrix(0.5 -0.866 0.866 0.5 -331.2411 349.7009)" width="36.935" height="35.72"/>
 	</g>
-</g>
-<g>
-</g>
-<g>
-</g>
-<g>
-</g>
-<g>
-</g>
-<g>
-</g>
-<g>
-</g>
-<g>
-</g>
-<g>
-</g>
-<g>
-</g>
-<g>
-</g>
-<g>
-</g>
-<g>
-</g>
-<g>
-</g>
-<g>
-</g>
-<g>
 </g>
 </svg>

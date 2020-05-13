@@ -3,7 +3,9 @@
 {{ $cropSmall := (default $crop (.Get "cropSmall")) }}
 {{ $ratio := float (default 0.5625 (.Get "ratio")) }}
 {{ $ratioSmall := float (default 0.75 (.Get "ratioSmall")) }}
-{{ $params := "%vx%v q70 %v" }}
+{{ $quality := 70 }}
+{{ $qualityRetina := 50 }}
+{{ $params := "%vx%v q%v %v" }}
 
 {{ $width := 760 }}
 {{ if (eq $type "hero") }}
@@ -27,12 +29,12 @@
     {{ $class := cond $isBitmap "bitmap" "vector" }}
     <figure class="article__figure article__figure--{{ $class }} article__figure--{{ with $type }}{{.}}{{ end }}">
         {{ if $isBitmap }}
-            {{ $image := .Fill (printf $params $width $height $crop) }}
-            {{ $imageRetina := .Fill (printf $params (mul $width 2) (mul $height 2) $crop) }}
-            {{ $imageSmall := .Fill (printf $params $smallWidth $smallHeight $cropSmall) }}
-            {{ $imageSmallRetina := .Fill (printf $params (mul $smallWidth 2) (mul $smallHeight 2) $cropSmall) }}
-            {{ $imageTiny := .Fill (printf $params $tinyWidth $tinyHeight $cropSmall) }}
-            {{ $imageTinyRetina := .Fill (printf $params (mul $tinyWidth 2) (mul $tinyHeight 2) $cropSmall) }}
+            {{ $image := .Fill (printf $params $width $height $quality $crop) }}
+            {{ $imageRetina := .Fill (printf $params (mul $width 2) (mul $height 2) $qualityRetina $crop) }}
+            {{ $imageSmall := .Fill (printf $params $smallWidth $smallHeight $quality $cropSmall) }}
+            {{ $imageSmallRetina := .Fill (printf $params (mul $smallWidth 2) (mul $smallHeight 2) $qualityRetina $cropSmall) }}
+            {{ $imageTiny := .Fill (printf $params $tinyWidth $tinyHeight $quality $cropSmall) }}
+            {{ $imageTinyRetina := .Fill (printf $params (mul $tinyWidth 2) (mul $tinyHeight 2) $qualityRetina $cropSmall) }}
             <picture>
                 <source media="(min-width: {{ $smallWidth }}px)" srcset="{{ $image.Permalink }}, {{ $imageRetina.Permalink }} 2x">
                 <source media="(min-width: {{ $tinyWidth }}px)" srcset="{{ $imageSmall.Permalink }}, {{ $imageSmallRetina.Permalink }} 2x">

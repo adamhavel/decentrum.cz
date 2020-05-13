@@ -1,0 +1,48 @@
+.lightswitch {
+    cursor: pointer;
+    opacity: .7;
+    font-size: .5rem;
+    color: $colorText;
+}
+
+    .lightswitch__container {
+        display: flex;
+        align-items: center;
+
+        &--light {
+
+            :root.dark & {
+                display: none;
+            }
+        }
+
+        &--dark {
+
+            :root:not(.dark) & {
+                display: none;
+            }
+        }
+
+        svg {
+            flex-shrink: 0;
+            width: 2.5em;
+            height: 2.5em;
+
+            @media (max-width: $screenLarge) {
+                width: 2em;
+                height: 2em;
+            }
+        }
+
+        span {
+            text-transform: uppercase;
+            letter-spacing: .25em;
+            margin-right: .4em;
+        }
+
+        &:hover,
+        &:focus {
+            color: $colorHighlight;
+            opacity: 1;
+        }
+    }

@@ -3,13 +3,15 @@
 <head>
     {{- $title := cond .IsHome .Site.Title (printf "%s — %s" .Title .Site.Title) -}}
     {{- $description := cond .IsPage .Summary .Site.Params.description -}}
-    {{- $image := cond .IsPage (.Resources.GetMatch (string .Page.Params.image)) (resources.Get "img/image.jpg") }}
+    {{- $image := cond .IsPage (.Resources.GetMatch (string .Page.Params.image)) (resources.Get "img/image.jpg") -}}
+    {{- $rssUrl := ((.GetPage "/").OutputFormats.Get "rss").Permalink -}}
+    {{- $navLinks := dict "1 RSS" $rssUrl "2 E-mail" (printf "mailto:%s" .Site.Params.email) "3 Archiv" (ref . "/blog") "4 Twitter" .Site.Params.twitterUrl "5 Newsletter" (ref . "/newsletter") -}}
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,minimum-scale=1.0" />
     <link rel="preload" href="/fonts/source-serif-variable.woff2" as="font" type="font/woff2" crossorigin />
     <link rel="preload" href="/fonts/source-serif-italic-variable.woff2" as="font" type="font/woff2" crossorigin />
     <link rel="preload" href="/fonts/space-grotesk-variable.ttf" as="font" type="font/ttf" crossorigin />
-    <link rel="alternate" type="application/rss+xml" href="{{ .Site.BaseURL }}index.xml" title="decentrum" />
+    <link rel="alternate" type="application/rss+xml" href="{{ $rssUrl }}" title="{{ .Site.Title }}" />
     {{ with resources.Get "css/default.scss" | toCSS | postCSS | minify | resources.Fingerprint "md5" -}}
         <link rel="stylesheet" href="{{ .Permalink }}" />
     {{ end -}}
@@ -35,52 +37,94 @@
 </head>
 <body>
 
-    <header class="site-header">
+    <div class="site-wrapper">
 
-        <nav class="site-header__nav">
-            <div class="site-header__tile">
-                <h1 class="site-header__title"><a href="/"><span>de</span>centrum</a></h1>
-                <p class="site-header__desc">praktická
+        <header class="site-header">
+
+            <nav class="site-header__nav">
+                <div class="site-header__tile">
+                    <h1 class="site-header__title"><a href="/"><span>de</span>centrum</a></h1>
+                    <p class="site-header__desc">praktická
 soběstačnost
 v komplexním světě</p>
-            </div>
-            <div class="site-header__tile">
-                <a href="" title=""><img role="presentation" src="/img/tile-skills.jpg"></a>
-            </div>
-            <div class="site-header__tile">
-                <a href="" title=""><img role="presentation" src="/img/tile-health.jpg"></a>
-            </div>
-            <div class="site-header__tile">
-                <a href="" title=""><img role="presentation" src="/img/tile-money.jpg"></a>
-            </div>
-            <div class="site-header__tile">
-                <a href="" title=""><img role="presentation" src="/img/tile-technology.jpg"></a>
-            </div>
-            <div class="site-header__tile">
-                <ul class="site-header__links">
-                    <li><a href="{{ .Site.BaseURL }}index.xml">RSS</a></li>
-                    <li><a href="mailto:{{ .Site.Params.email }}">E-mail</a></li>
-                    <li><a href="{{ .Site.Params.twitterUrl }}">Twitter</a></li>
-                    <li><a href="{{ ref . "newsletter" }}">Newsletter</a></li>
-                </ul>
-                <button class="site-header__lightswitch" type="button" aria-hidden="true"></button>
-            </div>
-        </nav>
+                </div>
+                {{- with .Site.Taxonomies.categories -}}
+                    <div class="site-header__tile">
+                        <a href="{{ .dovednosti.Page.Permalink }}" title="{{ .dovednosti.Page.Title }}">
+                            <img role="presentation" src="/img/tile-skills.jpg">
+                        </a>
+                    </div>
+                    <div class="site-header__tile">
+                        <a href="{{ .zdravi.Page.Permalink }}" title="{{ .zdravi.Page.Title }}">
+                            <img role="presentation" src="/img/tile-health.jpg">
+                        </a>
+                    </div>
+                    <div class="site-header__tile">
+                        <a href="{{ .finance.Page.Permalink }}" title="{{ .finance.Page.Title }}">
+                            <img role="presentation" src="/img/tile-money.jpg">
+                        </a>
+                    </div>
+                    <div class="site-header__tile">
+                        <a href="{{ .technologie.Page.Permalink }}" title="{{ .technologie.Page.Title }}">
+                            <img role="presentation" src="/img/tile-technology.jpg">
+                        </a>
+                    </div>
+                {{- end -}}
+                <div class="site-header__tile">
+                    <ul class="site-header__links">
+                        {{- range $title, $url := $navLinks -}}
+                            <li><a href="{{ $url }}">{{ substr $title 2 }}</a></li>
+                        {{- end -}}
+                    </ul>
+                    <button class="site-header__lightswitch lightswitch" type="button" aria-hidden="true">
+                        <div class="lightswitch__container lightswitch__container--light">
+                            <span>Den</span>
+                            {{ with resources.Get "img/icon-sun.svg" | minify -}}
+                                {{ .Content | safeHTML }}
+                            {{ end -}}
+                        </div>
+                        <div class="lightswitch__container lightswitch__container--dark">
+                            <span>Noc</span>
+                            {{ with resources.Get "img/icon-moon.svg" | minify -}}
+                                {{ .Content | safeHTML }}
+                            {{ end -}}
+                        </div>
+                    </button>
+                </div>
+            </nav>
 
 
-    </header>
+        </header>
 
-    <main class="site-content">
-        {{ block "main" . }}{{ end }}
-    </main>
+        <main class="site-content">
+            {{ block "main" . }}{{ end }}
+        </main>
+
+    </div>
 
     <footer class="site-footer">
 
-        <section class="site-disclaimer content">
-            <h3>Upozornění</h3>
-            <p>Nejsme lékaři, ani finanční poradci. Veškeré zde uvedené informace a tipy představují náš osobní názor a neslouží jako konkrétní investiční nebo lékařské doporučení. Rozhodnutí se jimi řídit ponecháváme vaší zodpovědnosti a zdravému rozumu.</p>
-            <p>V případě některých odkazů používáme <em><a href="https://cs.wikipedia.org/wiki/Affiliate_marketing">affiliate marketing</a></em>. Pokud při návštěvě odkazovaného webu koupíte produkt či službu, obdržíme pár procent z prodejní ceny. Jde o jeden z mála rozumných způsobů, jak finančně podpořit provoz webu, narozdíl od reklam či prodeje uživatelských dat. Všechny produkty či služby, na které tímto způsobem odkazujeme, buď sami používáme nebo bychom je s čistým svědomím doporučili nejbližším.</p>
-        </section>
+        {{ block "footer" . }}{{ end }}
+
+        <div class="site-footer__wrapper">
+
+            <nav class="site-footer__nav">
+                <ul>
+                    {{ range $title, $url := $navLinks }}
+                        <li><a href="{{ $url }}">{{ substr $title 2 }}</a></li>
+                    {{ end }}
+                </ul>
+            </nav>
+
+            <section class="site-footer__disclaimer content">
+
+                <p>Nejsme lékaři, ani finanční poradci. Veškeré zde uvedené informace a tipy představují náš osobní názor a neslouží jako konkrétní investiční nebo lékařské doporučení. Rozhodnutí se jimi řídit ponecháváme vaší zodpovědnosti a zdravému rozumu.</p>
+
+                <p>V případě některých odkazů používáme <em><a href="https://cs.wikipedia.org/wiki/Affiliate_marketing">affiliate marketing</a></em>. Pokud při návštěvě odkazovaného webu koupíte produkt či službu, obdržíme pár procent z prodejní ceny. Jde o jeden z mála rozumných způsobů, jak finančně podpořit provoz webu, narozdíl od reklam či prodeje uživatelských dat. Všechny produkty či služby, na které tímto způsobem odkazujeme, buď sami používáme nebo bychom je s čistým svědomím doporučili nejbližším.</p>
+
+            </section>
+
+        </div>
 
     </footer>
 

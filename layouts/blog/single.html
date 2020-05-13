@@ -1,5 +1,4 @@
 {{ define "main" }}
-{{ with .GetPage "/blog/decentralizovana-spolecnost" }}
 <article class="article">
 
     <header class="article__header">
@@ -61,10 +60,8 @@
 
 </article>
 {{ end }}
-{{ end }}
 
 {{ define "footer" }}
-{{ with .GetPage "/blog/decentralizovana-spolecnost" }}
 <nav class="site-footer__article-nav">
     <ul>
         {{ with .PrevInSection }}
@@ -76,5 +73,4 @@
         {{ end }}
     </ul>
 </nav>
-{{ end }}
 {{ end }}

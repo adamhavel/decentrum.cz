@@ -1,0 +1,4 @@
+---
+title: 'Technologie'
+slug: 'technologie'
+---

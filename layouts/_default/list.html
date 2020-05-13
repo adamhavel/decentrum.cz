@@ -1,0 +1,48 @@
+{{ define "main" }}
+    <article class="section">
+
+        <header class="section__header">
+            <h1 class="section__title">Archiv článků</h1>
+            <nav class="section__filters">
+                <ul>
+                    {{ range .Site.Taxonomies.categories }}
+                        {{ $isActive := eq .Page.Slug $.Slug }}
+                        <li><a {{ if $isActive }}class="is-active"{{ end }} data-count="{{ .Count }}" href="{{ .Page.Permalink }}">{{ .Page.Title }}</a></li>
+                    {{ end }}
+                </ul>
+            </nav>
+        </header>
+
+        <ul class="archive">
+            {{ $year := "" }}
+            {{ $icons := `{
+                "technologie": "technology",
+                "finance": "money",
+                "dovednosti": "skills",
+                "zdraví": "health"
+            }` | transform.Unmarshal }}
+            {{ range .Data.Pages }}
+                {{ $postYear := .Date.Format "2006" }}
+                {{ $isFirst := ne $postYear $year }}
+                {{ $year = $postYear }}
+                <li class="archive__item spot" {{ if $isFirst }}data-year="{{ $postYear }}"{{ end }}>
+                    <h2 class="spot__title"><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
+                    <p class="spot__summary">{{ .Summary }}</p>
+                    <ul class="spot__meta">
+                        <li>
+                            <time class="spot__date">{{ .Date.Format "2<span>·</span>1<span>·</span>2006" | safeHTML }}</time>
+                        </li>
+                        <li>
+                            <ul class="spot__categories">
+                                {{ range (.GetTerms "categories") }}
+                                    <li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
+                                {{ end }}
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+            {{ end }}
+        </ul>
+
+    </article>
+{{ end }}

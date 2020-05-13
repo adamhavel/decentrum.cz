@@ -9,13 +9,16 @@ params:
   email: info@decentrum.cz
 
 permalinks:
-  archiv: /:filename/
+  blog: /:filename/
+  categories: /archiv/:slug
 
 defaultContentLanguage: cs
 disableKinds:
-  - taxonomy
   - taxonomyTerm
 disableHugoGeneratorInject: true
+
+taxonomies:
+  category: categories
 
 markup:
   goldmark:

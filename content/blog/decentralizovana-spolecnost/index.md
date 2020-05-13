@@ -1,17 +1,17 @@
 ---
 title: "Decentralizovaná společnost"
 date: 2020-05-01
-summary: "Pokud chceme v tomto světě nejen přežívat, ale i prospívat, musíme ovládnout ne jednu, ale několik oblastí soběstačnosti. Praktická soběstačnost v moderním světě totiž stojí na čtyřech pilířích. Jsou to technologie, finance, praktické dovednosti a zdraví."
+summary: "Praktická soběstačnost v moderním světě stojí na čtyřech pilířích. Jsou to technologie, finance, praktické dovednosti a zdraví."
 quote:
-  source: "Otevřená společnost a její nepřátelé, Karl R. Popper"
+  source: "Otevřená společnost a její nepřátelé · Karl R. Popper"
   link: "https://www.kosmas.cz/autor/720/karl-r.-popper/"
   content: "Místo toho, abychom se vydávali za proroky, musíme se stát tvůrci svého osudu. Musíme se naučit dělat věci tak dobře, jak to dokážeme, a rozhlížet se po vlastních chybách. A když jsme se vzdali představy, že mocenské dějiny budou naším soudcem, když jsme si přestali dělat starost s tím, zda nám dějiny dají za pravdu nebo ne, pak se nám snad může jednoho dne podařit dostat moc pod kontrolu."
 image: "img/uzitecnost.jpg"
-tags:
+categories:
   - technologie
   - finance
   - dovednosti
-  - zdraví
+  - zdravi
 ---
 
 {{<lede>}}Je dílem náhody a zvláštní ironií{{</lede>}}, že tento text vzniká v době, kdy většinu světa pohlcuje opar pandemie. Zatímco v ostrém světle přímého přenosu obnažuje křehkost naší globální civilizace, nám svojí rychlostí nabízí (nebo spíš vnucuje) příležitost pocítit na vlastní kůži jindy těžko uchopitelnou sílu exponenciálního růstu.

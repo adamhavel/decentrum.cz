@@ -1,3 +1,4 @@
 ---
 title: "Archiv"
+url: "/archiv"
 ---

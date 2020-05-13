@@ -1,0 +1,13 @@
+.site-wrapper {
+    display: flex;
+    margin-bottom: lines(3);
+
+    @media (max-width: $screenMedium) {
+        display: block;
+        margin-bottom: lines(3);
+    }
+
+    @media (max-width: $screenSmall) {
+        margin-bottom: lines(1.5);
+    }
+}

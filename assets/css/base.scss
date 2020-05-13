@@ -4,7 +4,8 @@
     border: 0;
     list-style: none;
     font-weight: normal;
-    outline: 0 !important;
+    outline: none;
+    background: none;
 }
 
 html {
@@ -13,6 +14,7 @@ html {
     --color-text-b: 0;
     --color-tiles: #03327b;
     --color-background: rgb(245, 246, 250);
+    --opacity-text: .85;
     --text-weight: 375;
     --heading-weight: 600;
     --strong-weight: 500;
@@ -25,6 +27,7 @@ html {
         --color-text-b: 255;
         --color-tiles: #990808;
         --color-background: #191e20;
+        --opacity-text: .85;
         --text-weight: 325;
         --heading-weight: 550;
         --strong-weight: 400;
@@ -46,13 +49,13 @@ html {
 }
 
 body {
-    padding: 3vw;
-    padding-bottom: 6vw;
     display: flex;
+    flex-direction: column;
+    min-height: calc(100vh - 6vw);
+    padding: 3vw;
 
     @media (max-width: $screenMedium) {
-        display: block;
-        padding-top: 6vw;
+        padding: 6vw 10vw;
     }
 
     @media (max-width: $screenSmall) {
@@ -63,4 +66,9 @@ body {
 ::selection {
     color: $colorHighlight;
     background: rgba($colorHighlight, .05);
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
 }
