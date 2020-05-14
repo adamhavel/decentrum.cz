@@ -93,12 +93,18 @@
             display: block;
             margin: 0 auto lines(1);
             width: 80%;
-            mix-blend-mode: multiply;
+            background: $colorBackground;
 
-            :root.dark & {
-                filter: invert(1);
-                mix-blend-mode: screen;
-                opacity: .9;
+            img {
+                display: block;
+                width: 100%;
+                mix-blend-mode: multiply;
+
+                :root.dark & {
+                    filter: invert(1);
+                    mix-blend-mode: screen;
+                    opacity: .9;
+                }
             }
 
             @media (max-width: $screenSmall) {
