@@ -13,30 +13,7 @@
             </nav>
         </header>
 
-        <ul class="archive">
-            {{ $year := "" }}
-            {{ range .Data.Pages }}
-                {{ $postYear := .Date.Format "2006" }}
-                {{ $isFirst := ne $postYear $year }}
-                {{ $year = $postYear }}
-                <li class="archive__item spot" {{ if $isFirst }}data-year="{{ $postYear }}"{{ end }}>
-                    <h2 class="spot__title"><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
-                    <p class="spot__summary">{{ .Summary }}</p>
-                    <ul class="spot__meta">
-                        <li>
-                            <time class="spot__date">{{ .Date.Format "2<span>·</span>1<span>·</span>2006" | safeHTML }}</time>
-                        </li>
-                        <li>
-                            <ul class="spot__categories">
-                                {{ range (.GetTerms "categories") }}
-                                    <li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
-                                {{ end }}
-                            </ul>
-                        </li>
-                    </ul>
-                </li>
-            {{ end }}
-        </ul>
+        {{ partial "archive.html" . }}
 
     </article>
 {{ end }}

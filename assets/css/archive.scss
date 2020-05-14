@@ -1,10 +1,7 @@
-.archive {
-
-}
+.archive {}
 
     .archive__item {
         margin-bottom: lines(1.5);
-        margin-left: 6em;
         position: relative;
 
         &:not(:first-child) {
@@ -12,46 +9,53 @@
             padding-top: lines(1.5);
         }
 
-        &[data-year] {
-            padding-left: 6em;
-            margin-left: 0;
+        .archive--deep & {
+            margin-left: 6em;
 
-            &:before {
-                content: attr(data-year);
-                position: absolute;
-                left: 0;
-                font-family: $fontGrotesk;
-                font-feature-settings: 'liga', 'case';
-                letter-spacing: .05em;
-                line-height: 1.175;
+            &[data-year] {
+                padding-left: 6em;
+                margin-left: 0;
+
+                &:before {
+                    content: attr(data-year);
+                    position: absolute;
+                    left: 0;
+                    font-family: $fontGrotesk;
+                    font-feature-settings: 'liga', 'case';
+                    letter-spacing: .05em;
+                    line-height: 1.175;
+                }
+            }
+
+            @media (max-width: $screenSmall) {
+                margin-left: 4em;
+
+                &[data-year] {
+                    padding-left: 4em;
+                    margin-left: 0;
+                }
+            }
+
+            @media (max-width: $screenTiny) {
+                margin-left: 0;
+
+                &[data-year] {
+                    padding-left: 0;
+
+                    &:before {
+                        position: static;
+                        display: block;
+                        margin-bottom: lines(2);
+                    }
+                }
             }
         }
 
         @media (max-width: $screenSmall) {
-            margin-left: 4em;
             margin-bottom: lines(1);
 
             &:not(:first-child) {
                 padding-top: lines(1);
-            }
-
-            &[data-year] {
-                padding-left: 4em;
-                margin-left: 0;
-            }
-        }
-
-        @media (max-width: $screenTiny) {
-            margin-left: 0;
-
-            &[data-year] {
-                padding-left: 0;
-
-                &:before {
-                    position: static;
-                    display: block;
-                    margin-bottom: lines(2);
-                }
             }
         }
     }

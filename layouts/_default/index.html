@@ -31,13 +31,14 @@
             {{ $imageRetina := .Resize (printf $params $widthRetina $qualityRetina) }}
             {{ $imageTiny := .Resize (printf $params $smallWidth $quality) }}
             {{ $imageTinyRetina := .Resize (printf $params $smallWidthRetina $qualityRetina) }}
-            <img
-                class="article__illustration"
-                sizes="(min-width: 760px) {{ $width }}px, 90vw"
-                srcset="{{ $image.Permalink }} {{ $width }}w, {{ $imageRetina.Permalink }} {{ $widthRetina }}w, {{ $imageTiny.Permalink }} {{ $smallWidth }}w, {{ $imageTinyRetina.Permalink }} {{ $smallWidthRetina }}w"
-                src="{{ $image.Permalink }}"
-                role="presentation"
-            >
+            <figure class="article__illustration">
+                <img
+                    sizes="(min-width: 760px) {{ $width }}px, 90vw"
+                    srcset="{{ $image.Permalink }} {{ $width }}w, {{ $imageRetina.Permalink }} {{ $widthRetina }}w, {{ $imageTiny.Permalink }} {{ $smallWidth }}w, {{ $imageTinyRetina.Permalink }} {{ $smallWidthRetina }}w"
+                    src="{{ $image.Permalink }}"
+                    role="presentation"
+                >
+            </figure>
         {{ end }}
 
         {{ with .Params.quote }}
