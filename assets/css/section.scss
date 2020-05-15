@@ -1,4 +1,10 @@
-.section {}
+.section {
+    width: $siteContentLength;
+
+    @media (max-width: $screenMedium) {
+        width: auto;
+    }
+}
 
     .section__header {
         margin-bottom: lines(3);

@@ -1,81 +1,42 @@
 {{ define "main" }}
-{{ with .GetPage "/blog/decentralizovana-spolecnost" }}
-<article class="article">
+<article class="homepage">
 
-    <header class="article__header">
+    {{- with .Site.Taxonomies.categories -}}
+        <p class="homepage__headline"><strong>de<span>·</span>centrum</strong> — praktická <em>soběstačnost</em>
+v komplexním světě, stojící
+na pilířích <a href="{{ .technologie.Page.Permalink }}">technologií</a>, <a href="{{ .finance.Page.Permalink }}">financí</a>,
+praktických <a href="{{ .dovednosti.Page.Permalink }}">dovedností</a> a <a href="{{ .zdravi.Page.Permalink }}">zdraví</a>.</p>
+    {{- end -}}
 
-        <h1 class="article__title">{{ .Title }}</h1>
-
-        <ul class="article__meta">
-            <li>
-                <time>{{ .Date.Format "2<span>·</span>1<span>·</span>2006" | safeHTML }}</time>
-            </li>
-            <li>
-                <ul class="article__categories">
-                    {{ range (.GetTerms "categories") }}
-                        <li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
-                    {{ end }}
-                </ul>
-            </li>
-        </ul>
-
-        {{ with .Page.Resources.GetMatch "img/illustration.png" }}
-            {{ $params := "%vx q%v jpg #fff" }}
-            {{ $width := 700 }}
-            {{ $widthRetina := 1400 }}
-            {{ $smallWidth := 400 }}
-            {{ $smallWidthRetina := 800 }}
-            {{ $quality := 70 }}
-            {{ $qualityRetina := 50 }}
-            {{ $image := .Resize (printf $params $width $quality) }}
-            {{ $imageRetina := .Resize (printf $params $widthRetina $qualityRetina) }}
-            {{ $imageTiny := .Resize (printf $params $smallWidth $quality) }}
-            {{ $imageTinyRetina := .Resize (printf $params $smallWidthRetina $qualityRetina) }}
-            <figure class="article__illustration">
-                <img
-                    sizes="(min-width: 760px) {{ $width }}px, 90vw"
-                    srcset="{{ $image.Permalink }} {{ $width }}w, {{ $imageRetina.Permalink }} {{ $widthRetina }}w, {{ $imageTiny.Permalink }} {{ $smallWidth }}w, {{ $imageTinyRetina.Permalink }} {{ $smallWidthRetina }}w"
-                    src="{{ $image.Permalink }}"
-                    role="presentation"
-                >
-            </figure>
-        {{ end }}
-
-        {{ with .Params.quote }}
-            <blockquote class="article__intro">
-                <p>{{ .content }}</p>
-                <cite><a href="{{ .link }}">{{ .source }}</a></cite>
-            </blockquote>
-        {{ end }}
-
-    </header>
-
-    {{ $dropcap := substr (.Content | plainify) 0 1 -}}
-    <div class="article__content content" data-dropcap="{{ $dropcap }}">
-        {{ .Content }}
-    </div>
-
-    <section class="article__discussion discussion" id="diskuze">
-        <h2 class="discussion__heading">Diskuze</h2>
-        <p class="discussion__info content">Pokud jste v článku našli faktickou chybu nebo chcete-li přispět názorem či kritikou, použijte prosím e-mail <a href="mailto:{{ .Site.Params.email }}">{{ .Site.Params.email }}</a>. Vyhrazuji si právo zveřejnit jen ty příspěvky, které přímo souvisí s článkem, jsou přínosné a splňují kritéria slušnosti a srozumitelnosti. Zároveň beru v potaz jen ty zprávy, které jsou podepsané a mají jasného autora. Respektuji však právo na soukromí, prosím tedy, abyste v mailu uvedli, pod jakým jménem či přezdívkou mám příspěvek zobrazit.</p>
+    <section class="homepage__archive">
+        <h2 class="homepage__heading">Poslední článek</h2>
+        {{ partial "archive.html" . }}
     </section>
 
-</article>
-{{ end }}
-{{ end }}
+    {{ with resources.Get "img/tree.png" }}
+        {{ $params := "%vx q%v jpg #fff" }}
+        {{ $width := 600 }}
+        {{ $widthRetina := 1200 }}
+        {{ $tinyWidth := 400 }}
+        {{ $tinyWidthRetina := 800 }}
+        {{ $quality := 70 }}
+        {{ $qualityRetina := 50 }}
+        {{ $image := .Resize (printf $params $width $quality) }}
+        {{ $imageRetina := .Resize (printf $params $widthRetina $qualityRetina) }}
+        {{ $imageTiny := .Resize (printf $params $tinyWidth $quality) }}
+        {{ $imageTinyRetina := .Resize (printf $params $tinyWidthRetina $qualityRetina) }}
+        <img
+            sizes="(min-width: 760px) 30vw, (min-width: 440px) 70vw, 90vw"
+            srcset="{{ $image.Permalink }} {{ $width }}w, {{ $imageRetina.Permalink }} {{ $widthRetina }}w, {{ $imageTiny.Permalink }} {{ $tinyWidth }}w, {{ $imageTinyRetina.Permalink }} {{ $tinyWidthRetina }}w"
+            src="{{ $image.Permalink }}"
+            class="homepage__illustration homepage__illustration--tree"
+            role="presentation"
+            loading="lazy"
+        >
+    {{ end }}
+    {{ with resources.Get "img/binary-tree.svg" }}
+        <img class="homepage__illustration homepage__illustration--binary-tree" src="{{ .Permalink }}" loading="lazy" role="presentation">
+    {{ end }}
 
-{{ define "footer" }}
-{{ with .GetPage "/blog/decentralizovana-spolecnost" }}
-<nav class="site-footer__article-nav">
-    <ul>
-        {{ with .PrevInSection }}
-            <li><a href="{{ .Permalink }}" rel="prev"><span>{{ .Title }}</span></a></li>
-        {{ end }}
-        <li><a href="#" rel="top"><span>Nahoru</span></a></li>
-        {{ with .NextInSection }}
-            <li><a href="{{ .Permalink }}" rel="next"><span>{{ .Title }}</span></a></li>
-        {{ end }}
-    </ul>
-</nav>
-{{ end }}
+</article>
 {{ end }}

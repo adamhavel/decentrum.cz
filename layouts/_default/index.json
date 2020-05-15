@@ -1,0 +1,21 @@
+{
+  "name": "{{ .Site.Title }}",
+  "description": "{{ .Site.Params.description }}",
+  {{- with resources.Get "img/favicon.png" -}}
+  {{ $favicon192 := .Resize "192x NearestNeighbor #191e20" }}
+  {{ $favicon512 := .Resize "512x NearestNeighbor #191e20" }}
+  "icons": [
+    {
+      "src": "{{ $favicon192.Permalink }}",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "{{ $favicon512.Permalink }}",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
+  {{- end -}}
+  "display": "standalone",
+}

@@ -36,7 +36,11 @@
                     srcset="{{ $image.Permalink }} {{ $width }}w, {{ $imageRetina.Permalink }} {{ $widthRetina }}w, {{ $imageTiny.Permalink }} {{ $smallWidth }}w, {{ $imageTinyRetina.Permalink }} {{ $smallWidthRetina }}w"
                     src="{{ $image.Permalink }}"
                     role="presentation"
+                    class="article__illustration-drawing"
                 >
+                {{ with $.Page.Resources.GetMatch "img/illustration-overlay.svg" }}
+                    <img class="article__illustration-overlay" src="{{ .Permalink }}" alt="">
+                {{ end }}
             </figure>
         {{ end }}
 

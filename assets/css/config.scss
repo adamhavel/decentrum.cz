@@ -5,7 +5,7 @@ $colorText: rgba(var(--color-text-r), var(--color-text-g), var(--color-text-b), 
 $colorTextMedium: rgba(var(--color-text-r), var(--color-text-g), var(--color-text-b), .7);
 $colorTextLight: rgba(var(--color-text-r), var(--color-text-g), var(--color-text-b), .5);
 $colorBackground: var(--color-background);
-$colorHighlight: rgba(red, .8);
+$colorHighlight: rgba(var(--color-highlight-r), var(--color-highlight-g), var(--color-highlight-b), .8);
 $colorShade: rgba(var(--color-text-r), var(--color-text-g), var(--color-text-b), .1);
 $colorShadeLight: rgba(var(--color-text-r), var(--color-text-g), var(--color-text-b), .05);
 
@@ -35,3 +35,18 @@ $screenLarge: $siteContentLength * 2.25;
 $screenMedium: $siteContentLength * 1.75;
 $screenSmall: $siteContentLength * 1.25;
 $screenTiny: $siteContentLength * .725;
+
+@mixin squares($size, $color) {
+    $distance: $size + ($size / 3);
+
+    content: '';
+    display: block;
+    color: $color;
+    width: $size;
+    height: $size;
+    transform: translate($distance, $distance / -2) rotate(45deg);
+    background: currentColor;
+    box-shadow: 0 $distance 0 0 currentColor,
+                $distance 0 0 0 currentColor,
+                -$distance $distance 0 0 currentColor;
+}

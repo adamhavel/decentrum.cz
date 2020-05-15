@@ -17,6 +17,20 @@ disableKinds:
   - taxonomyTerm
 disableHugoGeneratorInject: true
 
+outputs:
+  home:
+    - HTML
+    - RSS
+    - JSON
+  section:
+    - HTML
+  taxonomy:
+    - HTML
+
+outputFormats:
+  JSON:
+    baseName: manifest
+
 taxonomies:
   category: categories
 

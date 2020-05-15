@@ -102,20 +102,9 @@
         margin: lines(2) 0 !important;
 
         &:before {
-            $squareSize: .3em;
-            $squareDistance: $squareSize + .1em;
+            @include squares(.3em, $colorTextMedium);
 
-            content: '';
-            color: $colorTextMedium;
-            width: $squareSize;
-            height: $squareSize;
-            transform: translateX(-$squareSize) rotate(45deg);
-            display: block;
-            margin: 0 auto lines(1) auto;
-            background: currentColor;
-            box-shadow: 0 $squareDistance 0 0 currentColor,
-                        $squareDistance 0 0 0 currentColor,
-                        -$squareDistance $squareDistance 0 0 currentColor;
+            margin: 0 auto lines(.5) auto;
         }
 
         @media (max-width: $screenSmall) {

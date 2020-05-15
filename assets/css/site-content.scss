@@ -1,7 +1,3 @@
 .site-content {
-    width: $siteContentLength;
-
-    @media (max-width: $screenMedium) {
-        width: auto;
-    }
+    flex-grow: 1;
 }

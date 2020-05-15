@@ -1,8 +1,11 @@
 .archive {}
 
     .archive__item {
-        margin-bottom: lines(1.5);
         position: relative;
+
+        &:not(:last-child) {
+            margin-bottom: lines(1.5);
+        }
 
         &:not(:first-child) {
             border-top: 1px solid $colorShade;
@@ -52,7 +55,10 @@
         }
 
         @media (max-width: $screenSmall) {
-            margin-bottom: lines(1);
+
+            &:not(:last-child) {
+                margin-bottom: lines(1);
+            }
 
             &:not(:first-child) {
                 padding-top: lines(1);

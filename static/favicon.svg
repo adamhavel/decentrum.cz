@@ -4,16 +4,16 @@
 	 viewBox="0 0 32 32" style="enable-background:new 0 0 32 32;" xml:space="preserve">
 <style type="text/css">
 	.st0{fill:#ED1C24;}
-	.st1{opacity:0;}
+	.st1{fill-opacity:0;}
 </style>
 <g>
-	<rect x="7" y="22" class="st0" width="8" height="8"/>
-	<rect x="7" y="12" class="st0" width="8" height="8"/>
-	<rect x="17" y="12" class="st0" width="8" height="8"/>
+	<rect x="2" y="22" class="st0" width="8" height="8"/>
+	<rect x="2" y="12" class="st0" width="8" height="8"/>
+	<rect x="12" y="12" class="st0" width="8" height="8"/>
 	<g>
-		<rect x="17" y="2" class="st0" width="8" height="8"/>
-		<path class="st1" d="M25,0h-8h-2v2v8H7H5v2v8v2v8v2h2h8h2v-2v-8h8h2v-2v-8v-2V2V0H25z M7,12h8v8H7V12z M15,30H7v-8h8V30z M25,20
-			h-8v-8h8V20z M17,10V2h8v8H17z"/>
+		<rect x="12" y="2" class="st0" width="8" height="8"/>
+		<path class="st1" d="M20,0h-8h-2v2v8H2H0v2v8v2v8v2h2h8h2v-2v-8h8h2v-2v-8v-2V2V0H20z M2,12h8v8H2V12z M10,30H2v-8h8V30z M20,20
+			h-8v-8h8V20z M12,10V2h8v8H12z"/>
 	</g>
 </g>
 </svg>

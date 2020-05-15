@@ -1,39 +1,51 @@
 <!DOCTYPE html>
 <html lang="cs">
 <head>
+    {{- $isArticle := and .IsPage (eq .Section "blog") }}
     {{- $title := cond .IsHome .Site.Title (printf "%s — %s" .Title .Site.Title) -}}
-    {{- $description := cond .IsPage .Summary .Site.Params.description -}}
-    {{- $image := cond .IsPage (.Resources.GetMatch (string .Page.Params.image)) (resources.Get "img/image.jpg") -}}
+    {{- $description := cond $isArticle .Summary .Site.Params.description -}}
+    {{- $image := cond $isArticle (.Resources.GetMatch (string .Page.Params.image)) (resources.Get "img/image.jpg") -}}
     {{- $rssUrl := ((.GetPage "/").OutputFormats.Get "rss").Permalink -}}
+    {{- $manifestUrl := ((.GetPage "/").OutputFormats.Get "json").Permalink -}}
     {{- $navLinks := dict "1 RSS" $rssUrl "2 E-mail" (printf "mailto:%s" .Site.Params.email) "3 Archiv" (ref . "/blog") "4 Twitter" .Site.Params.twitterUrl "5 Newsletter" (ref . "/newsletter") -}}
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,minimum-scale=1.0" />
     <link rel="preload" href="/fonts/source-serif-variable.woff2" as="font" type="font/woff2" crossorigin />
     <link rel="preload" href="/fonts/source-serif-italic-variable.woff2" as="font" type="font/woff2" crossorigin />
     <link rel="preload" href="/fonts/space-grotesk-variable.ttf" as="font" type="font/ttf" crossorigin />
-    <link rel="alternate" type="application/rss+xml" href="{{ $rssUrl }}" title="{{ .Site.Title }}" />
     {{ with resources.Get "css/default.scss" | toCSS | postCSS | minify | resources.Fingerprint "md5" -}}
-        <link rel="stylesheet" href="{{ .Permalink }}" />
-    {{ end -}}
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <link rel="stylesheet" href="{{ .Permalink }}" />
+    {{- end }}
     <title>{{ $title }}</title>
     <meta name="description" content="{{ $description }}" />
     {{ with $image -}}
-        {{ $img := .Fill "1200x628 q70" -}}
-        {{ $shortTitle := $title | truncate 70 -}}
-        {{ $shortDesc := $description | truncate 200 -}}
-        <meta property="og:title" content="{{ $shortTitle }}" />
-        <meta property="og:description" content="{{ $shortDesc }}" />
-        <meta property="og:image" content="{{ $img.Permalink }}" />
-        <meta property="og:site_name" content="{{ $.Site.BaseURL }}" />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="{{ $.Permalink }}" />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:site" content="{{ $.Site.Params.twitterHandle }}" />
-        <meta name="twitter:creator" content="{{ $.Site.Params.twitterHandle }}" />
-        <meta name="twitter:title" content="{{ $shortTitle }}" />
-        <meta name="twitter:description" content="{{ $shortDesc }}" />
-        <meta name="twitter:image" content="{{ $img.Permalink }}" />
+    {{- $img := .Fill "1200x628 q70" -}}
+    {{- $shortTitle := $title | truncate 70 -}}
+    {{- $shortDesc := $description | truncate 200 -}}
+    <meta property="og:title" content="{{ $shortTitle }}" />
+    <meta property="og:description" content="{{ $shortDesc }}" />
+    <meta property="og:image" content="{{ $img.Permalink }}" />
+    <meta property="og:site_name" content="{{ $.Site.BaseURL }}" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="{{ $.Permalink }}" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="{{ $.Site.Params.twitterHandle }}" />
+    <meta name="twitter:creator" content="{{ $.Site.Params.twitterHandle }}" />
+    <meta name="twitter:title" content="{{ $shortTitle }}" />
+    <meta name="twitter:description" content="{{ $shortDesc }}" />
+    <meta name="twitter:image" content="{{ $img.Permalink }}" />
+    {{- end }}
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    {{- with resources.Get "img/favicon.png" -}}
+    {{ $favicon180 := .Resize "180x NearestNeighbor #191e20" }}
+    <link rel="apple-touch-icon" sizes="180x180" href="{{ $favicon180.Permalink }}" />
+    {{- end }}
+    <link rel="manifest" href="{{ $manifestUrl }}" />
+    <link rel="alternate" type="application/rss+xml" href="{{ $rssUrl }}" title="{{ .Site.Title }}" />
+    {{ with resources.Get "js/script.js" | minify -}}
+    <script type="module">
+        {{ .Content | safeJS }}
+    </script>
     {{- end }}
 </head>
 <body>
@@ -128,11 +140,5 @@ v komplexním světě</p>
         </div>
 
     </footer>
-
-    {{ with resources.Get "js/script.js" | minify -}}
-        <script type="module">
-            {{ .Content | safeJS }}
-        </script>
-    {{ end -}}
 </body>
 </html>

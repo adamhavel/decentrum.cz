@@ -6,12 +6,16 @@
     font-weight: normal;
     outline: none;
     background: none;
+    box-sizing: border-box;
 }
 
 html {
     --color-text-r: 0;
     --color-text-g: 0;
     --color-text-b: 0;
+    --color-highlight-r: 255;
+    --color-highlight-g: 0;
+    --color-highlight-b: 0;
     --color-tiles: #03327b;
     --color-background: rgb(245, 246, 250);
     --opacity-text: .85;
@@ -25,6 +29,9 @@ html {
         --color-text-r: 255;
         --color-text-g: 255;
         --color-text-b: 255;
+        --color-highlight-r: 0;
+        --color-highlight-g: 255;
+        --color-highlight-b: 255;
         --color-tiles: #990808;
         --color-background: #191e20;
         --opacity-text: .85;
@@ -51,7 +58,7 @@ html {
 body {
     display: flex;
     flex-direction: column;
-    min-height: calc(100vh - 6vw);
+    min-height: 100vh;
     padding: 3vw;
 
     @media (max-width: $screenMedium) {
@@ -65,7 +72,7 @@ body {
 
 ::selection {
     color: $colorHighlight;
-    background: rgba($colorHighlight, .05);
+    background: rgba(var(--color-highlight-r), var(--color-highlight-g), var(--color-highlight-b), .05);
 }
 
 a {
