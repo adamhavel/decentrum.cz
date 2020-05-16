@@ -227,9 +227,7 @@
             margin: lines(1) 0;
             opacity: var(--image-opacity);
 
-            &--bitmap {
-                background: rgba(black, .05);
-            }
+            &--bitmap {}
 
             &--vector {
                 opacity: .8;
@@ -328,21 +326,6 @@
 
             @media (max-width: $screenSmall) {
                 margin: lines(1) auto !important;
-            }
-
-            img {
-                width: 100%;
-                display: block;
-                object-fit: cover;
-
-                .js & {
-                    opacity: 0;
-                    transition: opacity .5s;
-
-                    &.is-loaded {
-                        opacity: 1;
-                    }
-                }
             }
         }
 

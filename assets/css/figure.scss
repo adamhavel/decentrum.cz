@@ -1,0 +1,25 @@
+.figure {}
+
+    .figure__image {
+        width: 100%;
+        display: block;
+        object-fit: cover;
+
+        .js & {
+            opacity: 0;
+            transition: opacity .5s;
+
+            &.is-loaded {
+                opacity: 1;
+            }
+        }
+    }
+
+    .figure__caption {
+        display: block;
+        font-size: $sizePico;
+        font-family: $fontGrotesk;
+        text-align: right;
+        color: $colorTextLight;
+        margin-top: lines(.15);
+    }
