@@ -189,7 +189,7 @@ Není snad oblasti, která by byla natolik pokřivena nepravdami, nepochopením 
 ## Soumrak globalizace
 
 {{< figure src="img/pandemie.jpg" ratio="0.3" type="hero" crop="left" caption=`{
-    "title": "detail ze Zahrady pozemských rozkoší",
+    "title": "Detail ze Zahrady pozemských rozkoší",
     "author": "Hieronymus Bosch",
     "year": "1503–1504"
 }` >}}
@@ -207,7 +207,7 @@ Tyto předpovědi asi nikoho nepřekvapí. Potýkat se však budeme i s takzvan�
 ### Řeka a jezero
 
 {{< figure src="img/jezero.jpg" ratio="1.6" type="right" crop="left" cropSmall="bottom" caption=`{
-    "title": "detail z Lovců ve sněhu",
+    "title": "Detail z Lovců ve sněhu",
     "author": "Pieter Bruegel st.",
     "year": "1565"
 }` >}}

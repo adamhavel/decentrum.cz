@@ -59,10 +59,10 @@
         {{ with $.Get "caption" }}
             {{ $cap := . | transform.Unmarshal }}
             <figcaption class="figure__caption">
-                {{ with $cap.author }}{{ . }} · {{ end }}
                 {{ with $cap.url }}<a href="{{ . }}">{{ end }}
                 {{ $cap.title }}
                 {{ if $cap.url }}</a>{{ end }}
+                {{ with $cap.author }} · {{ . }}{{ end }}
                 {{ with $cap.year }}
                     {{ if $cap.copyright }}
                         (&copy; {{ . }} {{ $cap.copyright}})
