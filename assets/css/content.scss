@@ -104,7 +104,7 @@
         &:before {
             @include squares(.3em, $colorTextMedium);
 
-            margin: 0 auto lines(.5) auto;
+            margin: 0 auto lines(.75) auto;
         }
 
         @media (max-width: $screenSmall) {
