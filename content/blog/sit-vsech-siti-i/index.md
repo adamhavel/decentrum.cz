@@ -1,6 +1,6 @@
 ---
 title: "V síti: kapitalismus sledování"
-date: 2020-05-30
+date: 2020-08-30
 summary: "Tempore quos, soluta ullam cupiditate rem harum aperiam alias, ad, non repellendus eligendi, voluptatem iure."
 quote:
   source: "Nesmazatelné záznamy · Edward Snowden"

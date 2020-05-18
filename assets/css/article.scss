@@ -96,20 +96,26 @@
             }
 
         .article__illustration {
+            --width: 80%;
+
             position: relative;
             display: block;
             margin: 0 auto lines(1);
-            width: 80%;
+            width: var(--width);
             background: $colorBackground;
+            padding-bottom: calc(var(--ratio) * var(--width));
 
             @media (max-width: $screenSmall) {
-                width: 100%;
+                --width: 100%;
             }
-        }
 
-            .article__illustration-drawing {
-                display: block;
+            img {
+                position: absolute;
+                top: 0;
+                left: 0;
                 width: 100%;
+                height: 100%;
+                z-index: 1;
                 mix-blend-mode: multiply;
 
                 :root.dark & {
@@ -117,28 +123,18 @@
                     mix-blend-mode: screen;
                     opacity: .9;
                 }
-            }
 
-            .article__illustration-overlay {
-                position: absolute;
-                top: 0;
-                left: 0;
-                width: 100%;
-                height: 100%;
-                z-index: 2;
-                opacity: .8;
-                transition: opacity 5s;
-                mix-blend-mode: multiply;
-
-                :root.dark & {
-                    filter: invert(1);
-                    mix-blend-mode: screen;
-                }
-
-                .article__illustration-drawing:not(.is-loaded) + & {
+                &[src$=".svg"] {
+                    z-index: 2;
+                    transition: opacity 5s;
                     opacity: 0;
                 }
             }
+
+            img.is-loaded + img[src$=".svg"] {
+                opacity: .8 !important;
+            }
+        }
 
         .article__intro {
             width: 70%;
@@ -225,18 +221,6 @@
 
         .article__figure {
             margin: lines(1.5) 0 lines(1);
-            opacity: var(--image-opacity);
-
-            &--bitmap {}
-
-            &--vector {
-                opacity: .8;
-
-                :root.dark & {
-                    opacity: .9;
-                    filter: invert(1);
-                }
-            }
 
             &--right {
                 width: 50%;

@@ -6,6 +6,7 @@
 {{ $quality := 70 }}
 {{ $qualityRetina := 50 }}
 {{ $params := "%vx%v q%v %v" }}
+{{ $viewboxRegex := "([0-9]*[.])?[0-9]+ ([0-9]*[.])?[0-9]+ ([0-9]*[.])?[0-9]+ ([0-9]*[.])?[0-9]+" }}
 
 {{ $width := 760 }}
 {{ if (eq $type "hero") }}
@@ -26,9 +27,20 @@
 
 {{ with .Page.Resources.GetMatch (.Get "src") }}
     {{ $isBitmap := (ne .MediaType.SubType "svg")}}
-    {{ $class := cond $isBitmap "bitmap" "vector" }}
+    {{ $graphicType := cond $isBitmap "bitmap" "vector" }}
     {{ $image := "" }}
-    <figure class="figure article__figure article__figure--{{ $class }} article__figure--{{ with $type }}{{.}}{{ end }}">
+    {{ if eq $isBitmap false }}
+        {{ $viewbox := split (index (findRE $viewboxRegex .Content 1) 0) " " }}
+        {{ $vectorWidth := float (index $viewbox 2) }}
+        {{ $vectorHeight := float (index $viewbox 3) }}
+        {{ $ratio = div $vectorHeight $vectorWidth }}
+        {{ $ratioSmall = $ratio }}
+    {{ end }}
+    <figure
+        class="figure figure--{{ $graphicType }} article__figure {{ with $type }}article__figure--{{.}}{{ end }}"
+        style="--ratio: {{ $ratio }}; --ratio-small: {{ $ratioSmall }}"
+    >
+        <div class="figure__container">
         {{ if $isBitmap }}
             {{ $image = .Fill (printf $params $width $height $quality $crop) }}
             {{ $imageRetina := .Fill (printf $params (mul $width 2) (mul $height 2) $qualityRetina $crop) }}
@@ -56,6 +68,7 @@
         {{ if $isBitmap }}
             </picture>
         {{ end }}
+        </div>
         {{ with $.Get "caption" }}
             {{ $cap := . | transform.Unmarshal }}
             <figcaption class="figure__caption">

@@ -115,6 +115,7 @@ v komplexním světě</p>
 
     </div>
 
+    {{ if eq .IsHome false }}
     <footer class="site-footer">
 
         {{ block "footer" . }}{{ end }}
@@ -140,5 +141,6 @@ v komplexním světě</p>
         </div>
 
     </footer>
+    {{ end }}
 </body>
 </html>

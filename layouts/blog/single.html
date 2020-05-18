@@ -30,16 +30,16 @@
             {{ $imageRetina := .Resize (printf $params $widthRetina $qualityRetina) }}
             {{ $imageTiny := .Resize (printf $params $smallWidth $quality) }}
             {{ $imageTinyRetina := .Resize (printf $params $smallWidthRetina $qualityRetina) }}
-            <figure class="article__illustration">
+            {{ $ratio := div (float .Height) .Width }}
+            <figure class="article__illustration" style="--ratio: {{ $ratio }}">
                 <img
                     sizes="(min-width: 760px) {{ $width }}px, 90vw"
                     srcset="{{ $image.Permalink }} {{ $width }}w, {{ $imageRetina.Permalink }} {{ $widthRetina }}w, {{ $imageTiny.Permalink }} {{ $smallWidth }}w, {{ $imageTinyRetina.Permalink }} {{ $smallWidthRetina }}w"
                     src="{{ $image.Permalink }}"
                     role="presentation"
-                    class="article__illustration-drawing"
                 >
                 {{ with $.Page.Resources.GetMatch "img/illustration-overlay.svg" }}
-                    <img class="article__illustration-overlay" src="{{ .Permalink }}" alt="">
+                    <img src="{{ .Permalink }}" alt="">
                 {{ end }}
             </figure>
         {{ end }}
