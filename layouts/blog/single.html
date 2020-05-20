@@ -31,7 +31,7 @@
             {{ $imageTiny := .Resize (printf $params $smallWidth $quality) }}
             {{ $imageTinyRetina := .Resize (printf $params $smallWidthRetina $qualityRetina) }}
             {{ $ratio := div (float .Height) .Width }}
-            <figure class="article__illustration" style="--ratio: {{ $ratio }}">
+            <figure class="article__illustration" style="--ratio: {{ $ratio }};">
                 <img
                     sizes="(min-width: 760px) {{ $width }}px, 90vw"
                     srcset="{{ $image.Permalink }} {{ $width }}w, {{ $imageRetina.Permalink }} {{ $widthRetina }}w, {{ $imageTiny.Permalink }} {{ $smallWidth }}w, {{ $imageTinyRetina.Permalink }} {{ $smallWidthRetina }}w"
