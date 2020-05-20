@@ -9,7 +9,7 @@
         line-height: lines(1);
         text-transform: uppercase;
         letter-spacing: .075em;
-        font-feature-settings: 'zero', 'liga', 'case';
+        font-feature-settings: 'zero', 'liga', 'case', 'ss02';
         clear: both;
 
         @media (max-width: $screenSmall) {
@@ -136,7 +136,7 @@
             letter-spacing: .15em;
             font-variation-settings: 'wght' var(--heading-weight);
             margin-bottom: lines(.75);
-            font-feature-settings: 'zero', 'liga', 'case';
+            font-feature-settings: 'zero', 'liga', 'case', 'ss02';
         }
 
         hr {

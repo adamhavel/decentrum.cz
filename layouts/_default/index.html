@@ -9,7 +9,7 @@ praktických <a href="{{ .dovednosti.Page.Permalink }}">dovedností</a> a <a hre
     {{- end -}}
 
     <section class="homepage__archive">
-        <h2 class="homepage__heading">Poslední článek</h2>
+        <h2 class="homepage__heading">Poslední články</h2>
         {{ partial "archive.html" . }}
     </section>
 
@@ -34,8 +34,8 @@ praktických <a href="{{ .dovednosti.Page.Permalink }}">dovedností</a> a <a hre
             loading="lazy"
         >
     {{ end }}
-    {{ with resources.Get "img/binary-tree.svg" }}
-        <img class="homepage__illustration homepage__illustration--binary-tree" src="{{ .Permalink }}" loading="lazy" role="presentation">
+    {{ with resources.Get "img/binary-tree.svg" | minify }}
+        <div class="homepage__illustration homepage__illustration--binary-tree">{{ .Content | safeHTML }}</div>
     {{ end }}
 
 </article>

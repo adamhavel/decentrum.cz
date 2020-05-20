@@ -1,4 +1,4 @@
-<ul class="archive {{ if (ne .IsHome true) }}archive--deep{{ end }}">
+<ul class="archive {{ if (eq .IsHome true) }}archive--latest{{ end }}">
     {{ $pages := .Data.Pages }}
     {{ if .IsHome }}
         {{ $pages = (.Site.GetPage "/blog").Pages }}
@@ -8,7 +8,7 @@
         {{ $postYear := .Date.Format "2006" }}
         {{ $isFirst := ne $postYear $year }}
         {{ $year = $postYear }}
-        <li class="archive__item spot" {{ if $isFirst }}data-year="{{ $postYear }}"{{ end }}>
+        <li class="archive__item spot {{ if (eq $.IsHome true) }}spot--small{{ end }}" {{ if $isFirst }}data-year="{{ $postYear }}"{{ end }}>
             <h2 class="spot__title"><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
             <p class="spot__summary">{{ .Summary }}</p>
             <ul class="spot__meta">

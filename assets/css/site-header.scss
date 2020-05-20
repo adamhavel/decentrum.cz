@@ -43,8 +43,10 @@
 
             &:first-child {
                 font-family: $fontGrotesk;
+                font-feature-settings: 'zero', 'liga', 'case', 'ss02';
                 line-height: 1.25;
                 margin-top: -.125em;
+                transform: translateZ(0);
             }
 
             &:last-child {
@@ -271,6 +273,7 @@
 
         .site-header__links {
             font-family: $fontGrotesk;
+            font-feature-settings: 'zero', 'liga', 'case', 'ss02';
             font-size: $sizeNano;
             margin-top: auto;
             margin-bottom: -.25em;

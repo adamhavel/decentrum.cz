@@ -3,6 +3,7 @@
     margin-left: calc(#{$headerWidth} + #{$headerGap});
     color: $colorTextMedium;
     font-family: $fontGrotesk;
+    font-feature-settings: 'zero', 'liga', 'case', 'ss02';
 
     @media (max-width: $screenLarge) {
         margin-left: 0;

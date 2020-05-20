@@ -45,6 +45,7 @@
         display: block;
         font-size: $sizePico;
         font-family: $fontGrotesk;
+        font-feature-settings: 'zero', 'liga', 'case', 'ss02';
         text-align: right;
         color: $colorTextLight;
         margin-top: lines(.15);

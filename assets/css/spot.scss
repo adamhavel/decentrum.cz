@@ -7,7 +7,7 @@
         line-height: 1.0666;
         font-size: $sizeKilo;
         font-variation-settings: 'wght' var(--heading-weight);
-        font-feature-settings: 'zero', 'liga', 'case';
+        font-feature-settings: 'zero', 'liga', 'case', 'ss02';
         letter-spacing: .01em;
         margin-bottom: lines(.375);
 
@@ -18,11 +18,19 @@
                 color: $colorHighlight;
             }
         }
+
+        .spot--small & {
+            font-size: 1rem;
+        }
     }
 
     .spot__summary {
         font-size: $sizeMilli;
         margin-bottom: lines(.675);
+
+        .spot--small & {
+            font-size: $sizeMicro;
+        }
     }
 
     .spot__meta {
@@ -34,6 +42,7 @@
         letter-spacing: .075em;
         font-size: $sizePico;
         text-transform: uppercase;
+        font-feature-settings: 'liga', 'case', 'ss02';
         white-space: nowrap;
 
         > li:not(:last-child) {
