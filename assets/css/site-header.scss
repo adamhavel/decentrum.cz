@@ -46,7 +46,6 @@
                 font-feature-settings: 'zero', 'liga', 'case', 'ss02';
                 line-height: 1.25;
                 margin-top: -.125em;
-                transform: translateZ(0);
             }
 
             &:last-child {
@@ -83,6 +82,7 @@
                 padding-bottom: 100%;
                 position: relative;
                 overflow: hidden;
+                transform: translateZ(0);
 
                 img {
                     display: block;
@@ -93,27 +93,9 @@
                     left: 0;
                     width: 100%;
                     height: 100%;
+                    will-change: transform;
                     mix-blend-mode: difference;
                     transition: transform .3s;
-                }
-
-                &:before {
-                    xcontent: '';
-                    position: absolute;
-                    top: -50%;
-                    left: -50%;
-                    width: 200%;
-                    height: 200%;
-                    background-repeat: no-repeat;
-                    background-position: center;
-                    background-color: rgba(white, .65);
-                    background-size: 30%;
-                    z-index: 2;
-                    filter: invert(1);
-                    opacity: 0;
-                    transition: transform .5s, opacity .4s;
-                    transform: scale(.75);
-                    pointer-events: none;
                 }
 
                 &:hover,
@@ -124,34 +106,13 @@
                     img {
                         transform: scale(1.5);
                     }
-
-                    &:before {
-                        opacity: 1;
-                        transform: none;
-                    }
                 }
-            }
-
-            &:nth-child(2):before {
-                background-image: url('/img/icon-skills.svg');
-            }
-
-            &:nth-child(3):before {
-                background-image: url('/img/icon-health.svg');
-            }
-
-            &:nth-child(4):before {
-                background-image: url('/img/icon-money.svg');
-            }
-
-            &:nth-child(5):before {
-                background-image: url('/img/icon-technology.svg');
             }
         }
 
             .site-header__title {
-                $circleDiameter: 2.5125em * 2;
-                $dotDiameter: .25em;
+                $circleDiameter: 2.575em * 2;
+                $dotDiameter: .275em;
                 $innerDiameter: $circleDiameter - $dotDiameter;
                 @mixin dots($color) {
                     box-shadow: $innerDiameter 0 0 0 $color,
@@ -173,12 +134,13 @@
                     &:before {
                         content: '';
                         position: absolute;
-                        width: 4.725em;
-                        height: 4.725em;
+                        width: 4.85em;
+                        height: 4.85em;
                         border-radius: 50%;
                         border: 1px dashed currentColor;
                         left: 1.5em;
                         top: 50%;
+                        will-change: transform;
                         transform: translateY(-50%);
                         transition: opacity 1s, color .5s, transform 2s;
                         pointer-events: none;
@@ -195,9 +157,10 @@
                         border-radius: 50%;
                         background: currentColor;
                         opacity: .2;
-                        left: 1.375em;
+                        left: 1.39em;
                         top: 50%;
-                        transform: translateY(-50%);
+                        will-change: transform;
+                        transform: translateY(-50%) translateZ(0);
                         transform-origin: ($circleDiameter / 2) 0;
                         pointer-events: none;
                         transition: transform 1s, opacity .5s, color .5s, box-shadow .5s;
@@ -219,14 +182,14 @@
                         &:after {
                             @include dots(currentColor);
 
-                            transform: rotate(-179.9deg) translateY(-50%);
+                            transform: rotate(-179.9deg) translateY(-50%) translateZ(0);
                             opacity: 1;
                         }
                     }
                 }
 
                 span {
-                    padding-right: .525em;
+                    padding-right: .575em;
                 }
             }
 

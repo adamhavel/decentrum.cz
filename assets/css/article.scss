@@ -131,13 +131,18 @@
 
                 &[src$=".svg"] {
                     z-index: 2;
-                    transition: opacity 5s;
                     opacity: 0;
                 }
             }
 
             img.is-loaded + img[src$=".svg"] {
-                opacity: .8 !important;
+                @keyframes appear {
+                    to {
+                        opacity: .8;
+                    }
+                }
+
+                animation: appear linear 5s forwards;
             }
         }
 
