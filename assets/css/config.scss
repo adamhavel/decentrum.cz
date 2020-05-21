@@ -25,7 +25,26 @@ $sizeMilli: .9rem;
 $sizeKilo: 1.125rem;
 $sizeMega: 1.25rem;
 $sizeGiga: 1.5rem;
-$sizePeta: 2rem;
+$sizeTera: 2rem;
+
+$sizes: (
+    pico: $sizePico $baseLineHeight,
+    nano: $sizeNano $baseLineHeight,
+    micro: $sizeMicro $baseLineHeight,
+    milli: $sizeMilli $baseLineHeight,
+    mono: 1rem $baseLineHeight,
+    kilo: $sizeKilo $baseLineHeight,
+    mega: $sizeMega 1.333,
+    giga: $sizeGiga 1.25,
+    tera: $sizeTera 1.125
+);
+
+@mixin size($name) {
+    $size: map-get($sizes, $name);
+
+    font-size: nth($size, 1);
+    line-height: nth($size, 2);
+}
 
 $siteContentLength: 38rem;
 $headerWidth: 15rem;

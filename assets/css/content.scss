@@ -1,12 +1,13 @@
 .content {
 
     h2 {
+        @include size('kilo');
+
         font-family: $fontGrotesk;
-        font-size: $sizeKilo;
         font-variation-settings: 'wght' var(--heading-weight);
+        line-height: lines(1);
         margin-bottom: lines(1);
         margin-top: lines(4);
-        line-height: lines(1);
         text-transform: uppercase;
         letter-spacing: .075em;
         font-feature-settings: 'zero', 'liga', 'case', 'ss02';
@@ -19,11 +20,12 @@
     }
 
     h3 {
+        @include size('kilo');
+
         font-family: $fontSerif;
-        font-size: $sizeKilo;
         font-variation-settings: 'wght' var(--heading-weight);
-        line-height: lines(1);
         margin-bottom: lines(.5);
+        line-height: lines(1);
         margin-top: lines(2);
         font-feature-settings: 'smcp';
         clear: both;
@@ -31,24 +33,6 @@
         @media (max-width: $screenSmall) {
             margin-top: lines(1);
             margin-bottom: lines(.25);
-        }
-    }
-
-    h2, h3 {
-        position: relative;
-        cursor: pointer;
-
-        &:hover:before,
-        &:focus:before,
-        &:target:before {
-            content: '→';
-            position: absolute;
-            right: calc(100% + .5rem);
-            top: 50%;
-            transform: translateY(-45%);
-            font-variation-settings: 'wght' 100;
-            font-family: $fontGrotesk;
-            font-size: 1rem;
         }
     }
 
@@ -97,8 +81,9 @@
     }
 
     .pullout {
+        @include size('kilo');
+
         font-variation-settings: 'wght' var(--strong-weight);
-        font-size: $sizeKilo;
         margin: lines(2) 0 !important;
 
         &:before {
@@ -128,10 +113,11 @@
         }
 
         &:before {
+            @include size('milli');
+
             content: 'Poznámky';
             display: block;
             font-family: $fontGrotesk;
-            font-size: $sizeMilli;
             text-transform: uppercase;
             letter-spacing: .15em;
             font-variation-settings: 'wght' var(--heading-weight);
@@ -144,8 +130,9 @@
         }
 
         ol {
+            @include size('micro');
+
             counter-reset: footnotes;
-            font-size: $sizeMicro;
 
             @media (max-width: $screenSmall) {
                 margin-left: 3em;

@@ -11,64 +11,33 @@
         margin-top: -.2rem;
 
         @media (max-width: $screenMedium) {
+            margin-top: 0;
             margin-bottom: lines(2);
+        }
+
+        @media (max-width: $screenSmall) {
+            margin-bottom: lines(1);
         }
     }
 
         .section__title {
-            font-family: $fontGrotesk;
-            line-height: 1.2;
-            font-size: $sizePeta;
-            font-variation-settings: 'wght' var(--heading-weight);
-            font-feature-settings: 'zero', 'liga', 'case';
+            @include size('tera');
+
             padding-bottom: lines(.25);
             border-bottom: 1px solid $colorShade;
 
             &:not(:last-child) {
-                margin-bottom: lines(.6);
+                margin-bottom: lines(.5);
             }
 
             @media (max-width: $screenSmall) {
-                font-size: $sizeGiga;
+                @include size('giga');
             }
         }
 
         .section__filters {
-            font-family: $fontGrotesk;
+            @include size('pico');
+
             color: $colorTextMedium;
-            letter-spacing: .075em;
-            font-size: $sizePico;
-            text-transform: uppercase;
-            font-variation-settings: 'wght' var(--strong-weight);
-            line-height: 1.375;
-            display: flex;
-
-            ul {
-                display: flex;
-                flex-wrap: wrap;
-                align-items: center;
-            }
-
-            li {
-                display: block;
-            }
-
-            li:not(:last-child) {
-
-                &:after {
-                    display: inline-block;
-                    padding: 0 .5em;
-                    content: '·';
-                    font-variation-settings: 'wght' var(--heading-weight);
-                }
-            }
-
-            a {
-
-                &:hover,
-                &:focus,
-                &.is-active {
-                    color: $colorHighlight;
-                }
-            }
+            font-variation-settings: 'wght' var(--heading-weight);
         }

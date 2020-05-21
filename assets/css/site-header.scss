@@ -21,6 +21,8 @@
         display: grid;
         grid-gap: .6em;
         grid-template-columns: repeat(2, 1fr);
+        font-family: $fontGrotesk;
+        font-feature-settings: 'zero', 'liga', 'case', 'ss02';
 
         @media (max-width: $screenMedium) {
             grid-template-columns: repeat(4, 1fr);
@@ -42,8 +44,6 @@
         .site-header__tile {
 
             &:first-child {
-                font-family: $fontGrotesk;
-                font-feature-settings: 'zero', 'liga', 'case', 'ss02';
                 line-height: 1.25;
                 margin-top: -.125em;
             }
@@ -194,11 +194,13 @@
             }
 
             .site-header__desc {
-                font-variation-settings: 'wght' 375;
+                @include size('pico');
+
+                font-variation-settings: 'wght' 350;
                 color: $colorTextLight;
                 text-align: left;
-                font-size: $sizePico;
                 white-space: pre;
+                line-height: 1.25;
 
                 @media (max-width: $screenMedium) and (min-width: $screenSmall) {
                     white-space: normal;
@@ -235,8 +237,6 @@
             }
 
         .site-header__links {
-            font-family: $fontGrotesk;
-            font-feature-settings: 'zero', 'liga', 'case', 'ss02';
             font-size: $sizeNano;
             margin-top: auto;
             margin-bottom: -.25em;
@@ -283,21 +283,21 @@
                     flex-grow: 1;
                     margin-right: .5em;
                     border-bottom: 1px dotted currentColor;
-                    opacity: .25;
+                    opacity: .2;
                 }
 
                 &:hover,
-                &:focus,
-                &.is-active {
+                &:focus {
                     color: $colorHighlight;
 
                     &:before {
                         border-bottom-style: solid;
-
-                        :root.dark & {
-                            opacity: .5;
-                        }
+                        opacity: .5;
                     }
+                }
+
+                &.is-active {
+                    color: $colorHighlight;
                 }
 
                 @media (max-width: $screenTiny), (max-width: $screenMedium) and (min-width: $screenSmall) {

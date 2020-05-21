@@ -1,14 +1,20 @@
 .site-wrapper {
     display: flex;
     flex-grow: 1;
-    margin-bottom: lines(3);
 
     @media (max-width: $screenMedium) {
         display: block;
-        margin-bottom: lines(3);
     }
 
-    @media (max-width: $screenSmall) {
-        margin-bottom: lines(1.5);
+    &:not(:last-child) {
+        margin-bottom: lines(3);
+
+        @media (max-width: $screenMedium) {
+            margin-bottom: lines(2);
+        }
+
+        @media (max-width: $screenSmall) {
+            margin-bottom: lines(1.5);
+        }
     }
 }

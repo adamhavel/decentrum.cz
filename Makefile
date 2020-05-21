@@ -4,7 +4,7 @@ build: node_modules clean-build
 	hugo
 
 develop: node_modules clean-build
-	hugo server
+	hugo server --buildDrafts
 
 node_modules:
 	npm install

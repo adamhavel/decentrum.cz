@@ -16,3 +16,35 @@
     src: url('/fonts/space-grotesk-variable.ttf') format('truetype');
     font-display: swap;
 }
+
+.meta {
+    font-family: $fontGrotesk;
+    color: $colorTextLight;
+    letter-spacing: .075em;
+    font-feature-settings: 'liga', 'case', 'ss02';
+    text-transform: uppercase;
+}
+
+.date {
+    white-space: nowrap;
+
+    span {
+        display: inline-block;
+        margin: 0 .2em;
+        font-variation-settings: 'wght' var(--heading-weight);
+    }
+}
+
+.title {
+    font-family: $fontGrotesk;
+    font-variation-settings: 'wght' var(--heading-weight);
+    font-feature-settings: 'zero', 'liga', 'case', 'ss02';
+}
+
+.subtitle {
+    font-family: $fontGrotesk;
+    text-transform: uppercase;
+    letter-spacing: .15em;
+    font-variation-settings: 'wght' var(--heading-weight);
+    font-feature-settings: 'zero', 'liga', 'case', 'ss02';
+}

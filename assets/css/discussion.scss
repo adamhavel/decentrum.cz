@@ -1,17 +1,11 @@
-.discussion {
-
-}
+.discussion {}
 
     .discussion__heading {
-        font-family: $fontGrotesk;
-        font-size: $sizeMilli;
-        text-transform: uppercase;
-        letter-spacing: .15em;
-        font-variation-settings: 'wght' var(--heading-weight);
+        @include size('milli');
+
         margin-bottom: lines(.75);
-        font-feature-settings: 'zero', 'liga', 'case', 'ss02';
     }
 
     .discussion__info {
-        font-size: $sizeMicro;
+        @include size('micro');
     }

@@ -1,7 +1,7 @@
 .article {
     width: $siteContentLength;
 
-    @media (max-width: $screenMedium) {
+    @media (max-width: $screenLarge) {
         width: auto;
     }
 }
@@ -21,33 +21,25 @@
     }
 
         .article__title {
-            font-family: $fontGrotesk;
-            line-height: 1.2;
-            font-size: $sizePeta;
-            font-variation-settings: 'wght' var(--heading-weight);
-            font-feature-settings: 'zero', 'liga', 'case', 'ss02';
+            @include size('tera');
+
             padding-bottom: lines(.25);
             border-bottom: 1px solid $colorShade;
 
             &:not(:last-child) {
-                margin-bottom: lines(.6);
+                margin-bottom: lines(.5);
             }
 
             @media (max-width: $screenSmall) {
-                font-size: $sizeGiga;
+                @include size('giga');
             }
         }
 
         .article__meta {
+            @include size('pico');
+
             display: flex;
-            font-family: $fontGrotesk;
-            color: $colorTextLight;
-            letter-spacing: .075em;
-            font-size: $sizePico;
-            line-height: 1.375;
             align-items: flex-start;
-            font-feature-settings: 'liga', 'case', 'ss02';
-            text-transform: uppercase;
 
             &:not(:last-child) {
                 margin-bottom: lines(3);
@@ -64,41 +56,9 @@
             > li:not(:last-child) {
                 margin-right: 2em;
             }
-
-            time {
-                white-space: nowrap;
-
-                span {
-                    display: inline-block;
-                    margin: 0 .2em;
-                    font-variation-settings: 'wght' var(--heading-weight);
-                }
-            }
         }
 
-            .article__categories {
-                display: flex;
-                align-items: center;
-                flex-wrap: wrap;
-
-                > li:not(:last-child) {
-
-                    &:after {
-                        display: inline-block;
-                        padding: 0 .25em;
-                        content: '·';
-                        font-variation-settings: 'wght' var(--heading-weight);
-                    }
-                }
-
-                a {
-
-                    &:hover,
-                    &:focus {
-                        color: $colorHighlight;
-                    }
-                }
-            }
+            .article__categories {}
 
         .article__illustration {
             --width: 80%;
@@ -129,21 +89,25 @@
                     mix-blend-mode: screen;
                     opacity: .9;
                 }
-
-                &[src$=".svg"] {
-                    z-index: 2;
-                    opacity: 0;
-                }
             }
 
-            img.is-loaded + img[src$=".svg"] {
-                @keyframes appear {
-                    to {
-                        opacity: .8;
-                    }
+            .article__illustration-overlay {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                z-index: 2;
+                mix-blend-mode: multiply;
+                color: $colorHighlight;
+
+                :root.dark & {
+                    mix-blend-mode: screen;
                 }
 
-                animation: appear linear 5s forwards;
+                svg {
+                    fill: currentColor;
+                }
             }
         }
 
@@ -157,8 +121,9 @@
             }
 
             p {
+                @include size('milli');
+
                 font-style: italic;
-                font-size: $sizeMilli;
                 margin-bottom: lines(.5);
                 color: $colorTextMedium;
 
@@ -174,12 +139,13 @@
             }
 
             cite {
-                font-style: normal;
+                @include size('nano');
+
                 font-family: $fontGrotesk;
-                font-size: $sizeNano;
                 letter-spacing: .0125em;
                 color: $colorTextLight;
                 display: block;
+                font-style: normal;
 
                 a {
                     color: inherit;

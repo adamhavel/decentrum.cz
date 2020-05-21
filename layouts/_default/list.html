@@ -2,9 +2,9 @@
     <article class="section">
 
         <header class="section__header">
-            <h1 class="section__title">Archiv článků</h1>
-            <nav class="section__filters">
-                <ul>
+            <h1 class="section__title title">Archiv článků</h1>
+            <nav class="section__filters meta">
+                <ul class="categories-list">
                     {{ range .Site.Taxonomies.categories }}
                         {{ $isActive := eq .Page.Slug $.Slug }}
                         <li><a {{ if $isActive }}class="is-active"{{ end }} data-count="{{ .Count }}" href="{{ .Page.Permalink }}">{{ .Page.Title }}</a></li>

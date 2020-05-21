@@ -9,7 +9,6 @@ praktických <a href="{{ .dovednosti.Page.Permalink }}">dovedností</a> a <a hre
     {{- end -}}
 
     <section class="homepage__archive">
-        <h2 class="homepage__heading">Poslední články</h2>
         {{ partial "archive.html" . }}
     </section>
 
@@ -25,18 +24,17 @@ praktických <a href="{{ .dovednosti.Page.Permalink }}">dovedností</a> a <a hre
         {{ $imageRetina := .Resize (printf $params $widthRetina $qualityRetina) }}
         {{ $imageTiny := .Resize (printf $params $tinyWidth $quality) }}
         {{ $imageTinyRetina := .Resize (printf $params $tinyWidthRetina $qualityRetina) }}
-        <div class="homepage__illustration">
+        <div class="homepage__illustration" aria-hidden="true">
             <img
                 sizes="(min-width: 760px) 30vw, (min-width: 440px) 70vw, 90vw"
                 srcset="{{ $image.Permalink }} {{ $width }}w, {{ $imageRetina.Permalink }} {{ $widthRetina }}w, {{ $imageTiny.Permalink }} {{ $tinyWidth }}w, {{ $imageTinyRetina.Permalink }} {{ $tinyWidthRetina }}w"
                 src="{{ $image.Permalink }}"
-                role="presentation"
                 loading="lazy"
             >
         </div>
     {{ end }}
     {{ with resources.Get "img/binary-tree.svg" | minify }}
-        <div class="homepage__binary-tree">{{ .Content | safeHTML }}</div>
+        <div class="homepage__binary-tree" aria-hidden="true">{{ .Content | safeHTML }}</div>
     {{ end }}
 
 </article>

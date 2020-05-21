@@ -3,14 +3,14 @@
 
     <header class="article__header">
 
-        <h1 class="article__title">{{ .Title }}</h1>
+        <h1 class="article__title title">{{ .Title }}</h1>
 
-        <ul class="article__meta">
+        <ul class="article__meta meta">
             <li>
-                <time>{{ .Date.Format "2<span>·</span>1<span>·</span>2006" | safeHTML }}</time>
+                <time class="date">{{ .Date.Format "2<span>·</span>1<span>·</span>2006" | safeHTML }}</time>
             </li>
             <li>
-                <ul class="article__categories">
+                <ul class="article__categories categories-list">
                     {{ range (.GetTerms "categories") }}
                         <li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
                     {{ end }}
@@ -31,15 +31,14 @@
             {{ $imageTiny := .Resize (printf $params $smallWidth $quality) }}
             {{ $imageTinyRetina := .Resize (printf $params $smallWidthRetina $qualityRetina) }}
             {{ $ratio := div (float .Height) .Width }}
-            <figure class="article__illustration" style="--ratio: {{ $ratio }};">
+            <figure class="article__illustration" style="--ratio: {{ $ratio }};" aria-hidden="true">
                 <img
                     sizes="(min-width: 760px) {{ $width }}px, 90vw"
                     srcset="{{ $image.Permalink }} {{ $width }}w, {{ $imageRetina.Permalink }} {{ $widthRetina }}w, {{ $imageTiny.Permalink }} {{ $smallWidth }}w, {{ $imageTinyRetina.Permalink }} {{ $smallWidthRetina }}w"
                     src="{{ $image.Permalink }}"
-                    role="presentation"
                 >
-                {{ with $.Page.Resources.GetMatch "img/illustration-overlay.svg" }}
-                    <img src="{{ .Permalink }}" alt="">
+                {{ with $.Page.Resources.GetMatch "img/illustration-overlay.svg" | minify }}
+                    <div class="article__illustration-overlay">{{ .Content | safeHTML }}</div>
                 {{ end }}
             </figure>
         {{ end }}
@@ -59,7 +58,7 @@
     </div>
 
     <section class="article__discussion discussion" id="diskuze">
-        <h2 class="discussion__heading">Diskuze</h2>
+        <h2 class="discussion__heading subtitle">Diskuze</h2>
         <p class="discussion__info content">Pokud jste v článku našli faktickou chybu nebo chcete-li přispět názorem či kritikou, použijte prosím e-mail <a href="mailto:{{ .Site.Params.email }}">{{ .Site.Params.email }}</a>. Vyhrazuji si právo zveřejnit jen ty příspěvky, které přímo souvisí s článkem, jsou přínosné a splňují kritéria slušnosti a srozumitelnosti. Zároveň beru v potaz jen ty zprávy, které jsou podepsané a mají jasného autora. Respektuji však právo na soukromí, prosím tedy, abyste v mailu uvedli, pod jakým jménem či přezdívkou mám příspěvek zobrazit.</p>
     </section>
 

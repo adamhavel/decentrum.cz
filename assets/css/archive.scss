@@ -7,7 +7,7 @@
             margin-bottom: lines(1.5);
 
             .archive--latest & {
-                margin-bottom: lines(1);
+                margin-bottom: lines(.75);
             }
         }
 
@@ -16,7 +16,7 @@
             padding-top: lines(1.5);
 
             .archive--latest & {
-                padding-top: lines(1);
+                padding-top: lines(.75);
             }
         }
 
@@ -28,13 +28,15 @@
                 margin-left: 0;
 
                 &:before {
+                    @include size('kilo');
+
                     content: attr(data-year);
                     position: absolute;
                     left: 0;
                     font-family: $fontGrotesk;
                     font-feature-settings: 'liga', 'case';
+                    font-variation-settings: 'wght' var(--light-weight);
                     letter-spacing: .05em;
-                    line-height: 1.175;
                 }
             }
 

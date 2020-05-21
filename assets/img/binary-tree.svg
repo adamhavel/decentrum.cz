@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- Generator: Adobe Illustrator 24.1.2, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
-<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+<svg version="1.1" id="binary-tree" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
      viewBox="0 0 258.8 153.5" style="enable-background:new 0 0 258.8 153.5;" xml:space="preserve">
 <style type="text/css">
 
-    circle {
+    #binary-tree circle {
         fill: currentColor;
     }
 
-    line {
+    #binary-tree line {
         stroke-dashoffset: 19;
         fill: none;
         stroke: currentColor;
@@ -17,182 +17,178 @@
         stroke-dasharray: .5;
     }
 
-    .level {
+    #binary-tree .level {
         opacity: 0;
         animation: appear 1s ease-in-out 0s forwards;
     }
 
-    .second.level {
+    #binary-tree .second.level {
         animation-delay: .5s;
     }
 
-    .third.level {
+    #binary-tree .third.level {
         animation-delay: .75s;
     }
 
-    .fourth.level {
+    #binary-tree .fourth.level {
         animation-delay: 1s;
     }
 
-    #tree {
+    #binary-tree #tree {
         transform-origin: 50% 50%;
-        transform: scale(.85);
+        transform: scale(.95);
     }
 
-    #root {
-        opacity: 0;
-        transform: translateY(-10px);
-        animation: appear 2s ease-out 0s forwards;
-    }
+    #binary-tree #root {}
 
-    #l {
+    #binary-tree #l {
         transform-origin: 129.4px 4px;
         transform: rotate(-23.937deg);
     }
 
-        #ll {
+        #binary-tree #ll {
             transform-origin: 113.2px 40.5px;
             transform: rotate(-50.504deg);
         }
 
-            #lll {
+            #binary-tree #lll {
                 transform-origin: 73px 51.7px;
                 transform: rotate(-25.05deg);
             }
 
-                #llll {
+                #binary-tree #llll {
                     transform-origin: 25.4px 43.3px;
                     transform: rotate(-20deg);
                 }
 
-                #lllr {
+                #binary-tree #lllr {
                     transform-origin: 25.4px 43.3px;
                     transform: rotate(24deg);
                 }
 
-            #llr {
+            #binary-tree #llr {
                 transform-origin: 73px 51.7px;
                 transform: rotate(12deg);
             }
 
-                #llrl {
+                #binary-tree #llrl {
                     transform-origin: 29.7px 74px;
                     transform: rotate(-31deg);
                 }
 
-                #llrr {
+                #binary-tree #llrr {
                     transform-origin: 29.7px 74px;
                     transform: rotate(19.5deg);
                 }
 
-        #lr {
+        #binary-tree #lr {
             transform-origin: 113.2px 40.5px;
             transform: rotate(3.549deg);
         }
 
-            #lrl {
+            #binary-tree #lrl {
                 transform-origin: 98.9px 78.9px;
                 transform: rotate(-17deg);
             }
 
-                #lrll {
+                #binary-tree #lrll {
                     transform-origin: 69px 117.4px;
                     transform: rotate(-25deg);
                 }
 
-                #lrlr {
+                #binary-tree #lrlr {
                     transform-origin: 69px 117.4px;
                     transform: rotate(30deg);
                 }
 
-            #lrr {
+            #binary-tree #lrr {
                 transform-origin: 98.9px 78.9px;
                 transform: rotate(21deg);
 
             }
 
-                #lrrl {
+                #binary-tree #lrrl {
                     transform-origin: 99.3px 127.6px;
                     transform: rotate(-27.5deg);
                 }
 
-                #lrrr {
+                #binary-tree #lrrr {
                     transform-origin: 99.3px 127.6px;
                     transform: rotate(22deg);
                 }
 
-    #r {
+    #binary-tree #r {
         transform-origin: 129.4px 4px;
         transform: rotate(23.937deg);
     }
 
-        #rl {
+        #binary-tree #rl {
             transform-origin: 145.6px 39.9px;
             transform: rotate(-3.549deg);
         }
 
-            #rll {
+            #binary-tree #rll {
                 transform-origin: 159.9px 78.3px;
                 transform: rotate(-12deg);
 
             }
 
-                #rlll {
+                #binary-tree #rlll {
                     transform-origin: 159.5px 127px;
                     transform: rotate(-24deg);
                 }
 
-                #rllr {
+                #binary-tree #rllr {
                     transform-origin: 159.5px 127px;
                     transform: rotate(20deg);
                 }
 
-            #rlr {
+            #binary-tree #rlr {
                 transform-origin: 159.9px 78.3px;
                 transform: rotate(25.05deg);
             }
 
-                #rlrl {
+                #binary-tree #rlrl {
                     transform-origin: 189.8px 116.7px;
                     transform: rotate(19.5deg);
                 }
 
-                #rlrr {
+                #binary-tree #rlrr {
                     transform-origin: 189.8px 116.7px;
                     transform: rotate(-31deg);
                 }
 
-        #rr {
+        #binary-tree #rr {
             transform-origin: 145.6px 39.9px;
             transform: rotate(50.504deg);
         }
 
-            #rrl {
+            #binary-tree #rrl {
                 transform-origin: 185.8px 51.1px;
                 transform: rotate(21deg);
             }
 
-                #rrll {
+                #binary-tree #rrll {
                     transform-origin: 229.1px 73.3px;
                     transform: rotate(-30deg);
                 }
 
-                #rrlr {
+                #binary-tree #rrlr {
                     transform-origin: 229.1px 73.3px;
                     transform: rotate(25deg);
                 }
 
-            #rrr {
+            #binary-tree #rrr {
                 transform-origin: 185.8px 51.1px;
                 transform: rotate(-17deg);
             }
 
-                #rrrl {
+                #binary-tree #rrrl {
                     transform-origin: 233.4px 42.6px;
                     transform: rotate(22deg);
                 }
 
-                #rrrr {
+                #binary-tree #rrrr {
                     transform-origin: 233.4px 42.6px;
                     transform: rotate(-27.5deg);
                 }

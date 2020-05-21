@@ -1,0 +1,24 @@
+.categories-list {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+
+    > li:not(:last-child) {
+
+        &:after {
+            display: inline-block;
+            padding: 0 .25em;
+            content: '·';
+            font-variation-settings: 'wght' var(--heading-weight);
+        }
+    }
+
+    a {
+
+        &:hover,
+        &:focus,
+        &.is-active {
+            color: $colorHighlight;
+        }
+    }
+}

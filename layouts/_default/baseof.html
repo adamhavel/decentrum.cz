@@ -2,7 +2,7 @@
 <html lang="cs">
 <head>
     {{- $isArticle := and .IsPage (eq .Section "blog") }}
-    {{- $title := cond .IsHome .Site.Title (printf "%s — %s" .Title .Site.Title) -}}
+    {{- $title := cond .IsHome (printf "%s — %s" .Site.Title .Site.Params.shortDescription) (printf "%s — %s" .Title .Site.Title) -}}
     {{- $description := cond $isArticle .Summary .Site.Params.description -}}
     {{- $image := cond $isArticle (.Resources.GetMatch (string .Page.Params.image)) (resources.Get "img/image.jpg") -}}
     {{- $rssUrl := ((.GetPage "/").OutputFormats.Get "rss").Permalink -}}
@@ -84,9 +84,12 @@ v komplexním světě</p>
                     </div>
                 {{- end -}}
                 <div class="site-header__tile">
+
                     <ul class="site-header__links">
                         {{- range $title, $url := $navLinks -}}
-                            <li><a href="{{ $url }}">{{ substr $title 2 }}</a></li>
+                            {{ $title = substr $title 2 }}
+                            {{ $isActive := or (eq $title $.Title) (eq $title $.Params.parentTitle) }}
+                            <li><a href="{{ $url }}" {{ if $isActive }}class="is-active"{{ end }}>{{ $title }}</a></li>
                         {{- end -}}
                     </ul>
                     <button class="site-header__lightswitch lightswitch" type="button" aria-hidden="true">
@@ -125,7 +128,9 @@ v komplexním světě</p>
             <nav class="site-footer__nav">
                 <ul>
                     {{ range $title, $url := $navLinks }}
-                        <li><a href="{{ $url }}">{{ substr $title 2 }}</a></li>
+                        {{ $title = substr $title 2 }}
+                        {{ $isActive := or (eq $title $.Title) (eq $title $.Params.parentTitle) }}
+                        <li><a href="{{ $url }}" {{ if $isActive }}class="is-active"{{ end }}>{{ $title }}</a></li>
                     {{ end }}
                 </ul>
             </nav>

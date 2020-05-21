@@ -13,7 +13,7 @@
         text-transform: uppercase;
         padding: 1.5em;
         border: 1px solid $colorShade;
-        font-variation-settings: 'wght' 300;
+        font-variation-settings: 'wght' var(--light-weight);
         line-height: 1;
         color: $colorText;
         background: white;
@@ -46,7 +46,7 @@
         letter-spacing: .1em;
         padding: 1em;
         text-transform: uppercase;
-        font-variation-settings: 'wght' 600;
+        font-variation-settings: 'wght' var(--heading-weight);
         margin-left: 1em;
         cursor: pointer;
         background: none;
