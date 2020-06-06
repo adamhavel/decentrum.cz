@@ -2,7 +2,7 @@ title: de·centrum
 baseURL: https://decentrum.cz/
 enableRobotsTXT: true
 
-timeout: 30000
+timeout: 30s
 
 params:
   description: "de·centrum je web o praktické soběstačnosti v komplexním světě, stojící na pilířích technologií, financí, praktických dovedností a zdraví."
