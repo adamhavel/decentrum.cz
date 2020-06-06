@@ -1,4 +1,5 @@
 {{ $type := .Get "type" }}
+{{ $invert := .Get "invert" }}
 {{ $crop := (default "smart" (.Get "crop")) }}
 {{ $cropSmall := (default $crop (.Get "cropSmall")) }}
 {{ $ratio := float (default 0.5625 (.Get "ratio")) }}
@@ -37,7 +38,13 @@
         {{ $ratioSmall = $ratio }}
     {{ end }}
     <figure
-        class="figure figure--{{ $graphicType }} article__figure {{ with $type }}article__figure--{{.}}{{ end }}"
+        class="
+            figure
+            figure--{{ $graphicType }}
+            article__figure
+            {{ with $type }}article__figure--{{.}}{{ end }}
+            {{ with $invert }}figure--inverse{{ end }}
+        "
         style="--ratio: {{ $ratio }}; --ratio-small: {{ $ratioSmall }}"
     >
         <div class="figure__container">

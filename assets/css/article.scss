@@ -112,7 +112,7 @@
         }
 
         .article__intro {
-            width: 80%;
+            width: 85%;
             text-align: center;
             margin: 0 auto;
 
@@ -180,7 +180,7 @@
                 content: attr(data-dropcap);
                 float: left;
                 font-size: 7.12rem;
-                font-variation-settings: 'wght' var(--dropcap-weight);
+                font-variation-settings: 'wght' var(--weight-dropcap);
                 margin-right: .05em;
                 margin-top: .0675em;
                 line-height: 0.65;

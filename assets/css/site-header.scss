@@ -196,7 +196,7 @@
             .site-header__desc {
                 @include size('pico');
 
-                font-variation-settings: 'wght' 350;
+                font-variation-settings: 'wght' var(--weight-light);
                 color: $colorTextLight;
                 text-align: left;
                 white-space: pre;

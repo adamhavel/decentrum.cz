@@ -16,7 +16,7 @@
         border-width: 1px 0;
         padding: lines(1.25) 0;
         letter-spacing: .0125em;
-        font-variation-settings: 'wght' var(--heading-weight);
+        font-variation-settings: 'wght' var(--weight-heading);
 
         @media (max-width: $screenSmall) {
             @include size('milli');
@@ -48,7 +48,7 @@
             &:before,
             &:after {
                 color: $colorTextLight;
-                font-variation-settings: 'wght' var(--light-weight);
+                font-variation-settings: 'wght' var(--weight-light);
             }
 
             &[rel="top"] {
@@ -119,7 +119,7 @@
                 display: inline-block;
                 padding: 0 .5em;
                 content: '·';
-                font-variation-settings: 'wght' var(--strong-weight);
+                font-variation-settings: 'wght' var(--weight-strong);
             }
         }
 

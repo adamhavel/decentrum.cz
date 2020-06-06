@@ -4,7 +4,7 @@
         @include size('kilo');
 
         font-family: $fontGrotesk;
-        font-variation-settings: 'wght' var(--heading-weight);
+        font-variation-settings: 'wght' var(--weight-heading);
         line-height: lines(1);
         margin-bottom: lines(1);
         margin-top: lines(4);
@@ -23,12 +23,11 @@
         @include size('kilo');
 
         font-family: $fontSerif;
-        font-variation-settings: 'wght' var(--heading-weight);
+        font-variation-settings: 'wght' var(--weight-heading);
         margin-bottom: lines(.5);
         line-height: lines(1);
         margin-top: lines(2);
         font-feature-settings: 'smcp';
-        clear: both;
 
         @media (max-width: $screenSmall) {
             margin-top: lines(1);
@@ -43,7 +42,7 @@
         }
 
         strong {
-            font-variation-settings: 'wght' var(--strong-weight);
+            font-variation-settings: 'wght' var(--weight-strong);
         }
 
         sup[id^="fnref"] {
@@ -66,7 +65,7 @@
 
         .lede {
             font-feature-settings: 'smcp';
-            font-variation-settings: 'wght' var(--strong-weight);
+            font-variation-settings: 'wght' var(--weight-strong);
         }
     }
 
@@ -83,7 +82,7 @@
     .pullout {
         @include size('kilo');
 
-        font-variation-settings: 'wght' var(--strong-weight);
+        font-variation-settings: 'wght' var(--weight-strong);
         margin: lines(2) 0 !important;
 
         &:before {
@@ -120,7 +119,7 @@
             font-family: $fontGrotesk;
             text-transform: uppercase;
             letter-spacing: .15em;
-            font-variation-settings: 'wght' var(--heading-weight);
+            font-variation-settings: 'wght' var(--weight-heading);
             margin-bottom: lines(.75);
             font-feature-settings: 'zero', 'liga', 'case', 'ss02';
         }

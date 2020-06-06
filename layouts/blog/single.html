@@ -31,14 +31,19 @@
             {{ $imageTiny := .Resize (printf $params $smallWidth $quality) }}
             {{ $imageTinyRetina := .Resize (printf $params $smallWidthRetina $qualityRetina) }}
             {{ $ratio := div (float .Height) .Width }}
-            <figure class="article__illustration" style="--ratio: {{ $ratio }};" aria-hidden="true">
+            <figure
+                class="article__illustration"
+                style="--ratio: {{ $ratio }}; --width: {{ $.Params.illustrationWidth }}%"
+                aria-hidden="true"
+            >
                 <img
                     sizes="(min-width: 760px) {{ $width }}px, 90vw"
                     srcset="{{ $image.Permalink }} {{ $width }}w, {{ $imageRetina.Permalink }} {{ $widthRetina }}w, {{ $imageTiny.Permalink }} {{ $smallWidth }}w, {{ $imageTinyRetina.Permalink }} {{ $smallWidthRetina }}w"
                     src="{{ $image.Permalink }}"
                 >
-                {{ with $.Page.Resources.GetMatch "img/illustration-overlay.svg" | minify }}
-                    <div class="article__illustration-overlay">{{ .Content | safeHTML }}</div>
+                {{ with $.Page.Resources.GetMatch "img/illustration-overlay.svg" }}
+                    {{ $overlay := . | minify }}
+                    <div class="article__illustration-overlay">{{ $overlay.Content | safeHTML }}</div>
                 {{ end }}
             </figure>
         {{ end }}

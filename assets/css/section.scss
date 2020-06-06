@@ -39,5 +39,5 @@
             @include size('pico');
 
             color: $colorTextMedium;
-            font-variation-settings: 'wght' var(--heading-weight);
+            font-variation-settings: 'wght' var(--weight-heading);
         }

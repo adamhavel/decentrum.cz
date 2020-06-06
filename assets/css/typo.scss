@@ -31,13 +31,13 @@
     span {
         display: inline-block;
         margin: 0 .2em;
-        font-variation-settings: 'wght' var(--heading-weight);
+        font-variation-settings: 'wght' var(--weight-heading);
     }
 }
 
 .title {
     font-family: $fontGrotesk;
-    font-variation-settings: 'wght' var(--heading-weight);
+    font-variation-settings: 'wght' var(--weight-heading);
     font-feature-settings: 'zero', 'liga', 'case', 'ss02';
 }
 
@@ -45,6 +45,6 @@
     font-family: $fontGrotesk;
     text-transform: uppercase;
     letter-spacing: .15em;
-    font-variation-settings: 'wght' var(--heading-weight);
+    font-variation-settings: 'wght' var(--weight-heading);
     font-feature-settings: 'zero', 'liga', 'case', 'ss02';
 }

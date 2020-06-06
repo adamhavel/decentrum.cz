@@ -20,7 +20,7 @@
             top: 0;
             left: 0;
             object-fit: cover;
-            opacity: var(--image-opacity);
+            opacity: var(--opacity-image);
 
             .figure--vector & {
                 opacity: .8;
@@ -31,12 +31,18 @@
                 }
             }
 
+            .figure--inverse & {
+
+                //:root.dark & {
+                    filter: invert(1);
+                //}
+            }
+
             .js & {
-                opacity: 0;
                 transition: opacity .5s;
 
-                &.is-loaded {
-                    opacity: 1;
+                &:not(.is-loaded) {
+                    opacity: 0;
                 }
             }
         }

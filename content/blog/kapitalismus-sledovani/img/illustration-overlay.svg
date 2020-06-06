@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg version="1.1" id="overlay" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 222.808 174.839" style="enable-background:new 0 0 222.808 174.839;" xml:space="preserve">
+<style>
+	#overlay circle {
+        fill: currentColor;
+    }
+
+    #overlay line {
+        fill: none;
+        stroke: currentColor;
+        stroke-width: .1;
+        animation: dash 1s ease-out forwards .5s;
+        opacity: .75;
+    }
+
+    #overlay .start {
+        opacity: 0;
+    }
+
+    #overlay .end {
+        opacity: .375;
+        transform: scale(0);
+        animation: grow 2s ease-in-out forwards .5s;
+    }
+
+    @keyframes dash {
+        to {
+            stroke-dashoffset: 0;
+            stroke-width: .5;
+            stroke-dasharray: .5;
+        }
+    }
+
+    @keyframes grow {
+        to {
+            transform: scale(3);
+        }
+    }
+
+</style>
+<g>
+    <line x1="151.1" y1="80.64" x2="115.883" y2="112.086"/>
+    <circle class="end" cx="115.883" cy="112.086" r="5.461"/>
+    <circle class="start" cx="152.401" cy="79.994" r="4.073"/>
+</g>
+<g>
+    <line x1="168.034" y1="34.032" x2="118.028" y2="100.412"/>
+    <circle class="end" cx="118.028" cy="100.412" r="4.029"/>
+    <circle class="start" cx="168.525" cy="32.351" r="7.561"/>
+</g>
+<g>
+    <line x1="66.894" y1="23.203" x2="104.668" y2="96.014"/>
+    <circle class="start" cx="66.894" cy="23.203" r="6.003"/>
+    <circle class="end" cx="104.668" cy="96.014" r="5.525"/>
+</g>
+<g>
+    <line x1="37.927" y1="84.79" x2="87.924" y2="107.641"/>
+    <circle class="start" cx="38.436" cy="84.699" r="7.512"/>
+    <circle class="end" cx="87.578" cy="107.336" r="4.749"/>
+</g>
+<g>
+    <line x1="75.548" y1="78.296" x2="93.646" y2="95.742"/>
+    <circle class="start" cx="75.319" cy="78.809" r="2.654"/>
+    <circle class="end" cx="93.646" cy="95.742" r="3.474"/>
+</g>
+<g>
+    <line x1="203.42" y1="96.175" x2="130.882" y2="106.741"/>
+    <circle class="start" cx="204.27" cy="96.9" r="4.431"/>
+    <circle class="end" cx="130.882" cy="106.741" r="3.99"/>
+</g>
+<g>
+    <line x1="112.975" y1="47.798" x2="112.994" y2="88.45"/>
+    <circle class="start" cx="112.645" cy="46.617" r="4.459"/>
+    <circle class="end" cx="112.994" cy="88.45" r="3.429"/>
+</g>
+<script>
+
+    document.querySelectorAll('#overlay circle').forEach(circleEl => {
+        let x = circleEl.getAttribute('cx');
+        let y = circleEl.getAttribute('cy');
+
+        circleEl.style.transformOrigin = `${x}px ${y}px`;
+    });
+
+    document.querySelectorAll('#overlay line').forEach(lineEl => {
+        let attr = a => parseFloat(lineEl.getAttribute(a));
+        let x1 = attr('x1');
+        let x2 = attr('x2');
+        let y1 = attr('y1');
+        let y2 = attr('y2');
+        let length = Math.sqrt(Math.pow(x1 - x2, 2) + Math.pow(y1 - y2, 2));
+
+        lineEl.style.strokeDasharray = length;
+        lineEl.style.strokeDashoffset = length
+    });
+
+    document.querySelectorAll('#overlay g').forEach(groupEl => {
+        let delay = Math.random();
+
+        [...groupEl.children].forEach(el => {
+            let currentDelay = parseFloat(window
+                .getComputedStyle(el)
+                .getPropertyValue('animation-delay'));
+
+            el.style.animationDelay = currentDelay + delay + 's';
+        });
+
+        //lineEl.style.animationDelay = `${(Math.random()) * 2}s`;
+    });
+
+</script>
+</svg>

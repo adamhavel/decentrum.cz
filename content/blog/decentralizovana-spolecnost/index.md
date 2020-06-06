@@ -7,6 +7,7 @@ quote:
   link: "https://www.kosmas.cz/autor/720/karl-r.-popper/"
   content: "Místo toho, abychom se vydávali za proroky, musíme se stát tvůrci svého osudu. Musíme se naučit dělat věci tak dobře, jak to dokážeme, a rozhlížet se po vlastních chybách. A když jsme se vzdali představy, že mocenské dějiny budou naším soudcem, když jsme si přestali dělat starost s tím, zda nám dějiny dají za pravdu nebo ne, pak se nám snad může jednoho dne podařit dostat moc pod kontrolu."
 image: "img/uzitecnost.jpg"
+illustrationWidth: 80
 categories:
   - technologie
   - finance
@@ -23,7 +24,7 @@ Stavu nijak nepomáhá neschopné a zkorumpované vedení Světové zdravotnick�
 ## Mýtus soběstačnosti
 
 {{< figure src="img/sobestacnost.jpg" type="hero" ratio="0.5" crop="top" caption=`{
-    "title": "The Herd Boy",
+    "title": "Hlídač koní",
     "author": "Frederic Remington",
     "year": "1905"
 }` >}}
