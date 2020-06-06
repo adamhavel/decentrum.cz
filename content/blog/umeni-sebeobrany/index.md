@@ -1,7 +1,7 @@
 ---
 draft: true
 title: "V síti: umění sebeobrany"
-date: 2020-06-15
+date: 2020-06-16
 summary: "Commodi tenetur omnis consectetur aut repudiandae corporis vero, quia id ullam. Corrupti, recusandae, maxime. Similique quae ea."
 quote:
   source: "Nesmazatelné záznamy · Edward Snowden"
