@@ -71,7 +71,7 @@ Jelikož o nás obě firmy v mnoha ohledech vědí víc než naši nejbližší,
 Hlavním cílem firem jako Google a Facebook je nicméně tvořit zisk, ne měřit svůj dopad na společnost. Z jejich pohledu platí jednoduchá úměra: víc dat, víc peněz. Nelze se tedy divit, že se nehrnou měnit výnosný status quo. Toho úkolu se tudíž musíme zhostit sami.
 {{</pullout>}}
 
-{{< figure src="img/cosette.jpg" ratio="1.725" type="right" caption=`{
+{{< figure src="img/cosette.jpg" ratio="1.725" type="right" crop="left" cropSmall="center" caption=`{
     "title": "Cosette",
     "author": "Émile Bayard",
     "year": "1862"

@@ -72,7 +72,7 @@
             transform: translateZ(0);
 
             @media (max-width: $screenSmall) {
-                --width: 100%;
+                --width: 80% !important;
             }
 
             img {

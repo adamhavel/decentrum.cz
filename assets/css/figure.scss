@@ -32,10 +32,7 @@
             }
 
             .figure--inverse & {
-
-                //:root.dark & {
-                    filter: invert(1);
-                //}
+                filter: invert(1);
             }
 
             .js & {

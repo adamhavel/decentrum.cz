@@ -20,8 +20,9 @@
 
         {{ with .Page.Resources.GetMatch "img/illustration.png" }}
             {{ $params := "%vx q%v jpg #fff" }}
-            {{ $width := 700 }}
-            {{ $widthRetina := 1400 }}
+            {{ $widthPercent := div $.Params.illustrationWidth (float 100) }}
+            {{ $width := int (mul 760 $widthPercent) }}
+            {{ $widthRetina := int (mul 1520 $widthPercent) }}
             {{ $smallWidth := 400 }}
             {{ $smallWidthRetina := 800 }}
             {{ $quality := 70 }}
@@ -37,7 +38,7 @@
                 aria-hidden="true"
             >
                 <img
-                    sizes="(min-width: 760px) {{ $width }}px, 90vw"
+                    sizes="(min-width: 760px) {{ $width }}px, 80vw"
                     srcset="{{ $image.Permalink }} {{ $width }}w, {{ $imageRetina.Permalink }} {{ $widthRetina }}w, {{ $imageTiny.Permalink }} {{ $smallWidth }}w, {{ $imageTinyRetina.Permalink }} {{ $smallWidthRetina }}w"
                     src="{{ $image.Permalink }}"
                 >
