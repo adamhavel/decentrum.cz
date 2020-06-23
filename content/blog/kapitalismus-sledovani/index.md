@@ -4,7 +4,7 @@ date: 2020-06-06
 summary: "Internet se zrodil ze směsi vojenských, vědeckých a komerčních zájmů. Od počátku se odkazuje na princip decentralizace, ve své současné podobě jej nicméně v mnoha ohledech opouští."
 quote:
   source: "Dohlížet a trestat · Michel Foucault"
-  link: "https://www.kosmas.cz/knihy/62579/dohlizet-a-trestat/"
+  link: "https://www.kosmas.cz/knihy/62579/dohlizet-a-trestat/?afil=1263"
   content: "Z toho plyne hlavní účinek Panoptikonu: zavést u vězně­ného vědomý a nepřetržitý stav viditelnosti, který zajišťuje automatické fungování moci. Způsobit, aby dohlížení bylo permanentní ve svých účincích, byť by bylo nesoustavné ve své činnosti; aby dokonalost moci vedla k tomu, že aktuálnost jejího vykonávání bude zbytečná."
 image: "img/monopol.jpg"
 illustrationWidth: 50
@@ -89,7 +89,7 @@ Dnes platí, že používám-li službu například od Facebooku, patří mu ve�
 
 Standard Solid je odpovědí na tento problém. Spočívá v jednoduchém nápadu: svá data si schraňuji sám, ať už svépomocí (třeba na vlastním počítači) nebo skrze k tomu určenou službu. V případě, že se rozhodnu vyzkoušet nějakou aplikaci, umožním jí dočasný přístup k té části mých dat, jež nutně potřebuje pro svůj chod. A co je nejdůležitější: tuto pravomoc mohu kdykoliv odepřít a přejít k jinému, konkurenčnímu produktu. Na první pohled jde o malou změnu. Pokud se však ujme a rozšíří, obrátí internet vzhůru nohama. Mnohem víc pak bude záležet na kvalitě samotného produktu a zmenší se prostor pro vznik monopolu. Produkty podporující standard Solid navíc budou působit důvěryhodněji a tím získají konkurenční výhodu.
 
-Každopádně, pokud se má dnešní situace zlepšit, je třeba bojovat na všech frontách, nejen té legislativní a technologické, a využít možností, které se nabízejí už dnes. Vždy nám totiž zbývá ještě jeden způsob, jak se vypořádat s tímto [kapitalismem sledování](https://www.kosmas.cz/knihy/275351/vek-sledovaciho-kapitalismu-zapas-o-budoucnost-lidstva-na-nove-hranici-moci/). Mně osobně je nejsympatičtější, neboť v duchu soběstačnosti nabádá, abychom produkty těchto firem jednoduše nepoužívali a místo toho zvolili jejich alternativy, případně se před sběrem dat alespoň chránili. Toto umění sebeobrany je tématem druhé části.
+Každopádně, pokud se má dnešní situace zlepšit, je třeba bojovat na všech frontách, nejen té legislativní a technologické, a využít možností, které se nabízejí už dnes. Vždy nám totiž zbývá ještě jeden způsob, jak se vypořádat s tímto [kapitalismem sledování](https://www.kosmas.cz/knihy/275351/vek-sledovaciho-kapitalismu-zapas-o-budoucnost-lidstva-na-nove-hranici-moci/?afil=1263). Mně osobně je nejsympatičtější, neboť v duchu soběstačnosti nabádá, abychom produkty těchto firem jednoduše nepoužívali a místo toho zvolili jejich alternativy, případně se před sběrem dat alespoň chránili. Toto umění sebeobrany je tématem druhé části.
 
 [^1]: Homo economicus je model člověka jako vždy racionálního jedince s jediným zájmem: maximalizovat svůj zisk.
 
@@ -113,7 +113,7 @@ Každopádně, pokud se má dnešní situace zlepšit, je třeba bojovat na vše
 
 [^11]: Krom zmíněného fiaska Facebooku a firmy Cambridge Analytica lze vyzdvihnout nedávný únik soukromých fotek a videí z úložiště Google Photos. Vlivem chyby docházelo k tomu, že kdokoliv si v určitém období stáhnul svoje fotky či videa, mohl obdržet data někoho jiného. Google situaci vyřešil posláním e-mailu s vyjádřením lítosti za vzniklou *nepříjemnost*.
 
-[^12]: Edward Snowden je bývalý agent NSA a CIA, nyní žijící v azylu v Moskvě, který v roce 2013 novinářům předal informace o tajných amerických projektech sledování internetové komunikace. Narozdíl od cílených odposlechů, které vyžadují soudní příkaz, dochází v rámci těchto programů k automatickému sběru *veškeré* komunikace, včetně té domácí, čímž je porušována americká ústava. Tyto projekty, a nepochybně další, veřejnosti zatím neznámé, jsou stále v provozu. Detaily tohoto systému Snowden popsal ve své knize [Nesmazatelné záznamy](https://www.kosmas.cz/knihy/272714/nesmazatelne-zaznamy/).
+[^12]: Edward Snowden je bývalý agent NSA a CIA, nyní žijící v azylu v Moskvě, který v roce 2013 novinářům předal informace o tajných amerických projektech sledování internetové komunikace. Narozdíl od cílených odposlechů, které vyžadují soudní příkaz, dochází v rámci těchto programů k automatickému sběru *veškeré* komunikace, včetně té domácí, čímž je porušována americká ústava. Tyto projekty, a nepochybně další, veřejnosti zatím neznámé, jsou stále v provozu. Detaily tohoto systému Snowden popsal ve své knize [Nesmazatelné záznamy](https://www.kosmas.cz/knihy/272714/nesmazatelne-zaznamy/?afil=1263).
 
 [^13]: Francouzsky „nechat být”, respektive „nechat činit”. Jde o heslo vyjadřující ekonomickou zásadu, aby stát nezasahoval do hospodářství a nesnažil se jej řídit. Skrývá se za ním idea, že trh vyřeší vše.
 

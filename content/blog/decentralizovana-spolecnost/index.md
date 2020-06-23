@@ -4,7 +4,7 @@ date: 2020-05-01
 summary: "Praktická soběstačnost v moderním světě stojí na čtyřech pilířích. Jsou to technologie, finance, praktické dovednosti a zdraví."
 quote:
   source: "Otevřená společnost a její nepřátelé · Karl R. Popper"
-  link: "https://www.kosmas.cz/autor/720/karl-r.-popper/"
+  link: "https://www.kosmas.cz/autor/720/karl-r.-popper/?afil=1263"
   content: "Místo toho, abychom se vydávali za proroky, musíme se stát tvůrci svého osudu. Musíme se naučit dělat věci tak dobře, jak to dokážeme, a rozhlížet se po vlastních chybách. A když jsme se vzdali představy, že mocenské dějiny budou naším soudcem, když jsme si přestali dělat starost s tím, zda nám dějiny dají za pravdu nebo ne, pak se nám snad může jednoho dne podařit dostat moc pod kontrolu."
 image: "img/uzitecnost.jpg"
 illustrationWidth: 80
@@ -17,7 +17,7 @@ categories:
 
 {{<lede>}}Je dílem náhody a zvláštní ironií{{</lede>}}, že tento text vzniká v době, kdy většinu světa pohlcuje opar pandemie. Zatímco v ostrém světle přímého přenosu obnažuje křehkost naší globální civilizace, nám svojí rychlostí nabízí (nebo spíš vnucuje) příležitost pocítit na vlastní kůži jindy těžko uchopitelnou sílu exponenciálního růstu.
 
-O koronaviru se mluví jako o *černé labuti*, nepředvídatelné události obrovského dopadu, termínu zpopularizovaném [knihou stejného jména](https://www.kosmas.cz/knihy/162293/cerna-labut/) od Nassima Taleba. To je však nebezpečná mýlka, která svádí k myšlence, že na podobné situace se nelze předem připravit. Peří téhle labutě ovšem nemůže být bělejší. Přestože není v našich silách předpovědět *kdy* k podobné situaci dojde, dokážeme posoudit *jestli* může nastat. Pokud se dobereme závěru, že ano, máme jedinou možnost. Musíme změnit podmínky tak, abychom událost vyloučili nebo ji alespoň učinili méně pravděpodobnou. K tomu nedošlo. Proto se teď potýkáme s následky viru, který se vlivem nadmíru globalizovaného světa proměnil z lokálního problému v pandemii.
+O koronaviru se mluví jako o *černé labuti*, nepředvídatelné události obrovského dopadu, termínu zpopularizovaném [knihou stejného jména](https://www.kosmas.cz/knihy/162293/cerna-labut/?afil=1263) od Nassima Taleba. To je však nebezpečná mýlka, která svádí k myšlence, že na podobné situace se nelze předem připravit. Peří téhle labutě ovšem nemůže být bělejší. Přestože není v našich silách předpovědět *kdy* k podobné situaci dojde, dokážeme posoudit *jestli* může nastat. Pokud se dobereme závěru, že ano, máme jedinou možnost. Musíme změnit podmínky tak, abychom událost vyloučili nebo ji alespoň učinili méně pravděpodobnou. K tomu nedošlo. Proto se teď potýkáme s následky viru, který se vlivem nadmíru globalizovaného světa proměnil z lokálního problému v pandemii.
 
 Stavu nijak nepomáhá neschopné a zkorumpované vedení Světové zdravotnické organizace, které situaci od začátku zlehčovalo, aby šlo na ruku svým chlebodárcům z Číny. A které, navzdory kritice, ve své zhoubné roli pokračuje a vydává nebezpečná prohlášení o neúčinnosti roušek. O dílčích selháních státu, našeho i jiných, a jeho vůdců lze jistě také napsat mnoho. Neztrácejme však čas hledáním zlého úmyslu tam, kde je dostatečným vysvětlením hloupost. Já se totiž míním věnovat společností jako celku. Na domácím příkladu chybějících roušek, plicních ventilátorů či iniciativy [Česko.Digital](https://cesko.digital/) se totiž ukazuje, že je-li třeba, lidé umí najít vlastní řešení. Jsou soběstační.
 
@@ -29,7 +29,7 @@ Stavu nijak nepomáhá neschopné a zkorumpované vedení Světové zdravotnick�
     "year": "1905"
 }` >}}
 
-Kolem pojmu soběstačnosti nicméně panuje řada mýtů a nedorozumění. Většina si nejspíš představí osamělé stavení uprostřed lesů, uzavřenou komunitu, ne-li rovnou jednotlivce živořícího na hraně přežití. Někoho možná napadne Henry David Thoreau a jeho [Walden](https://www.kosmas.cz/knihy/252636/walden-aneb-zivot-v-lesich/). Navzdory romantickým představám ale platí, že nám přirozenost velí tvořit společenství, a jen skuteční sociopaté mohou žít bez jiných a nestrádat. Ostatně, Thoreau ve svém příbytku na okraji lesa hostil časté návštěvy a špinavé prádlo mu chodila prát vlastní matka.
+Kolem pojmu soběstačnosti nicméně panuje řada mýtů a nedorozumění. Většina si nejspíš představí osamělé stavení uprostřed lesů, uzavřenou komunitu, ne-li rovnou jednotlivce živořícího na hraně přežití. Někoho možná napadne Henry David Thoreau a jeho [Walden](https://www.kosmas.cz/knihy/252636/walden-aneb-zivot-v-lesich/?afil=1263). Navzdory romantickým představám ale platí, že nám přirozenost velí tvořit společenství, a jen skuteční sociopaté mohou žít bez jiných a nestrádat. Ostatně, Thoreau ve svém příbytku na okraji lesa hostil časté návštěvy a špinavé prádlo mu chodila prát vlastní matka.
  
 ### V pavučině vztahů
 
@@ -53,7 +53,7 @@ Společnost je pak decentralizovaná natolik, nakolik jsou soběstačné tyto me
 
 {{< figure src="img/graf4.svg" type="small" >}}
 
-Nikdo to nepopsal lépe než George Orwell v románu [1984](https://www.kosmas.cz/knihy/202933/devatenact-set-osmdesat-ctyri/). V jeho drtivé vizi jsou to děti, které s tupou hrdostí donášejí na své rodiče, s plným vědomím, že tak otevírají dveře smrti, ne-li něčemu horšímu. Nakonec se zdá, že jak Orwell, tak Aldous Huxley, autor dalšího dystopického románu, [Konec civilizace](https://www.kosmas.cz/knihy/155529/konec-civilizace/), měli oba svůj díl pravdy. Na cestě do otroctví se totiž jejich vize potkávají. Orwellův vševědoucí stát nabývá skutečných kontur v Číně, permanentní válku zde však nahrazuje *soma*[^2] rostoucího bohatství.
+Nikdo to nepopsal lépe než George Orwell v románu [1984](https://www.kosmas.cz/knihy/202933/devatenact-set-osmdesat-ctyri/?afil=1263). V jeho drtivé vizi jsou to děti, které s tupou hrdostí donášejí na své rodiče, s plným vědomím, že tak otevírají dveře smrti, ne-li něčemu horšímu. Nakonec se zdá, že jak Orwell, tak Aldous Huxley, autor dalšího dystopického románu, [Konec civilizace](https://www.kosmas.cz/knihy/155529/konec-civilizace/?afil=1263), měli oba svůj díl pravdy. Na cestě do otroctví se totiž jejich vize potkávají. Orwellův vševědoucí stát nabývá skutečných kontur v Číně, permanentní válku zde však nahrazuje *soma*[^2] rostoucího bohatství.
 
 {{< figure src="img/totalita.jpg" crop="right" caption=`{
     "title": "1984",
@@ -142,7 +142,7 @@ Třetí doména konečně zasahuje do oblasti, kterou si většinou představím
 
 Především pro ty z nás, co jsou živi prací s počítačem a většinu času tráví ponořeni ve změti modelů, symbolů, čísel a tabulek, je fyzická realita mnohdy frustrující. V kontrastu s tou virtuální totiž obsahuje *překvapivé* množství detailů. I teoreticky jednoduché úkoly — zhotovit stůl, vypěstovat rajče, omítnout stěnu — nám v praxi nastavují zrcadlo naší až směšné neschopnosti, obzvlášť bolestné ve srovnání s lehce nabytým umem ve světě za obrazovkou počítače.
 
-Když dáme dohromady soběstačnost a dovednost, nemá však výsledek daleko k *prepperství*, neboli krizové připravenosti. Ta nabývá mnoha podob. Od rozumných pouček, které nestojí mnoho pěnez a můžou nám zachránit život, až po karikatury zosobněné samotářem v maskáčích, jehož jediným zdrojem štěstí jsou zásoby konzerv v bunkru a schadenfreude[^12] bezprostřední apokalypsy. Pramenů, zabývajících se touto problematikou, je nicméně spousta (jako úvod může posloužit kniha [Ruka noci podaná](https://www.kosmas.cz/knihy/250595/ruka-noci-podana/)) a já se navíc chci zaměřit na ty dovednosti a znalosti, jež mají hlubší smysl i mimo krizovou situaci.
+Když dáme dohromady soběstačnost a dovednost, nemá však výsledek daleko k *prepperství*, neboli krizové připravenosti. Ta nabývá mnoha podob. Od rozumných pouček, které nestojí mnoho pěnez a můžou nám zachránit život, až po karikatury zosobněné samotářem v maskáčích, jehož jediným zdrojem štěstí jsou zásoby konzerv v bunkru a schadenfreude[^12] bezprostřední apokalypsy. Pramenů, zabývajících se touto problematikou, je nicméně spousta (jako úvod může posloužit kniha [Ruka noci podaná](https://www.kosmas.cz/knihy/250595/ruka-noci-podana/?afil=1263)) a já se navíc chci zaměřit na ty dovednosti a znalosti, jež mají hlubší smysl i mimo krizovou situaci.
 
 {{< figure src="img/dovednosti.jpg" type="hero" ratio="0.5" sepia="20" crop="bottom" caption=`{
     "title": "Žně",
@@ -175,7 +175,7 @@ Poslední oblast je nejdůležitější, protože na ní všechny předchozí st
     }
 }` >}}
 
-Každopádně, dokud se nenaplní vize budoucnosti z mangy [Ghost in the Shell](https://www.kosmas.cz/knihy/231159/ghost-in-the-shell-1/)[^14], jsme od narození až po smrt svázáni s jedním tělem; jiného se nám nedostane. A jelikož jsou těla různá, má každý človek jiný fyzický potenciál. Bylo by chybou nepokusit se jej uskutečnit. Ne jako projev narcismu či sobectví, ale naopak ve snaze stát se užitečnějšími.
+Každopádně, dokud se nenaplní vize budoucnosti z mangy [Ghost in the Shell](https://www.kosmas.cz/knihy/231159/ghost-in-the-shell-1/?afil=1263)[^14], jsme od narození až po smrt svázáni s jedním tělem; jiného se nám nedostane. A jelikož jsou těla různá, má každý človek jiný fyzický potenciál. Bylo by chybou nepokusit se jej uskutečnit. Ne jako projev narcismu či sobectví, ale naopak ve snaze stát se užitečnějšími.
 
 Jistě, mnoho aspektů našeho těla je vlivem genetiky a náhody mimo naši kontrolu. Jak ale ukazuje oblast epigenetiky[^15], nejsme naprostými otroky našich genů. Značnou měrou záleží na podmínkách, které našemu tělu utváříme. Ukazuje se, že často nezáleží ani tak na tom, co tělu dáváme, ale spíš čemu se vyhýbáme.
 
@@ -195,7 +195,7 @@ Není snad oblasti, která by byla natolik pokřivena nepravdami, nepochopením 
     "year": "1503–1504"
 }` >}}
 
-O budoucnosti této pandemie lze s jistotou říct jen málo. Epidemie neštovic, která vypukla za vlády Marka Aurelia Antonia (jehož téměř důvěrně známe skrze jeho [zápisky](https://www.kosmas.cz/knihy/173235/hovory-k-sobe/)), populaci decimovala déle než dekádu, vzala si kolem 5 milionů životů včetně císařova a zásadně ovlivnila vývoj římské říše. Následky koronaviru *možná* nebudou tak dramatické (alespoň co se lidských obětí týče), ale řada změn přesto bude nezvratná. Není totiž podstatné, zdali mají pravdu ti, kdo tvrdí, že nemoc v důsledku nebude o nic horší než sezonní chřipka, ani to, že se nám dříve nebo později podaří nalézt vakcínu.
+O budoucnosti této pandemie lze s jistotou říct jen málo. Epidemie neštovic, která vypukla za vlády Marka Aurelia Antonia (jehož téměř důvěrně známe skrze jeho [zápisky](https://www.kosmas.cz/knihy/173235/hovory-k-sobe/?afil=1263)), populaci decimovala déle než dekádu, vzala si kolem 5 milionů životů včetně císařova a zásadně ovlivnila vývoj římské říše. Následky koronaviru *možná* nebudou tak dramatické (alespoň co se lidských obětí týče), ale řada změn přesto bude nezvratná. Není totiž podstatné, zdali mají pravdu ti, kdo tvrdí, že nemoc v důsledku nebude o nic horší než sezonní chřipka, ani to, že se nám dříve nebo později podaří nalézt vakcínu.
 
 {{<pullout>}}
 Důležitý je příběh, který kolem krize vzniká. Už teď se vypráví o události, která nemá v kolektivní paměti obdoby, a skutečnost, ať je jakákoliv, se síle tohoto příběhu přizpůsobí.
