@@ -50,8 +50,8 @@
         {{ end }}
 
         {{ with .Params.quote }}
-            <blockquote class="article__intro">
-                <p>{{ .content }}</p>
+            <blockquote class="article__intro {{ with .pre }}article__intro--pre{{ end }}">
+                <p>{{ .content | safeHTML }}</p>
                 <cite><a href="{{ .link }}">{{ .source }}</a></cite>
             </blockquote>
         {{ end }}

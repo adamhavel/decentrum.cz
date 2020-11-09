@@ -157,6 +157,10 @@
                     }
                 }
             }
+
+            &.article__intro--pre p {
+                white-space: pre;
+            }
         }
 
     .article__content {
